@@ -1,0 +1,72 @@
+PODS:
+  - DBClient/Core (1.2):
+    - YALResult (= 1.1)
+  - DBClient/Realm (1.2):
+    - DBClient/Core
+    - RealmSwift (~> 3.11.1)
+    - YALResult (= 1.1)
+  - Kingfisher (4.10.1)
+  - "NSObject+Rx (4.4.1)":
+    - RxSwift (~> 4.3)
+  - Realm (3.11.2):
+    - Realm/Headers (= 3.11.2)
+  - Realm/Headers (3.11.2)
+  - RealmSwift (3.11.2):
+    - Realm (= 3.11.2)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - SVProgressHUD (2.2.5)
+  - SwiftGen (6.0.2)
+  - Swinject (2.5.0)
+  - SwinjectAutoregistration (2.5.0):
+    - Swinject (~> 2.5)
+  - YALResult (1.1)
+
+DEPENDENCIES:
+  - DBClient/Realm
+  - Kingfisher (~> 4.10.1)
+  - "NSObject+Rx (~> 4.4.1)"
+  - RxCocoa (~> 4.4.0)
+  - RxSwift (~> 4.4.0)
+  - SVProgressHUD (~> 2.2.5)
+  - SwiftGen (~> 6.0.2)
+  - Swinject (~> 2.5.0)
+  - SwinjectAutoregistration (~> 2.5.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DBClient
+    - Kingfisher
+    - "NSObject+Rx"
+    - Realm
+    - RealmSwift
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SVProgressHUD
+    - SwiftGen
+    - Swinject
+    - SwinjectAutoregistration
+    - YALResult
+
+SPEC CHECKSUMS:
+  DBClient: d24d8defcd29a9282e303abb50d4cfcb036493d1
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
+  RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
+  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
+  YALResult: e7acf1405252ef9a2a1f121176cc44b588844d93
+
+PODFILE CHECKSUM: c54c265e8ab7237251112b0327e6dcd264c84ec1
+
+COCOAPODS: 1.6.0.beta.2
