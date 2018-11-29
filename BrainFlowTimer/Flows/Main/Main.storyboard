@@ -35,15 +35,15 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9W-BH-ttY">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="60"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="start"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-e1-e1E">
                                         <rect key="frame" x="105" y="0.0" width="73" height="60"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="pause"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-ox-IYQ">
                                         <rect key="frame" x="210" y="0.0" width="73" height="60"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="reset"/>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -65,7 +65,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="endButton" destination="Ftq-ox-IYQ" id="n5u-F1-DOz"/>
+                        <outlet property="pauseButton" destination="Nlx-e1-e1E" id="7YN-qS-x0o"/>
+                        <outlet property="resetButton" destination="Ftq-ox-IYQ" id="n5u-F1-DOz"/>
                         <outlet property="startButton" destination="O9W-BH-ttY" id="0MJ-YU-zbl"/>
                         <outlet property="timeLabel" destination="iNK-ih-DEE" id="xad-so-rbf"/>
                     </connections>

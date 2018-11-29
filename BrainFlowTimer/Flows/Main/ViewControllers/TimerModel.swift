@@ -18,9 +18,6 @@ final class TimerModel: EventNode, HasDisposeBag {
     var hrs = 0
     var min = 0
     var sec = 0
-    var diffHrs = 0
-    var diffMins = 0
-    var diffSecs = 0
     
     let updateTimer = PublishSubject<Void>()
     
@@ -40,22 +37,21 @@ final class TimerModel: EventNode, HasDisposeBag {
         startCountdownAction
             .doOnNext { [unowned self] _ in
                 debugPrint("start")
-                self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
-                    self?.timerTick()
-                })
+                self.scheduleTimer()
             }
             .disposed(by: disposeBag)
         
         pauseCountdownAction
             .doOnNext { [unowned self] _ in
                 debugPrint("pause")
+                self.timer.invalidate()
             }
             .disposed(by: disposeBag)
         
         resetCountdownAction
             .doOnNext { [unowned self] _ in
+                KeyValueStorageService.removeObject(for: .savedTime)
                 self.resetContent()
-                debugPrint("reset")
             }
             .disposed(by: disposeBag)
     }
@@ -64,15 +60,17 @@ final class TimerModel: EventNode, HasDisposeBag {
     
     private func pauseWhenBackround() {
         self.timer.invalidate()
-        let shared = UserDefaults.standard
-        shared.set(Date(), forKey: "savedTime")
-        print(Date())
+        KeyValueStorageService.set(Date(), for: .savedTime)
     }
     
     private func willEnterForeground() {
-        if let savedDate = UserDefaults.standard.object(forKey: "savedTime") as? Date {
-            setTimeDifference(startDate: savedDate)
-            
+        if let savedDate = KeyValueStorageService.object(for: .savedTime) as? Date {
+            let components = Calendar.current.dateComponents([.hour, .minute, .second], from: savedDate, to: Date())
+            self.hrs += components.hour!
+            self.min += components.minute!
+            self.sec += components.second!
+            updateTimer.onNext(())
+            scheduleTimer()
         }
     }
     
@@ -97,26 +95,11 @@ final class TimerModel: EventNode, HasDisposeBag {
         self.hrs = 0
     }
     
-    private func setTimeDifference(startDate: Date) {
-        let components = Calendar.current.dateComponents([.hour, .minute, .second], from: startDate, to: Date())
-        diffHrs = components.hour!
-        diffMins = components.minute!
-        diffSecs = components.second!
+    private func scheduleTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
+            self?.timerTick()
+        })
     }
-    
-    private func addBackgroundTime(hours: Int, minutes: Int, seconds: Int) {
-        self.hrs += hours
-        self.min += minutes
-        self.sec += seconds
-        
-    }
-    
-    func removeSavedDate() {
-        if (UserDefaults.standard.object(forKey: "savedTime") as? Date ) != nil {
-            UserDefaults.standard.removeObject(forKey: "savedTime")
-        }
-    }
-    
     private func addHandlers() {
         addHandler { [unowned self] (event: ApplicationEvent) in
             switch event {

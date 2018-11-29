@@ -14,7 +14,8 @@ final class TimerViewController: UIViewController {
     
     @IBOutlet private var timeLabel: UILabel!
     @IBOutlet private weak var startButton: UIButton!
-    @IBOutlet private weak var endButton: UIButton!
+    @IBOutlet private weak var pauseButton: UIButton!
+    @IBOutlet private weak var resetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,12 @@ final class TimerViewController: UIViewController {
             .bind(to: viewModel.startButtonTapped)
             .disposed(by: disposeBag)
         
-        endButton.rx.tap
-            .bind(to: viewModel.startButtonTapped)
+        pauseButton.rx.tap
+            .bind(to: viewModel.pauseButtonTapped)
+            .disposed(by: disposeBag)
+        
+        resetButton.rx.tap
+            .bind(to: viewModel.resetButtonTapped)
             .disposed(by: disposeBag)
     }
     

@@ -13,8 +13,12 @@ final class TimerViewModel: HasDisposeBag {
         return model.startCountdownAction
     }
     
+    var pauseButtonTapped: PublishSubject<Void> {
+        return model.pauseCountdownAction
+    }
+    
     var resetButtonTapped: PublishSubject<Void> {
-        return model.startCountdownAction
+        return model.resetCountdownAction
     }
     
     let timerText = PublishSubject<String>()
