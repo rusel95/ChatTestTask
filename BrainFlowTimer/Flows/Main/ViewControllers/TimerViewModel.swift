@@ -9,6 +9,10 @@ import RxSwift
 
 final class TimerViewModel: HasDisposeBag {
     
+    var countdownTimePicked: PublishSubject<Date> {
+        return model.countDownDateAction
+    }
+    
     var startButtonTapped: PublishSubject<Void> {
         return model.startCountdownAction
     }
@@ -36,7 +40,7 @@ final class TimerViewModel: HasDisposeBag {
                 let numberOfSecondsInHour = 3600
                 let hours = Int(currentSecond / numberOfSecondsInHour)
                 let numberOfSecondsInMinute = 60
-                let minutes = Int(currentSecond / numberOfSecondsInMinute)
+                let minutes = Int((currentSecond - (numberOfSecondsInHour * hours)) / numberOfSecondsInMinute)
                 let secondsToShow = currentSecond % numberOfSecondsInMinute
                 self.timerText.onNext(
                     String(

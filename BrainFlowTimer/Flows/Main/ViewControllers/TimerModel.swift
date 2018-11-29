@@ -17,6 +17,7 @@ final class TimerModel: EventNode, HasDisposeBag {
     
     var currentSecond = BehaviorRelay<Int>(value: 0)
     
+    let countDownDateAction = PublishSubject<Date>()
     let startCountdownAction = PublishSubject<Void>()
     let pauseCountdownAction = PublishSubject<Void>()
     let stopCountdownAction = PublishSubject<Void>()
@@ -33,6 +34,13 @@ final class TimerModel: EventNode, HasDisposeBag {
     }
     
     private func initializeBindings() {
+        
+        countDownDateAction
+            .doOnNext { [unowned self] date in
+                let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+                self.currentSecond.accept(components.hour! * 3600 + components.minute! * 60)
+            }
+            .disposed(by: disposeBag)
         
         startCountdownAction
             .doOnNext { [unowned self] _ in
@@ -79,7 +87,7 @@ final class TimerModel: EventNode, HasDisposeBag {
             let timeInterval = TimeInterval(1.0)
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
                 guard let self = self else { return }
-                self.currentSecond.accept(self.currentSecond.value + Int(timeInterval))
+                self.currentSecond.accept(self.currentSecond.value - Int(timeInterval))
             })
         }
     }
