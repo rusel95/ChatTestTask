@@ -9,22 +9,13 @@ import Core
 
 enum MainMenuEvent: Event {
     
-    case logout
-    
 }
 
 final class MainMenuModel: EventNode {
     
-    let user: User
-    
-    init(parent: EventNode, user: User) {
-        self.user = user
+    override init(parent: EventNode) {
         
         super.init(parent: parent)
     }
-    
-    func logOut() {
-        raise(event: MainMenuEvent.logout)
-    }
-    
+
 }

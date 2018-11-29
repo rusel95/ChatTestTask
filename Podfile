@@ -15,7 +15,7 @@ abstract_target 'Shared' do
 
     target 'Core' do
 
-  	# DB
+  	# DB client component
     	pod 'DBClient/Realm'
 
     end

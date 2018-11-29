@@ -10,22 +10,17 @@ import Swinject
 
 enum MainFlowEvent: Event {
     
-    case logout
-    
 }
 
 final class MainFlowCoordinator: EventNode, FlowCoordinator {
     
     weak var containerViewController: UIViewController?
     
-    let userSession: UserSession
-    
     private let container: Container
     
-    init(parent: EventNode, userSession: UserSession) {
-        self.userSession = userSession
-        self.container = Container(parent: userSession.container) {
-            MainFlowAssembly(userSession).assemble(container: $0)
+    init(parent: EventNode, container: Container) {
+        self.container = Container(parent: container) {
+            MainFlowAssembly().assemble(container: $0)
         }
         
         super.init(parent: parent)
@@ -45,8 +40,8 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
     
     private func handle(_ event: MainMenuEvent) {
         switch event {
-        case .logout:
-            raise(event: MainFlowEvent.logout)
+        default:
+            break
         }
     }
     

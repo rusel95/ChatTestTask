@@ -1,4 +1,3 @@
-
 import Foundation
 import Swinject
 import SwinjectAutoregistration
@@ -13,4 +12,3 @@ extension Resolver {
         return resolve(T.self, arguments: arg1 as EventNode, arg2)
     }
 }
-

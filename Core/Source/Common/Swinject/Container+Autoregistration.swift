@@ -1,4 +1,3 @@
-
 import Swinject
 import SwinjectAutoregistration
 
@@ -22,14 +21,16 @@ extension Container {
     }
     
 //    @discardableResult
-//    public func autoregister<Service, Arg1>(initializer: @escaping (Arg1, Resolver) -> Service) -> Swinject.ServiceEntry<Service> {
+//    public func autoregister<Service, Arg1>(initializer: @escaping (Arg1, Resolver) -> Service)
+//    -> Swinject.ServiceEntry<Service> {
 //        return register(Service.self, factory: { (resolver, argument) -> Service in
 //            return initializer(argument, resolver)
 //        })
 //    }
 //
 //    @discardableResult
-//    public func autoregister<Service, Arg1, Arg2>(argument arg1: Arg1.Type, initializer: @escaping (Arg1, Arg2) -> Service) -> Swinject.ServiceEntry<Service> {
+//    public func autoregister<Service, Arg1, Arg2>(argument arg1: Arg1.Type,
+//    initializer: @escaping (Arg1, Arg2) -> Service) -> Swinject.ServiceEntry<Service> {
 //        return register(Service.self, factory: { (resolver, arg1: Arg1, arg2: Arg2) -> Service in
 //            return initializer(arg1, arg2)
 //        })

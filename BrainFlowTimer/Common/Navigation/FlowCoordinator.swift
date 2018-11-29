@@ -8,7 +8,7 @@ import UIKit
 
 protocol FlowCoordinator: class {
     
-    weak var containerViewController: UIViewController? { get set }
+    var containerViewController: UIViewController? { get set }
     @discardableResult func createFlow() -> UIViewController
     
 }

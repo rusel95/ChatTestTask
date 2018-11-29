@@ -24,12 +24,12 @@ final class MainMenuViewController: UIViewController, AlertPresentable {
     }
     
     private func setupBindings() {
-        viewModel.username.asObservable().bind(to: nameLabel.rx.text).disposed(by: disposeBag)
-        viewModel.avatar.asObservable()
-            .subscribe(onNext: { url in
-                self.avatarImageView.setImage(with: url)
-            })
-            .disposed(by: disposeBag)
+//        viewModel.username.asObservable().bind(to: nameLabel.rx.text).disposed(by: disposeBag)
+//        viewModel.avatar.asObservable()
+//            .subscribe(onNext: { url in
+//                self.avatarImageView.setImage(with: url)
+//            })
+//            .disposed(by: disposeBag)
     }
 }
 
@@ -37,8 +37,8 @@ final class MainMenuViewController: UIViewController, AlertPresentable {
 
 private extension MainMenuViewController {
     
-    @IBAction private func logOut(_ sender: Any) {
-        viewModel.logOut()
-    }
+//    @IBAction private func logOut(_ sender: Any) {
+//        viewModel.logOut()
+//    }
     
 }

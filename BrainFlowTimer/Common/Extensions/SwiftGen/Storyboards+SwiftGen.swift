@@ -37,22 +37,7 @@ extension UIViewController {
   }
 }
 
-// swiftlint:disable file_length
-// swiftlint:disable type_body_length
-
 struct StoryboardScene {
-  enum Auth: String, StoryboardSceneType {
-    static let storyboardName = "Auth"
-
-    case loginScene = "Login"
-    static func instantiateLogin() -> LoginViewController {
-      guard let vc = StoryboardScene.Auth.loginScene.viewController() as? LoginViewController
-      else {
-        fatalError("ViewController 'Login' is not of the expected class LoginViewController.")
-      }
-      return vc
-    }
-  }
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
   }

@@ -12,17 +12,16 @@ import Swinject
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     let container = Container()
-    let userSessionController = UserSessionController()
     
     var window: UIWindow?
     private var applicationFlowCoordinator: ApplicationFlowCoordinator!
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         applicationFlowCoordinator = ApplicationFlowCoordinator(
-            window: window!,
-            userSessionController: userSessionController
+            window: window!
         )
         applicationFlowCoordinator.execute()
         
