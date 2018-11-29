@@ -17,8 +17,8 @@ final class TimerViewModel: HasDisposeBag {
         return model.pauseCountdownAction
     }
     
-    var resetButtonTapped: PublishSubject<Void> {
-        return model.resetCountdownAction
+    var stopButtonTapped: PublishSubject<Void> {
+        return model.stopCountdownAction
     }
     
     let timerText = PublishSubject<String>()
@@ -31,16 +31,19 @@ final class TimerViewModel: HasDisposeBag {
     }
     
     private func initializeBindings() {
-        model.updateTimer
-            .doOnNext({ [unowned self] _ in
-                
+        model.currentSecond
+            .doOnNext { (currentSecond) in
+                let numberOfSecondsInHour = 3600
+                let hours = Int(currentSecond / numberOfSecondsInHour)
+                let numberOfSecondsInMinute = 60
+                let minutes = Int(currentSecond / numberOfSecondsInMinute)
+                let secondsToShow = currentSecond % numberOfSecondsInMinute
                 self.timerText.onNext(
                     String(
                         format: "%02d : %02d : %02d",
-                        self.model.hrs, self.model.min, self.model.sec)
-                )
-            })
-            .disposed(by: disposeBag)
+                        hours, minutes, secondsToShow)
+                    )
+            }.disposed(by: disposeBag)
     }
     
 }

@@ -38,7 +38,7 @@ final class TimerViewController: UIViewController {
             .disposed(by: disposeBag)
         
         resetButton.rx.tap
-            .bind(to: viewModel.resetButtonTapped)
+            .bind(to: viewModel.stopButtonTapped)
             .disposed(by: disposeBag)
     }
     

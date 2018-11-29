@@ -7,6 +7,7 @@
 import Foundation
 import Core
 import RxSwift
+import RxCocoa
 
 enum MainMenuEvent: Event {
     
@@ -14,20 +15,19 @@ enum MainMenuEvent: Event {
 
 final class TimerModel: EventNode, HasDisposeBag {
     
-    var timer = Timer()
-    var hrs = 0
-    var min = 0
-    var sec = 0
-    
-    let updateTimer = PublishSubject<Void>()
+    var currentSecond = BehaviorRelay<Int>(value: 0)
     
     let startCountdownAction = PublishSubject<Void>()
     let pauseCountdownAction = PublishSubject<Void>()
-    let resetCountdownAction = PublishSubject<Void>()
+    let stopCountdownAction = PublishSubject<Void>()
+    
+    private var timer = Timer()
+    private var isTimerWorking = false
     
     override init(parent: EventNode) {
         super.init(parent: parent)
         
+        currentSecond.accept(0)
         addHandlers()
         initializeBindings()
     }
@@ -36,22 +36,23 @@ final class TimerModel: EventNode, HasDisposeBag {
         
         startCountdownAction
             .doOnNext { [unowned self] _ in
-                debugPrint("start")
                 self.scheduleTimer()
             }
             .disposed(by: disposeBag)
         
         pauseCountdownAction
             .doOnNext { [unowned self] _ in
-                debugPrint("pause")
                 self.timer.invalidate()
+                self.isTimerWorking = false
             }
             .disposed(by: disposeBag)
         
-        resetCountdownAction
+        stopCountdownAction
             .doOnNext { [unowned self] _ in
                 KeyValueStorageService.removeObject(for: .savedTime)
-                self.resetContent()
+                self.timer.invalidate()
+                self.isTimerWorking = false
+                self.currentSecond.accept(0)
             }
             .disposed(by: disposeBag)
     }
@@ -59,46 +60,28 @@ final class TimerModel: EventNode, HasDisposeBag {
     // MARK: - private
     
     private func pauseWhenBackround() {
-        self.timer.invalidate()
+        timer.invalidate()
+        isTimerWorking = false
         KeyValueStorageService.set(Date(), for: .savedTime)
     }
     
     private func willEnterForeground() {
         if let savedDate = KeyValueStorageService.object(for: .savedTime) as? Date {
-            let components = Calendar.current.dateComponents([.hour, .minute, .second], from: savedDate, to: Date())
-            self.hrs += components.hour!
-            self.min += components.minute!
-            self.sec += components.second!
-            updateTimer.onNext(())
+            let components = Calendar.current.dateComponents([.second], from: savedDate, to: Date())
+            self.currentSecond.accept(self.currentSecond.value + components.second!)
             scheduleTimer()
         }
     }
     
-    private func timerTick() {
-        if self.sec == 59 {
-            self.min += 1
-            self.sec = 0
-            if (self.min == 59) {
-                self.hrs += 1
-                self.min = 0
-            }
-        } else {
-            self.sec += 1
-        }
-        updateTimer.onNext(())
-    }
-    
-    private func resetContent() {
-        timer.invalidate()
-        self.sec = 0
-        self.min = 0
-        self.hrs = 0
-    }
-    
     private func scheduleTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
-            self?.timerTick()
-        })
+        if !isTimerWorking {
+            isTimerWorking = true
+            let timeInterval = TimeInterval(1.0)
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
+                guard let self = self else { return }
+                self.currentSecond.accept(self.currentSecond.value + Int(timeInterval))
+            })
+        }
     }
     private func addHandlers() {
         addHandler { [unowned self] (event: ApplicationEvent) in
