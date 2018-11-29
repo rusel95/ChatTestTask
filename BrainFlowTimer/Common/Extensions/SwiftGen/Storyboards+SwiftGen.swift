@@ -1,59 +1,73 @@
-// Generated using SwiftGen, by O.Halligon — https://github.com/AliSoftware/SwiftGen
+// swiftlint:disable all
+// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
 
+// swiftlint:disable sorted_imports
 import Foundation
 import UIKit
 
-protocol StoryboardSceneType {
+// swiftlint:disable superfluous_disable_command
+// swiftlint:disable file_length
+
+// MARK: - Storyboard Scenes
+
+// swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
+internal enum StoryboardScene {
+  internal enum Auth: StoryboardType {
+    internal static let storyboardName = "Auth"
+
+    internal static let login = SceneType<BrainFlowTimer.LoginViewController>(storyboard: Auth.self, identifier: "Login")
+  }
+  internal enum LaunchScreen: StoryboardType {
+    internal static let storyboardName = "LaunchScreen"
+
+    internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
+  }
+  internal enum Settings: StoryboardType {
+    internal static let storyboardName = "Settings"
+
+    internal static let settingsViewController = SceneType<BrainFlowTimer.SettingsViewController>(storyboard: Settings.self, identifier: "SettingsViewController")
+  }
+  internal enum Timer: StoryboardType {
+    internal static let storyboardName = "Timer"
+
+    internal static let timerViewController = SceneType<BrainFlowTimer.TimerViewController>(storyboard: Timer.self, identifier: "TimerViewController")
+  }
+}
+// swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
+
+// MARK: - Implementation Details
+
+internal protocol StoryboardType {
   static var storyboardName: String { get }
 }
 
-extension StoryboardSceneType {
-  static func storyboard() -> UIStoryboard {
-    return UIStoryboard(name: self.storyboardName, bundle: nil)
+internal extension StoryboardType {
+  static var storyboard: UIStoryboard {
+    return UIStoryboard(name: self.storyboardName, bundle: Bundle(for: BundleToken.self))
   }
+}
 
-  static func initialViewController() -> UIViewController {
-    guard let vc = storyboard().instantiateInitialViewController() else {
-      fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
+internal struct SceneType<T: UIViewController> {
+  internal let storyboard: StoryboardType.Type
+  internal let identifier: String
+
+  internal func instantiate() -> T {
+    guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
+      fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
     }
-    return vc
+    return controller
   }
 }
 
-extension StoryboardSceneType where Self: RawRepresentable, Self.RawValue == String {
-  func viewController() -> UIViewController {
-    return Self.storyboard().instantiateViewController(withIdentifier: self.rawValue)
-  }
-  static func viewController(identifier: Self) -> UIViewController {
-    return identifier.viewController()
-  }
-}
+internal struct InitialSceneType<T: UIViewController> {
+  internal let storyboard: StoryboardType.Type
 
-protocol StoryboardSegueType: RawRepresentable { }
-
-extension UIViewController {
-  func performSegue<S: StoryboardSegueType>(segue: S, sender: AnyObject? = nil) where S.RawValue == String {
-    performSegue(withIdentifier: segue.rawValue, sender: sender)
-  }
-}
-
-struct StoryboardScene {
-  enum LaunchScreen: StoryboardSceneType {
-    static let storyboardName = "LaunchScreen"
-  }
-  enum Main: String, StoryboardSceneType {
-    static let storyboardName = "Main"
-
-    case mainMenuViewControllerScene = "MainMenuViewController"
-    static func instantiateMainMenuViewController() -> TimerViewController {
-      guard let vc = StoryboardScene.Main.mainMenuViewControllerScene.viewController() as? TimerViewController
-      else {
-        fatalError("ViewController 'MainMenuViewController' is not of the expected class MainMenuViewController.")
-      }
-      return vc
+  internal func instantiate() -> T {
+    guard let controller = storyboard.storyboard.instantiateInitialViewController() as? T else {
+      fatalError("ViewController is not of the expected class \(T.self).")
     }
+    return controller
   }
 }
 
-struct StoryboardSegue {
-}
+private final class BundleToken {}

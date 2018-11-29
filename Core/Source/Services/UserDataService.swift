@@ -13,10 +13,11 @@ import RxCocoa
 public enum UserDataServiceKey: String {
     
     case savedTime
+    case chosenTimeInterval
     
 }
 
-public class KeyValueStorageService {
+public class UserDataService {
     
     public static func observe<E: KVORepresentable>(
         _ type: E.Type,
@@ -50,5 +51,4 @@ public class KeyValueStorageService {
     public static func removeObject(for key: UserDataServiceKey) {
         UserDefaults.standard.removeObject(forKey: key.rawValue)
     }
-    
 }

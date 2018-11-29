@@ -1,5 +1,5 @@
 //
-//  MainMenuModel.swift
+//  TimerModel.swift
 //
 //  Copyright © 2016 Yalantis. All rights reserved.
 //
@@ -9,15 +9,11 @@ import Core
 import RxSwift
 import RxCocoa
 
-enum MainMenuEvent: Event {
-    
-}
-
 final class TimerModel: EventNode, HasDisposeBag {
     
+    var chosenTimeInterval: Int
     var currentSecond = BehaviorRelay<Int>(value: 0)
     
-    let countDownDateAction = PublishSubject<Date>()
     let startCountdownAction = PublishSubject<Void>()
     let pauseCountdownAction = PublishSubject<Void>()
     let stopCountdownAction = PublishSubject<Void>()
@@ -26,21 +22,17 @@ final class TimerModel: EventNode, HasDisposeBag {
     private var isTimerWorking = false
     
     override init(parent: EventNode) {
+        chosenTimeInterval = UserDataService
+            .object(for: .chosenTimeInterval) as? Int ?? Constants.defaultCountdownInterval
+        currentSecond.accept(chosenTimeInterval)
+        
         super.init(parent: parent)
         
-        currentSecond.accept(0)
         addHandlers()
         initializeBindings()
     }
     
     private func initializeBindings() {
-        
-        countDownDateAction
-            .doOnNext { [unowned self] date in
-                let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-                self.currentSecond.accept(components.hour! * 3600 + components.minute! * 60)
-            }
-            .disposed(by: disposeBag)
         
         startCountdownAction
             .doOnNext { [unowned self] _ in
@@ -57,10 +49,10 @@ final class TimerModel: EventNode, HasDisposeBag {
         
         stopCountdownAction
             .doOnNext { [unowned self] _ in
-                KeyValueStorageService.removeObject(for: .savedTime)
+                UserDataService.removeObject(for: .savedTime)
                 self.timer.invalidate()
                 self.isTimerWorking = false
-                self.currentSecond.accept(0)
+                self.currentSecond.accept(self.chosenTimeInterval)
             }
             .disposed(by: disposeBag)
     }
@@ -70,11 +62,11 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func pauseWhenBackround() {
         timer.invalidate()
         isTimerWorking = false
-        KeyValueStorageService.set(Date(), for: .savedTime)
+        UserDataService.set(Date(), for: .savedTime)
     }
     
     private func willEnterForeground() {
-        if let savedDate = KeyValueStorageService.object(for: .savedTime) as? Date {
+        if let savedDate = UserDataService.object(for: .savedTime) as? Date {
             let components = Calendar.current.dateComponents([.second], from: savedDate, to: Date())
             self.currentSecond.accept(self.currentSecond.value + components.second!)
             scheduleTimer()
@@ -84,13 +76,16 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func scheduleTimer() {
         if !isTimerWorking {
             isTimerWorking = true
-            let timeInterval = TimeInterval(1.0)
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
-                guard let self = self else { return }
-                self.currentSecond.accept(self.currentSecond.value - Int(timeInterval))
+            timer = Timer.scheduledTimer(
+                withTimeInterval: TimeInterval(Constants.defaultTickTimeInterval),
+                repeats: true,
+                block: { [weak self] (_) in
+                    guard let self = self else { return }
+                    self.currentSecond.accept(self.currentSecond.value - Constants.defaultTickTimeInterval)
             })
         }
     }
+    
     private func addHandlers() {
         addHandler { [unowned self] (event: ApplicationEvent) in
             switch event {
@@ -100,5 +95,14 @@ final class TimerModel: EventNode, HasDisposeBag {
                 self.willEnterForeground()
             }
         }
+    }
+    
+    private func subscribeOnSettingsChanges() {
+        UserDataService.observe(Int.self, .chosenTimeInterval)
+            .doOnNext { [weak self] (newTimeInterval) in
+                if let self = self, let newTimeInterval = newTimeInterval {
+                    self.chosenTimeInterval = newTimeInterval
+                }
+            }.disposed(by: disposeBag)
     }
 }

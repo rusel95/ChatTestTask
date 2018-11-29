@@ -1,5 +1,5 @@
 //
-//  MainMenuViewController.swift
+//  TimerViewController.swift
 //
 //  Copyright © 2016 Yalantis. All rights reserved.
 //
@@ -29,10 +29,6 @@ final class TimerViewController: UIViewController {
             .doOnNext { [weak self] (text) in
                 self?.timeLabel.text = text
             }.disposed(by: disposeBag)
-        
-        datePickerView.rx.date
-            .bind(to: viewModel.countdownTimePicked)
-            .disposed(by: disposeBag)
         
         startButton.rx.tap
             .bind(to: viewModel.startButtonTapped)

@@ -9,7 +9,7 @@
 "common_buttons.ok_button.title" = "OK";
 
 // Login
-"auth.login_button.title" = "Login";
+"auth.login_button.title" = "Login testing again";
 
 // HUDs
 "alert.default_error_tile" = "Error";

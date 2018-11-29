@@ -33,16 +33,9 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
     }
     
     private func addHandlers() {
-        addHandler { [weak self] (event: MainMenuEvent) in
-            self?.handle(event)
-        }
-    }
-    
-    private func handle(_ event: MainMenuEvent) {
-        switch event {
-        default:
-            break
-        }
+//        addHandler { [weak self] (event: MainMenuEvent) in
+//            self?.handle(event)
+//        }
     }
     
 }

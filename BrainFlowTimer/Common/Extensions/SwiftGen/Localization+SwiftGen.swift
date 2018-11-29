@@ -16,7 +16,7 @@ internal enum L10n {
   internal static let alertDefaultInfoTile = L10n.tr("Localizable", "alert.default_info_tile")
   /// Success
   internal static let alertDefaultSuccessTile = L10n.tr("Localizable", "alert.default_success_tile")
-  /// Login
+  /// Login testing again
   internal static let authLoginButtonTitle = L10n.tr("Localizable", "auth.login_button.title")
   /// OK
   internal static let commonButtonsOkButtonTitle = L10n.tr("Localizable", "common_buttons.ok_button.title")
