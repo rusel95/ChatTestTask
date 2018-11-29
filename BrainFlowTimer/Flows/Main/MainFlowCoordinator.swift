@@ -27,7 +27,7 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
     }
     
     func createFlow() -> UIViewController {
-        let controller: MainMenuViewController = container.autoresolve(argument: self)
+        let controller: TimerViewController = container.autoresolve(argument: self)
         addHandlers()
         return controller
     }

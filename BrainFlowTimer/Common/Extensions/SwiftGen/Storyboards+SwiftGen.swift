@@ -45,8 +45,8 @@ struct StoryboardScene {
     static let storyboardName = "Main"
 
     case mainMenuViewControllerScene = "MainMenuViewController"
-    static func instantiateMainMenuViewController() -> MainMenuViewController {
-      guard let vc = StoryboardScene.Main.mainMenuViewControllerScene.viewController() as? MainMenuViewController
+    static func instantiateMainMenuViewController() -> TimerViewController {
+      guard let vc = StoryboardScene.Main.mainMenuViewControllerScene.viewController() as? TimerViewController
       else {
         fatalError("ViewController 'MainMenuViewController' is not of the expected class MainMenuViewController.")
       }

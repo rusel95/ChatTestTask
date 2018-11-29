@@ -8,6 +8,13 @@ import UIKit
 import Core
 import Swinject
 
+enum ApplicationEvent: Event {
+    
+    case applicationDidEnterBackground
+    case applicationWillEnterForeground
+    
+}
+
 final class ApplicationFlowCoordinator: EventNode {
     
     public let container = Container()
@@ -25,6 +32,14 @@ final class ApplicationFlowCoordinator: EventNode {
     
     func execute() {
         presentMainModule()
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        self.raise(event: ApplicationEvent.applicationDidEnterBackground)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        self.raise(event: ApplicationEvent.applicationWillEnterForeground)
     }
     
     // MARK: Modules presentation

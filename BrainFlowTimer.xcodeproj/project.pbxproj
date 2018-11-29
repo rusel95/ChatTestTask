@@ -36,12 +36,18 @@
 		70BF67CF2045A6AD00803C08 /* ApplicationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF677E2045A6AD00803C08 /* ApplicationFlowCoordinator.swift */; };
 		70BF67E02045A6AE00803C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67962045A6AD00803C08 /* Main.storyboard */; };
 		70BF67E12045A6AE00803C08 /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF67972045A6AD00803C08 /* MainFlowCoordinator.swift */; };
-		70BF67E22045A6AE00803C08 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF67992045A6AD00803C08 /* MainMenuModel.swift */; };
-		70BF67E32045A6AE00803C08 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF679A2045A6AD00803C08 /* MainMenuViewController.swift */; };
-		70BF67E42045A6AE00803C08 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF679B2045A6AD00803C08 /* MainMenuViewModel.swift */; };
+		70BF67E22045A6AE00803C08 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF67992045A6AD00803C08 /* TimerModel.swift */; };
+		70BF67E32045A6AE00803C08 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF679A2045A6AD00803C08 /* TimerViewController.swift */; };
+		70BF67E42045A6AE00803C08 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF679B2045A6AD00803C08 /* TimerViewModel.swift */; };
 		70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67AF2045A6AD00803C08 /* Assets.xcassets */; };
 		70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B12045A6AD00803C08 /* Localizable.strings */; };
 		70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */; };
+		74E1AA3E21B005F90057C271 /* RxSwift+Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */; };
+		74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3721B005F80057C271 /* ObservableType+Call.swift */; };
+		74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */; };
+		74E1AA4221B005F90057C271 /* RxSwift+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3A21B005F90057C271 /* RxSwift+Unwrap.swift */; };
+		74E1AA4321B005F90057C271 /* NSObject+DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3B21B005F90057C271 /* NSObject+DisposeBag.swift */; };
+		74E1AA4421B005F90057C271 /* RxBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3C21B005F90057C271 /* RxBinding.swift */; };
 		80E1B8F0D806C5AFD26D3934 /* Pods_Shared_BrainFlowTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCC77B6EB967729E8B96ACF /* Pods_Shared_BrainFlowTimer.framework */; };
 		E858DD4C20247D4600A7867A /* Resolver+Autoresolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = E879B2562022368C009FEC51 /* Resolver+Autoresolve.swift */; };
 		E858DD4D20247D4600A7867A /* Container+Autoregistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E879B258202245B9009FEC51 /* Container+Autoregistration.swift */; };
@@ -130,12 +136,18 @@
 		70BF677E2045A6AD00803C08 /* ApplicationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationFlowCoordinator.swift; sourceTree = "<group>"; };
 		70BF67962045A6AD00803C08 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		70BF67972045A6AD00803C08 /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
-		70BF67992045A6AD00803C08 /* MainMenuModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
-		70BF679A2045A6AD00803C08 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
-		70BF679B2045A6AD00803C08 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		70BF67992045A6AD00803C08 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		70BF679A2045A6AD00803C08 /* TimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		70BF679B2045A6AD00803C08 /* TimerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		70BF67AF2045A6AD00803C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BF67B12045A6AD00803C08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+Scan.swift"; sourceTree = "<group>"; };
+		74E1AA3721B005F80057C271 /* ObservableType+Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Call.swift"; sourceTree = "<group>"; };
+		74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+HandyFunctions.swift"; sourceTree = "<group>"; };
+		74E1AA3A21B005F90057C271 /* RxSwift+Unwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+Unwrap.swift"; sourceTree = "<group>"; };
+		74E1AA3B21B005F90057C271 /* NSObject+DisposeBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+DisposeBag.swift"; sourceTree = "<group>"; };
+		74E1AA3C21B005F90057C271 /* RxBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxBinding.swift; sourceTree = "<group>"; };
 		8375904631231FC210C017B6 /* Pods-Shared-ArchitectureGuideTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-ArchitectureGuideTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-ArchitectureGuideTemplate/Pods-Shared-ArchitectureGuideTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		88B15A8F16B8CF9080D25328 /* Pods-Shared-MVVMTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-MVVMTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-MVVMTemplate/Pods-Shared-MVVMTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		9691CA666D30DE631B9FB729 /* Pods-Shared-Core.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shared-Core.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shared-Core/Pods-Shared-Core.release.xcconfig"; sourceTree = "<group>"; };
@@ -283,6 +295,7 @@
 		70BF67642045A6AD00803C08 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				74E1AA3521B005720057C271 /* Rx */,
 				70BF67652045A6AD00803C08 /* Reusable */,
 				70BF67692045A6AD00803C08 /* SwiftGen */,
 				70BF676D2045A6AD00803C08 /* Swinject */,
@@ -377,9 +390,9 @@
 		70BF67982045A6AD00803C08 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				70BF67992045A6AD00803C08 /* MainMenuModel.swift */,
-				70BF679A2045A6AD00803C08 /* MainMenuViewController.swift */,
-				70BF679B2045A6AD00803C08 /* MainMenuViewModel.swift */,
+				70BF679A2045A6AD00803C08 /* TimerViewController.swift */,
+				70BF679B2045A6AD00803C08 /* TimerViewModel.swift */,
+				70BF67992045A6AD00803C08 /* TimerModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -407,6 +420,19 @@
 			children = (
 			);
 			path = UserSession;
+			sourceTree = "<group>";
+		};
+		74E1AA3521B005720057C271 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				74E1AA3B21B005F90057C271 /* NSObject+DisposeBag.swift */,
+				74E1AA3721B005F80057C271 /* ObservableType+Call.swift */,
+				74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */,
+				74E1AA3C21B005F90057C271 /* RxBinding.swift */,
+				74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */,
+				74E1AA3A21B005F90057C271 /* RxSwift+Unwrap.swift */,
+			);
+			path = Rx;
 			sourceTree = "<group>";
 		};
 		C52110211DAB85BC006CEBCE = {
@@ -757,27 +783,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E1AA4221B005F90057C271 /* RxSwift+Unwrap.swift in Sources */,
 				70BF67C02045A6AD00803C08 /* UICollectionView+Reusable.swift in Sources */,
 				70BF67C32045A6AD00803C08 /* Localization+SwiftGen.swift in Sources */,
+				74E1AA4421B005F90057C271 /* RxBinding.swift in Sources */,
 				70BF67CB2045A6AD00803C08 /* EventNode.swift in Sources */,
 				70BF67BF2045A6AD00803C08 /* Reusable.swift in Sources */,
 				70BF67C92045A6AD00803C08 /* UIViewController+DisposeBag.swift in Sources */,
+				74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */,
 				70BF67CF2045A6AD00803C08 /* ApplicationFlowCoordinator.swift in Sources */,
 				70BF67B62045A6AD00803C08 /* MainFlowAssembly.swift in Sources */,
 				70BF67BD2045A6AD00803C08 /* SpinnerPresentable.swift in Sources */,
 				70BF67E12045A6AE00803C08 /* MainFlowCoordinator.swift in Sources */,
 				70BF67CA2045A6AD00803C08 /* UIViewController+RxLyfecycle.swift in Sources */,
 				70BF67BC2045A6AD00803C08 /* Spinner.swift in Sources */,
-				70BF67E42045A6AE00803C08 /* MainMenuViewModel.swift in Sources */,
+				70BF67E42045A6AE00803C08 /* TimerViewModel.swift in Sources */,
 				70BF67C12045A6AD00803C08 /* UITableView+Reusable.swift in Sources */,
 				70BF67C42045A6AD00803C08 /* Storyboards+SwiftGen.swift in Sources */,
+				74E1AA3E21B005F90057C271 /* RxSwift+Scan.swift in Sources */,
 				70BF67C22045A6AD00803C08 /* Images+SwiftGen.swift in Sources */,
 				70BF67B82045A6AD00803C08 /* AlertPresentable.swift in Sources */,
-				70BF67E32045A6AE00803C08 /* MainMenuViewController.swift in Sources */,
+				70BF67E32045A6AE00803C08 /* TimerViewController.swift in Sources */,
+				74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */,
 				70BF67B92045A6AD00803C08 /* ApplicationAlert.swift in Sources */,
 				70BF67C72045A6AD00803C08 /* UIImageView+Kingfisher.swift in Sources */,
-				70BF67E22045A6AE00803C08 /* MainMenuModel.swift in Sources */,
+				70BF67E22045A6AE00803C08 /* TimerModel.swift in Sources */,
 				70BF67CD2045A6AD00803C08 /* ModuleInput.swift in Sources */,
+				74E1AA4321B005F90057C271 /* NSObject+DisposeBag.swift in Sources */,
 				70BF67CC2045A6AD00803C08 /* FlowCoordinator.swift in Sources */,
 				70BF67B72045A6AD00803C08 /* Alert.swift in Sources */,
 				70BF67C82045A6AD00803C08 /* UITableView+Rx.swift in Sources */,

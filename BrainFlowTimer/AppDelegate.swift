@@ -20,12 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        applicationFlowCoordinator = ApplicationFlowCoordinator(
-            window: window!
-        )
+        applicationFlowCoordinator = ApplicationFlowCoordinator(window: window!)
         applicationFlowCoordinator.execute()
         
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        applicationFlowCoordinator.applicationDidEnterBackground(application)
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        applicationFlowCoordinator.applicationWillEnterForeground(application)
     }
     
 }

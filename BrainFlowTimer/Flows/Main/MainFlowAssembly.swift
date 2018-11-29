@@ -9,10 +9,10 @@ final class MainFlowAssembly: Assembly {
     }
     
     private func assembleUI(in container: Container) {
-        container.register(MainMenuViewController.self) { (_, parent: EventNode) in
+        container.register(TimerViewController.self) { (_, parent: EventNode) in
             let controller = StoryboardScene.Main.instantiateMainMenuViewController()
-            let model = MainMenuModel(parent: parent)
-            controller.viewModel = MainMenuViewModel(model: model)
+            let model = TimerModel(parent: parent)
+            controller.viewModel = TimerViewModel(model: model)
             return controller
         }
     }
