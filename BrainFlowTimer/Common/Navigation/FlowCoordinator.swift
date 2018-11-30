@@ -16,7 +16,23 @@ protocol FlowCoordinator: class {
 extension FlowCoordinator {
     
     var navigationController: UINavigationController? {
-        return containerViewController as? UINavigationController
+        if let navigationController = containerViewController as? UINavigationController {
+            return navigationController
+        } else {
+            return containerViewController?.navigationController
+        }
+    }
+    
+}
+
+extension FlowCoordinator {
+    
+    func push(viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func popToRoot() {
+        navigationController?.popToRootViewController(animated: true)
     }
     
 }

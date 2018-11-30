@@ -14,6 +14,7 @@ final class TimerModel: EventNode, HasDisposeBag {
     var chosenTimeInterval: Int
     var currentSecond = BehaviorRelay<Int>(value: 0)
     
+    let settingsAction = PublishSubject<Void>()
     let startCountdownAction = PublishSubject<Void>()
     let pauseCountdownAction = PublishSubject<Void>()
     let stopCountdownAction = PublishSubject<Void>()
@@ -34,18 +35,21 @@ final class TimerModel: EventNode, HasDisposeBag {
     
     private func initializeBindings() {
         
+        settingsAction
+            .doOnNext { [unowned self] _ in
+                self.raise(event: MainFlowEvent.openSettings)
+            }.disposed(by: disposeBag)
+        
         startCountdownAction
             .doOnNext { [unowned self] _ in
                 self.scheduleTimer()
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
         pauseCountdownAction
             .doOnNext { [unowned self] _ in
                 self.timer.invalidate()
                 self.isTimerWorking = false
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
         stopCountdownAction
             .doOnNext { [unowned self] _ in
@@ -53,8 +57,7 @@ final class TimerModel: EventNode, HasDisposeBag {
                 self.timer.invalidate()
                 self.isTimerWorking = false
                 self.currentSecond.accept(self.chosenTimeInterval)
-            }
-            .disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
     }
     
     // MARK: - private
@@ -68,7 +71,7 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func willEnterForeground() {
         if let savedDate = UserDataService.object(for: .savedTime) as? Date {
             let components = Calendar.current.dateComponents([.second], from: savedDate, to: Date())
-            self.currentSecond.accept(self.currentSecond.value + components.second!)
+            self.currentSecond.accept(self.currentSecond.value - components.second!)
             scheduleTimer()
         }
     }

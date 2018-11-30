@@ -54,14 +54,8 @@ final class ApplicationFlowCoordinator: EventNode {
     // MARK: Helpers
     
     private func setWindowRootViewController(with viewController: UIViewController) {
-        window.rootViewController = viewController
+        window.rootViewController = UINavigationController(rootViewController: viewController)
         window.makeKeyAndVisible()
-    }
-    
-    private func handle(_ event: MainFlowEvent) {
-        switch event {
-            
-        }
     }
     
 }

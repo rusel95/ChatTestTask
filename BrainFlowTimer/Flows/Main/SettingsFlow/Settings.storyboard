@@ -18,30 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t8J-A4-5Cd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="2O0-kg-UZV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d0v-Bs-PDi">
-                                <rect key="frame" x="0.0" y="20" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eoy-g4-vGg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <date key="date" timeIntervalSinceReferenceDate="565198139.02624094">
                                             <!--2018-11-29 15:28:59 +0000-->
                                         </date>
                                     </datePicker>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Eoy-g4-vGg" firstAttribute="height" secondItem="d0v-Bs-PDi" secondAttribute="height" multiplier="1/3" constant="135" id="Wdk-Dr-8ws"/>
-                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d0v-Bs-PDi" firstAttribute="top" secondItem="Ivy-6R-Syh" secondAttribute="top" id="5hT-Sg-eDs"/>
+                            <constraint firstItem="Ivy-6R-Syh" firstAttribute="trailing" secondItem="t8J-A4-5Cd" secondAttribute="trailing" id="CgX-MW-XJN"/>
                             <constraint firstItem="d0v-Bs-PDi" firstAttribute="leading" secondItem="Ivy-6R-Syh" secondAttribute="leading" id="Epj-9D-lMb"/>
                             <constraint firstItem="Ivy-6R-Syh" firstAttribute="trailing" secondItem="d0v-Bs-PDi" secondAttribute="trailing" id="PRz-TO-U55"/>
+                            <constraint firstItem="t8J-A4-5Cd" firstAttribute="top" secondItem="dIW-pD-CcG" secondAttribute="top" id="XH1-ZA-n0q"/>
+                            <constraint firstItem="Ivy-6R-Syh" firstAttribute="bottom" secondItem="t8J-A4-5Cd" secondAttribute="bottom" id="h6F-pg-yGu"/>
                             <constraint firstItem="Ivy-6R-Syh" firstAttribute="bottom" secondItem="d0v-Bs-PDi" secondAttribute="bottom" id="mJd-yL-l0a"/>
+                            <constraint firstItem="t8J-A4-5Cd" firstAttribute="leading" secondItem="Ivy-6R-Syh" secondAttribute="leading" id="wPI-9V-ab0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ivy-6R-Syh"/>
                     </view>
+                    <connections>
+                        <outlet property="datePickerView" destination="Eoy-g4-vGg" id="Qfi-cc-JEJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOT-hg-AKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

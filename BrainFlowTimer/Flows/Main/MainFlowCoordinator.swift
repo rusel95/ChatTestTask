@@ -9,7 +9,7 @@ import Core
 import Swinject
 
 enum MainFlowEvent: Event {
-    
+     case openSettings
 }
 
 final class MainFlowCoordinator: EventNode, FlowCoordinator {
@@ -22,20 +22,29 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
         self.container = Container(parent: container) {
             MainFlowAssembly().assemble(container: $0)
         }
-        
         super.init(parent: parent)
+        
+        addHandlers()
     }
     
     func createFlow() -> UIViewController {
         let controller: TimerViewController = container.autoresolve(argument: self)
-        addHandlers()
+        
         return controller
     }
     
     private func addHandlers() {
-//        addHandler { [weak self] (event: MainMenuEvent) in
-//            self?.handle(event)
-//        }
+        addHandler { [weak self] (event: MainFlowEvent) in
+            switch event {
+            case .openSettings:
+                self?.openSettings()
+            }
+        }
+    }
+    
+    private func openSettings() {
+        let settingsController: SettingsViewController = container.autoresolve(argument: self)
+        navigationController?.pushViewController(settingsController, animated: true)
     }
     
 }

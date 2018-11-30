@@ -13,10 +13,10 @@ final class TimerViewController: UIViewController {
     var viewModel: TimerViewModel!
     
     @IBOutlet private var timeLabel: UILabel!
+    @IBOutlet private weak var settingsButton: UIButton!
     @IBOutlet private weak var startButton: UIButton!
     @IBOutlet private weak var pauseButton: UIButton!
     @IBOutlet private weak var resetButton: UIButton!
-    @IBOutlet private weak var datePickerView: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,10 @@ final class TimerViewController: UIViewController {
             .doOnNext { [weak self] (text) in
                 self?.timeLabel.text = text
             }.disposed(by: disposeBag)
+        
+        settingsButton.rx.tap
+            .bind(to: viewModel.settingsButtonTapped)
+            .disposed(by: disposeBag)
         
         startButton.rx.tap
             .bind(to: viewModel.startButtonTapped)
