@@ -11,6 +11,7 @@ abstract_target 'Shared' do
     # FRP
     pod 'RxCocoa', '~> 4.4.0'
     pod 'RxSwift', '~> 4.4.0'
+    pod 'RxRealm', '~> 0.7.6'
     pod 'NSObject+Rx', '~> 4.4.1'
 
     target 'Core' do

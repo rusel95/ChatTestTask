@@ -8,9 +8,9 @@
 
 enum Constants {
     
-    static let defaultTickTimeInterval = 1 /// seconds
-    static let defaultCountdownInterval = 1500 /// seconds
-    static let numberOfSecondsInHour = 3600 /// seconds
-    static let numberOfSecondsInMinute = 60 /// seconds
+    static let defaultTickTimeInterval: Int16 = 1 /// seconds
+    static let defaultWorkDuration: Int16 = 1500 /// seconds
+    static let numberOfSecondsInHour: Int16 = 3600 /// seconds
+    static let numberOfSecondsInMinute: Int16 = 60 /// seconds
     
 }

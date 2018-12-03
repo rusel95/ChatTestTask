@@ -13,7 +13,6 @@ import RxCocoa
 public enum UserDataServiceKey: String {
     
     case savedTime
-    case chosenTimeInterval
     
 }
 

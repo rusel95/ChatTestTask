@@ -11,8 +11,8 @@ import RxSwift
 
 final class SettingsViewModel: HasDisposeBag {
     
-    var countdownTimePicked: PublishSubject<Date> {
-        return model.countDownDateAction
+    var workDurationChanged: PublishSubject<String?> {
+        return model.workDurationChangedAction
     }
     
     private let model: SettingsModel

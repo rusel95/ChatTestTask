@@ -14,7 +14,11 @@ final class SettingsViewController: UIViewController {
     
     var viewModel: SettingsViewModel!
     
-    @IBOutlet private weak var datePickerView: UIDatePicker!
+    @IBOutlet private weak var workDurationTextField: UITextField!
+    @IBOutlet private weak var breakDurationTextField: UITextField!
+    @IBOutlet private weak var longBreakDurationTextField: UITextField!
+    @IBOutlet private weak var dailyGoalTextField: UITextField!
+    @IBOutlet private weak var sessionsUntilLongBreakTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +27,8 @@ final class SettingsViewController: UIViewController {
     }
     
     private func initializeBindings() {        
-        datePickerView.rx.date
-            .bind(to: viewModel.countdownTimePicked)
+        workDurationTextField.rx.text
+            .bind(to: viewModel.workDurationChanged)
             .disposed(by: disposeBag)
     }
     

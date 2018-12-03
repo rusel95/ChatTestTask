@@ -13,7 +13,7 @@ import RxCocoa
 
 final class SettingsModel: EventNode, HasDisposeBag {
     
-    let countDownDateAction = PublishSubject<Date>()
+    let workDurationChangedAction = PublishSubject<String?>()
     
     override init(parent: EventNode) {
         super.init(parent: parent)
@@ -23,13 +23,17 @@ final class SettingsModel: EventNode, HasDisposeBag {
     
     private func initializeBindings() {
         
-        countDownDateAction
-            .doOnNext { date in
-                let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-                let chosenTimeInterval = components.hour! * 3600 + components.minute! * 60
-                UserDataService.set(chosenTimeInterval, for: .chosenTimeInterval)
-            }
-            .disposed(by: disposeBag)
+        workDurationChangedAction
+            .doOnNext { newWorkDurationText in
+                if let durations = RealmService.shared.realm.objects(Durations.self).first,
+                    let newWorkDurationText = newWorkDurationText,
+                    let workDuration = Int16(newWorkDurationText) {
+                    try? RealmService.shared.realm.write {
+                        durations.workSession = workDuration
+                        RealmService.shared.realm.add(durations, update: true)
+                    }
+                }
+            }.disposed(by: disposeBag)
     }
     
     // MARK: - private

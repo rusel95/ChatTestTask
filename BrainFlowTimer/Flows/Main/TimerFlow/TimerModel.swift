@@ -8,11 +8,13 @@ import Foundation
 import Core
 import RxSwift
 import RxCocoa
+import RxRealm
 
 final class TimerModel: EventNode, HasDisposeBag {
     
-    var chosenTimeInterval: Int
-    var currentSecond = BehaviorRelay<Int>(value: 0)
+    var durations: Durations?
+    var currentSecond = BehaviorRelay<Int16>(value: 0)
+    var currentTimeInterval: Int16 = 0 /// can be work and rest
     
     let settingsAction = PublishSubject<Void>()
     let startCountdownAction = PublishSubject<Void>()
@@ -23,13 +25,10 @@ final class TimerModel: EventNode, HasDisposeBag {
     private var isTimerWorking = false
     
     override init(parent: EventNode) {
-        chosenTimeInterval = UserDataService
-            .object(for: .chosenTimeInterval) as? Int ?? Constants.defaultCountdownInterval
-        currentSecond.accept(chosenTimeInterval)
-        
         super.init(parent: parent)
         
         addHandlers()
+        subscribeOnSettingsChanges()
         initializeBindings()
     }
     
@@ -56,7 +55,7 @@ final class TimerModel: EventNode, HasDisposeBag {
                 UserDataService.removeObject(for: .savedTime)
                 self.timer.invalidate()
                 self.isTimerWorking = false
-                self.currentSecond.accept(self.chosenTimeInterval)
+                self.currentSecond.accept(self.currentTimeInterval)
             }.disposed(by: disposeBag)
     }
     
@@ -71,7 +70,7 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func willEnterForeground() {
         if let savedDate = UserDataService.object(for: .savedTime) as? Date {
             let components = Calendar.current.dateComponents([.second], from: savedDate, to: Date())
-            self.currentSecond.accept(self.currentSecond.value - components.second!)
+            self.currentSecond.accept(self.currentSecond.value - Int16(components.second!))
             scheduleTimer()
         }
     }
@@ -101,11 +100,15 @@ final class TimerModel: EventNode, HasDisposeBag {
     }
     
     private func subscribeOnSettingsChanges() {
-        UserDataService.observe(Int.self, .chosenTimeInterval)
-            .doOnNext { [weak self] (newTimeInterval) in
-                if let self = self, let newTimeInterval = newTimeInterval {
-                    self.chosenTimeInterval = newTimeInterval
-                }
-            }.disposed(by: disposeBag)
+        if let durations = RealmService.shared.realm.objects(Durations.self).first {
+            Observable.propertyChanges(object: durations)
+                .take(1)
+                .doOnNext { [unowned self] changes in
+                    if let newDurations = changes.newValue as? Durations {
+                        self.durations = newDurations
+                        self.currentSecond.accept(newDurations.workSession)
+                    }
+                }.disposed(by: disposeBag)
+        }
     }
 }

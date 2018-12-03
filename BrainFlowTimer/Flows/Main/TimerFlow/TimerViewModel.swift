@@ -28,9 +28,9 @@ final class TimerViewModel: HasDisposeBag {
     var timerText: Observable<String> {
         return model.currentSecond
             .map({ (currentSecond) -> String in
-                let hours = Int(currentSecond / Constants.numberOfSecondsInHour)
-                let minutes = Int((currentSecond - (Constants.numberOfSecondsInHour * hours)) /
-                    Constants.numberOfSecondsInMinute)
+                let hours = currentSecond / Constants.numberOfSecondsInHour
+                let minutes = (currentSecond - (Constants.numberOfSecondsInHour * hours)) /
+                    Constants.numberOfSecondsInMinute
                 let secondsToShow = currentSecond % Constants.numberOfSecondsInMinute
                 return String(format: "%02d : %02d : %02d", hours, minutes, secondsToShow)
             })
