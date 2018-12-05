@@ -12,9 +12,12 @@ import RxRealm
 
 final class TimerModel: EventNode, HasDisposeBag {
     
-    var durations: Durations?
+    var durations: Durations? {
+        didSet {
+            self.currentSecond.accept(durations?.work ?? 0)
+        }
+    }
     var currentSecond = BehaviorRelay<Int16>(value: 0)
-    var currentTimeInterval: Int16 = 0 /// can be work and rest
     
     let settingsAction = PublishSubject<Void>()
     let startCountdownAction = PublishSubject<Void>()
@@ -33,6 +36,8 @@ final class TimerModel: EventNode, HasDisposeBag {
     }
     
     private func initializeBindings() {
+        
+        self.durations = RealmService.shared.realm.objects(Durations.self).first
         
         settingsAction
             .doOnNext { [unowned self] _ in
@@ -55,7 +60,7 @@ final class TimerModel: EventNode, HasDisposeBag {
                 UserDataService.removeObject(for: .savedTime)
                 self.timer.invalidate()
                 self.isTimerWorking = false
-                self.currentSecond.accept(self.currentTimeInterval)
+                self.currentSecond.accept(self.durations?.work ?? 0)
             }.disposed(by: disposeBag)
     }
     
@@ -102,11 +107,10 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func subscribeOnSettingsChanges() {
         if let durations = RealmService.shared.realm.objects(Durations.self).first {
             Observable.propertyChanges(object: durations)
-                .take(1)
                 .doOnNext { [unowned self] changes in
                     if let newDurations = changes.newValue as? Durations {
                         self.durations = newDurations
-                        self.currentSecond.accept(newDurations.workSession)
+                        self.currentSecond.accept(newDurations.work)
                     }
                 }.disposed(by: disposeBag)
         }

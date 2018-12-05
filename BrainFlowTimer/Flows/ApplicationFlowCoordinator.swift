@@ -31,6 +31,7 @@ final class ApplicationFlowCoordinator: EventNode {
     }
     
     func execute() {
+        setDatabaseWithDefaultDataIfNeeded()
         presentMainModule()
     }
     
@@ -56,6 +57,16 @@ final class ApplicationFlowCoordinator: EventNode {
     private func setWindowRootViewController(with viewController: UIViewController) {
         window.rootViewController = UINavigationController(rootViewController: viewController)
         window.makeKeyAndVisible()
+    }
+    
+    public func setDatabaseWithDefaultDataIfNeeded() {
+        if !UserDataService.bool(for: UserDataServiceKey.isFirstStart) {
+            UserDataService.set(true, for: UserDataServiceKey.isFirstStart)
+            let realm = RealmService.shared.realm
+            try? realm.write {
+                realm.add(Durations())
+            }
+        }
     }
     
 }

@@ -25,4 +25,5 @@ public final class RealmService {
     }
     
     fileprivate init() {}
+
 }

@@ -29,7 +29,7 @@ final class SettingsModel: EventNode, HasDisposeBag {
                     let newWorkDurationText = newWorkDurationText,
                     let workDuration = Int16(newWorkDurationText) {
                     try? RealmService.shared.realm.write {
-                        durations.workSession = workDuration
+                        durations.work = workDuration
                         RealmService.shared.realm.add(durations, update: true)
                     }
                 }

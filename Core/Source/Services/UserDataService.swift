@@ -12,6 +12,7 @@ import RxCocoa
 
 public enum UserDataServiceKey: String {
     
+    case isFirstStart
     case savedTime
     
 }
