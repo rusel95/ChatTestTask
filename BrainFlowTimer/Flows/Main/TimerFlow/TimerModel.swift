@@ -89,6 +89,9 @@ final class TimerModel: EventNode, HasDisposeBag {
                 block: { [weak self] (_) in
                     guard let self = self else { return }
                     self.currentSecond.accept(self.currentSecond.value - Constants.defaultTickTimeInterval)
+                    if self.currentSecond.value == 0 {
+                        self.pauseCountdownAction.onNext(())
+                    }
             })
         }
     }
@@ -108,9 +111,8 @@ final class TimerModel: EventNode, HasDisposeBag {
         if let durations = RealmService.shared.realm.objects(Durations.self).first {
             Observable.propertyChanges(object: durations)
                 .doOnNext { [unowned self] changes in
-                    if let newDurations = changes.newValue as? Durations {
-                        self.durations = newDurations
-                        self.currentSecond.accept(newDurations.work)
+                    if changes.name == "work", let newWorkDuration = changes.newValue as? Int16 {
+                        self.currentSecond.accept(newWorkDuration)
                     }
                 }.disposed(by: disposeBag)
         }

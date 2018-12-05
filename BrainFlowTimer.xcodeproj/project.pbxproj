@@ -41,6 +41,7 @@
 		70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67AF2045A6AD00803C08 /* Assets.xcassets */; };
 		70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B12045A6AD00803C08 /* Localizable.strings */; };
 		70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */; };
+		741A9C3C21B7C18E00C0A2B1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741A9C3B21B7C18E00C0A2B1 /* Day.swift */; };
 		743A954D21B1877D006F7A4D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A954C21B1877D006F7A4D /* Settings.swift */; };
 		743A954F21B1889F006F7A4D /* Durations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A954E21B1889F006F7A4D /* Durations.swift */; };
 		743A955121B18B30006F7A4D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A955021B18B30006F7A4D /* RealmService.swift */; };
@@ -149,6 +150,7 @@
 		70BF67AF2045A6AD00803C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BF67B12045A6AD00803C08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		741A9C3B21B7C18E00C0A2B1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		743A954C21B1877D006F7A4D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		743A954E21B1889F006F7A4D /* Durations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Durations.swift; sourceTree = "<group>"; };
 		743A955021B18B30006F7A4D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
@@ -509,6 +511,7 @@
 		C5525E3A1DABC0E70016156E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				741A9C3B21B7C18E00C0A2B1 /* Day.swift */,
 				743A954E21B1889F006F7A4D /* Durations.swift */,
 				743A954C21B1877D006F7A4D /* Settings.swift */,
 			);
@@ -878,6 +881,7 @@
 			files = (
 				E8CBE42B20222BFD00186010 /* Constants.swift in Sources */,
 				74E1AA4721B0214A0057C271 /* UserDataService.swift in Sources */,
+				741A9C3C21B7C18E00C0A2B1 /* Day.swift in Sources */,
 				743A955121B18B30006F7A4D /* RealmService.swift in Sources */,
 				E858DD4C20247D4600A7867A /* Resolver+Autoresolve.swift in Sources */,
 				743A954F21B1889F006F7A4D /* Durations.swift in Sources */,

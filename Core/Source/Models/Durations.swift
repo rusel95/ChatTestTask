@@ -10,7 +10,6 @@ import Foundation
 import Realm
 import RealmSwift
 
-//in seconds
 public class Durations: Object, Decodable {
     
     @objc public dynamic var id: Int = -1
