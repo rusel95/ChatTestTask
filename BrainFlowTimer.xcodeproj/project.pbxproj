@@ -42,6 +42,12 @@
 		70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B12045A6AD00803C08 /* Localizable.strings */; };
 		70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */; };
 		741A9C3C21B7C18E00C0A2B1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741A9C3B21B7C18E00C0A2B1 /* Day.swift */; };
+		7426386021BA538A0063E6E8 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426385F21BA538A0063E6E8 /* SoundService.swift */; };
+		7426386921BA59B90063E6E8 /* startCountdown1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386221BA59B90063E6E8 /* startCountdown1.wav */; };
+		7426386C21BA59B90063E6E8 /* finish1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386521BA59B90063E6E8 /* finish1.wav */; };
+		7426386D21BA59B90063E6E8 /* clockTick1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386621BA59B90063E6E8 /* clockTick1.wav */; };
+		7426386E21BA59B90063E6E8 /* clockTick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386721BA59B90063E6E8 /* clockTick2.wav */; };
+		7426386F21BA59B90063E6E8 /* clockcTick3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386821BA59B90063E6E8 /* clockcTick3.wav */; };
 		743A954D21B1877D006F7A4D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A954C21B1877D006F7A4D /* Settings.swift */; };
 		743A954F21B1889F006F7A4D /* Durations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A954E21B1889F006F7A4D /* Durations.swift */; };
 		743A955121B18B30006F7A4D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A955021B18B30006F7A4D /* RealmService.swift */; };
@@ -151,6 +157,12 @@
 		70BF67B12045A6AD00803C08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		741A9C3B21B7C18E00C0A2B1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		7426385F21BA538A0063E6E8 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		7426386221BA59B90063E6E8 /* startCountdown1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = startCountdown1.wav; sourceTree = "<group>"; };
+		7426386521BA59B90063E6E8 /* finish1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = finish1.wav; sourceTree = "<group>"; };
+		7426386621BA59B90063E6E8 /* clockTick1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clockTick1.wav; sourceTree = "<group>"; };
+		7426386721BA59B90063E6E8 /* clockTick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clockTick2.wav; sourceTree = "<group>"; };
+		7426386821BA59B90063E6E8 /* clockcTick3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clockcTick3.wav; sourceTree = "<group>"; };
 		743A954C21B1877D006F7A4D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		743A954E21B1889F006F7A4D /* Durations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Durations.swift; sourceTree = "<group>"; };
 		743A955021B18B30006F7A4D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
@@ -272,6 +284,7 @@
 		70BF67562045A6AD00803C08 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				7426385E21BA536D0063E6E8 /* Services */,
 				70BF675A2045A6AD00803C08 /* Controls */,
 				70BF67642045A6AD00803C08 /* Extensions */,
 				70BF67762045A6AD00803C08 /* Navigation */,
@@ -414,6 +427,7 @@
 		70BF67AE2045A6AD00803C08 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7426386121BA598F0063E6E8 /* Sounds */,
 				70BF67AF2045A6AD00803C08 /* Assets.xcassets */,
 				70BF67B12045A6AD00803C08 /* Localizable.strings */,
 				70BF67B22045A6AD00803C08 /* Storyboards */,
@@ -427,6 +441,26 @@
 				70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		7426385E21BA536D0063E6E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7426385F21BA538A0063E6E8 /* SoundService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7426386121BA598F0063E6E8 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7426386221BA59B90063E6E8 /* startCountdown1.wav */,
+				7426386621BA59B90063E6E8 /* clockTick1.wav */,
+				7426386721BA59B90063E6E8 /* clockTick2.wav */,
+				7426386821BA59B90063E6E8 /* clockcTick3.wav */,
+				7426386521BA59B90063E6E8 /* finish1.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		74AD592B21B07340002FF176 /* Auth */ = {
@@ -693,12 +727,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7426386921BA59B90063E6E8 /* startCountdown1.wav in Resources */,
+				7426386F21BA59B90063E6E8 /* clockcTick3.wav in Resources */,
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
 				70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */,
 				70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */,
+				7426386E21BA59B90063E6E8 /* clockTick2.wav in Resources */,
+				7426386C21BA59B90063E6E8 /* finish1.wav in Resources */,
 				74D55D6121B04BCC00906D4E /* Settings.storyboard in Resources */,
 				505FCBEC2052E68E006CF982 /* Notes.txt in Resources */,
 				70BF67E02045A6AE00803C08 /* Timer.storyboard in Resources */,
+				7426386D21BA59B90063E6E8 /* clockTick1.wav in Resources */,
 				74AD592D21B0735D002FF176 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,6 +903,7 @@
 				70BF67CD2045A6AD00803C08 /* ModuleInput.swift in Sources */,
 				74E1AA4321B005F90057C271 /* NSObject+DisposeBag.swift in Sources */,
 				70BF67CC2045A6AD00803C08 /* FlowCoordinator.swift in Sources */,
+				7426386021BA538A0063E6E8 /* SoundService.swift in Sources */,
 				70BF67B72045A6AD00803C08 /* Alert.swift in Sources */,
 				70BF67C82045A6AD00803C08 /* UITableView+Rx.swift in Sources */,
 				70BF67B42045A6AD00803C08 /* AppDelegate.swift in Sources */,

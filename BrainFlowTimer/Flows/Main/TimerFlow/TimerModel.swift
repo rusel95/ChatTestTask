@@ -83,13 +83,16 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func scheduleTimer() {
         if !isTimerWorking {
             isTimerWorking = true
+            SoundService.shared.playSound(SoundType.startCountdown1, withVibration: true)
             timer = Timer.scheduledTimer(
                 withTimeInterval: TimeInterval(Constants.defaultTickTimeInterval),
                 repeats: true,
                 block: { [weak self] (_) in
                     guard let self = self else { return }
                     self.currentSecond.accept(self.currentSecond.value - Constants.defaultTickTimeInterval)
+                    SoundService.shared.playSound(SoundType.clockTick1)
                     if self.currentSecond.value == 0 {
+                        SoundService.shared.playSound(SoundType.finish1, withVibration: true)
                         self.pauseCountdownAction.onNext(())
                     }
             })
