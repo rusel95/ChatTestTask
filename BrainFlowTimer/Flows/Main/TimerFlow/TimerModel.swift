@@ -75,7 +75,8 @@ final class TimerModel: EventNode, HasDisposeBag {
     private func willEnterForeground() {
         if let savedDate = UserDataService.object(for: .savedTime) as? Date {
             let components = Calendar.current.dateComponents([.second], from: savedDate, to: Date())
-            self.currentSecond.accept(self.currentSecond.value - Int16(components.second!))
+            let expectedSecond = self.currentSecond.value - Int16(components.second!)
+            self.currentSecond.accept(expectedSecond > 0 ? expectedSecond : 0)
             scheduleTimer()
         }
     }
@@ -84,6 +85,7 @@ final class TimerModel: EventNode, HasDisposeBag {
         if !isTimerWorking {
             isTimerWorking = true
             SoundService.shared.playSound(SoundType.startCountdown1, withVibration: true)
+            NotificationsService.shared.scheduleLocalNotification(.workIntervalFinished, in: UInt16(self.durations?.work ?? 10))
             timer = Timer.scheduledTimer(
                 withTimeInterval: TimeInterval(Constants.defaultTickTimeInterval),
                 repeats: true,

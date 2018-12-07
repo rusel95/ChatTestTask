@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        NotificationsService.shared.didFinishLaunching(application: application, launchOptions: launchOptions)
         applicationFlowCoordinator = ApplicationFlowCoordinator(window: window!)
         applicationFlowCoordinator.execute()
         

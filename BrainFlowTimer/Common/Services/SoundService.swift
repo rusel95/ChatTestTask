@@ -20,9 +20,13 @@ enum SoundType: String {
     
 }
 
-final class SoundService {
+final class SoundService: NSObject {
     
     static let shared = SoundService()
+    
+    private override init() {
+        super.init()
+    }
     
     func playSound(_ alertType: SoundType, withVibration: Bool = false) {
         if let filePath = Bundle.main.path(forResource: alertType.rawValue, ofType: "wav") {

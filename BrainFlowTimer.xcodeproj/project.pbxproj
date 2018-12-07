@@ -48,6 +48,7 @@
 		7426386D21BA59B90063E6E8 /* clockTick1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386621BA59B90063E6E8 /* clockTick1.wav */; };
 		7426386E21BA59B90063E6E8 /* clockTick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386721BA59B90063E6E8 /* clockTick2.wav */; };
 		7426386F21BA59B90063E6E8 /* clockcTick3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7426386821BA59B90063E6E8 /* clockcTick3.wav */; };
+		7426387121BA5EC00063E6E8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426387021BA5EC00063E6E8 /* NotificationsService.swift */; };
 		743A954D21B1877D006F7A4D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A954C21B1877D006F7A4D /* Settings.swift */; };
 		743A954F21B1889F006F7A4D /* Durations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A954E21B1889F006F7A4D /* Durations.swift */; };
 		743A955121B18B30006F7A4D /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743A955021B18B30006F7A4D /* RealmService.swift */; };
@@ -163,6 +164,7 @@
 		7426386621BA59B90063E6E8 /* clockTick1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clockTick1.wav; sourceTree = "<group>"; };
 		7426386721BA59B90063E6E8 /* clockTick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clockTick2.wav; sourceTree = "<group>"; };
 		7426386821BA59B90063E6E8 /* clockcTick3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clockcTick3.wav; sourceTree = "<group>"; };
+		7426387021BA5EC00063E6E8 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
 		743A954C21B1877D006F7A4D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		743A954E21B1889F006F7A4D /* Durations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Durations.swift; sourceTree = "<group>"; };
 		743A955021B18B30006F7A4D /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 			isa = PBXGroup;
 			children = (
 				7426385F21BA538A0063E6E8 /* SoundService.swift */,
+				7426387021BA5EC00063E6E8 /* NotificationsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				74E1AA4221B005F90057C271 /* RxSwift+Unwrap.swift in Sources */,
 				70BF67C02045A6AD00803C08 /* UICollectionView+Reusable.swift in Sources */,
 				70BF67C32045A6AD00803C08 /* Localization+SwiftGen.swift in Sources */,
+				7426387121BA5EC00063E6E8 /* NotificationsService.swift in Sources */,
 				74E1AA4421B005F90057C271 /* RxBinding.swift in Sources */,
 				74AD592F21B0739A002FF176 /* LoginViewController.swift in Sources */,
 				70BF67CB2045A6AD00803C08 /* EventNode.swift in Sources */,
