@@ -83,9 +83,11 @@ final class TimerModel: EventNode, HasDisposeBag {
     
     private func scheduleTimer() {
         if !isTimerWorking {
+            guard let durations = self.durations else { return }
             isTimerWorking = true
-            SoundService.shared.playSound(SoundType.startCountdown1, withVibration: true)
-            NotificationsService.shared.scheduleLocalNotification(.workIntervalFinished, in: UInt16(self.durations?.work ?? 10))
+            SoundService.shared.playSound(SoundType.startCountdown2, withVibration: true)
+            NotificationsService.shared.scheduleLocalNotification(.workIntervalFinished,
+                                                                  in: UInt16(durations.work))
             timer = Timer.scheduledTimer(
                 withTimeInterval: TimeInterval(Constants.defaultTickTimeInterval),
                 repeats: true,

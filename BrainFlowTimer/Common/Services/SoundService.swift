@@ -13,6 +13,7 @@ import AVFoundation
 enum SoundType: String {
     
     case startCountdown1
+    case startCountdown2
     case clockTick1
     case clockTick2
     case clockTick3

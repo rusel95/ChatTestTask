@@ -55,6 +55,7 @@
 		74AD592D21B0735D002FF176 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74AD592C21B0735D002FF176 /* Auth.storyboard */; };
 		74AD592F21B0739A002FF176 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AD592E21B0739A002FF176 /* LoginViewController.swift */; };
 		74AD593121B081CE002FF176 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AD593021B081CE002FF176 /* Constants.swift */; };
+		74CB08DE21BFB0F1002E4813 /* startCountdown2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74CB08DD21BFB0F0002E4813 /* startCountdown2.wav */; };
 		74D55D5B21B04B7900906D4E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5A21B04B7900906D4E /* SettingsViewController.swift */; };
 		74D55D5D21B04B8700906D4E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5C21B04B8700906D4E /* SettingsViewModel.swift */; };
 		74D55D5F21B04B9500906D4E /* SettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5E21B04B9500906D4E /* SettingsModel.swift */; };
@@ -171,6 +172,7 @@
 		74AD592C21B0735D002FF176 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		74AD592E21B0739A002FF176 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		74AD593021B081CE002FF176 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74CB08DD21BFB0F0002E4813 /* startCountdown2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = startCountdown2.wav; sourceTree = "<group>"; };
 		74D55D5A21B04B7900906D4E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		74D55D5C21B04B8700906D4E /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		74D55D5E21B04B9500906D4E /* SettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModel.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				7426386221BA59B90063E6E8 /* startCountdown1.wav */,
+				74CB08DD21BFB0F0002E4813 /* startCountdown2.wav */,
 				7426386621BA59B90063E6E8 /* clockTick1.wav */,
 				7426386721BA59B90063E6E8 /* clockTick2.wav */,
 				7426386821BA59B90063E6E8 /* clockcTick3.wav */,
@@ -693,6 +696,11 @@
 						DevelopmentTeam = 6JW599RQL7;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					E8CBE3FA202228FD00186010 = {
 						CreatedOnToolsVersion = 9.2;
@@ -734,6 +742,7 @@
 				7426386F21BA59B90063E6E8 /* clockcTick3.wav in Resources */,
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
 				70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */,
+				74CB08DE21BFB0F1002E4813 /* startCountdown2.wav in Resources */,
 				70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */,
 				7426386E21BA59B90063E6E8 /* clockTick2.wav in Resources */,
 				7426386C21BA59B90063E6E8 /* finish1.wav in Resources */,
@@ -1084,7 +1093,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6JW599RQL7;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruslanpopesku.BrainFlowTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1103,7 +1112,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 6JW599RQL7;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ruslanpopesku.BrainFlowTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1130,7 +1139,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yalantis.$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1160,7 +1169,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = Core/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yalantis.$(PRODUCT_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

@@ -36,7 +36,7 @@ public final class NotificationsService: NSObject {
         let title = "test"
         let body = "body"
         let date = Date().addingTimeInterval(TimeInterval(delay))
-        let sound = nil
+        let sound = UNNotificationSound.default()
         
         scheduleLocalNotification(identifier: type.rawValue, title: title, body: body, sound: sound, date: date)
     }
