@@ -57,10 +57,11 @@ final class TimerModel: EventNode, HasDisposeBag {
         
         stopCountdownAction
             .doOnNext { [unowned self] _ in
+                guard let durations = self.durations else { return }
                 UserDataService.removeObject(for: .savedTime)
                 self.timer.invalidate()
                 self.isTimerWorking = false
-                self.currentSecond.accept(self.durations?.work ?? 0)
+                self.currentSecond.accept(durations.work)
             }.disposed(by: disposeBag)
     }
     
@@ -85,11 +86,13 @@ final class TimerModel: EventNode, HasDisposeBag {
         if !isTimerWorking {
             guard let durations = self.durations else { return }
             isTimerWorking = true
-            SoundService.shared.playAlertSound(SoundType.startCountdown2, withVibration: true)
-            SoundService.shared.playWhiteNoise(WhiteNoiceType.waves1)
+            if self.currentSecond.value == self.durations!.work {
+                SoundService.shared.playAlertSound(SoundType.startCountdown2, withVibration: true)
+            }
             
             NotificationsService.shared.scheduleLocalNotification(.workIntervalFinished,
                                                                   in: UInt16(durations.work))
+            
             timer = Timer.scheduledTimer(
                 withTimeInterval: TimeInterval(Constants.defaultTickTimeInterval),
                 repeats: true,
