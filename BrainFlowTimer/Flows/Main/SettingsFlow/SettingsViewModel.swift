@@ -11,8 +11,8 @@ import RxSwift
 
 final class SettingsViewModel: HasDisposeBag {
     
-    var workDurationChanged: PublishSubject<String?> {
-        return model.workDurationChangedAction
+    var durationsViewModel: DurationsViewModel {
+        return DurationsViewModel(model: model.durationsModel)
     }
     
     private let model: SettingsModel

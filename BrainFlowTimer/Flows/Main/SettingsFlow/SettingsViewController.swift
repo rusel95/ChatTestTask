@@ -9,27 +9,41 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 final class SettingsViewController: UIViewController {
     
+    // MARK: - Properties
+    
+    @IBOutlet private weak var durationsContainer: UIView!
+    
     var viewModel: SettingsViewModel!
     
-    @IBOutlet private weak var workDurationTextField: UITextField!
-    @IBOutlet private weak var breakDurationTextField: UITextField!
-    @IBOutlet private weak var longBreakDurationTextField: UITextField!
-    @IBOutlet private weak var dailyGoalTextField: UITextField!
-    @IBOutlet private weak var sessionsUntilLongBreakTextField: UITextField!
+    private lazy var durationsView: DurationsView = {
+        let view = DurationsView.loadFromNib()
+        view.viewModel = viewModel.durationsViewModel
+        return view
+    }()
     
+    // MARK: - View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureDurationsView()
         initializeBindings()
     }
     
-    private func initializeBindings() {        
-        workDurationTextField.rx.text
-            .bind(to: viewModel.workDurationChanged)
-            .disposed(by: disposeBag)
+    // MARK: - Private Methods
+    private func initializeBindings() {
+        
+    }
+    
+    private func configureDurationsView() {
+        durationsContainer.addSubview(durationsView)
+        durationsView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
     }
     
 }

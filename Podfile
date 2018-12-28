@@ -18,6 +18,10 @@ abstract_target 'Shared' do
 
   	# DB client component
     pod 'DBClient/Realm'
+    
+    # UI
+    pod 'SnapKit', '~> 4.2.0'
+    pod 'HandyText', '~> 1.4.0'
 
     end
     

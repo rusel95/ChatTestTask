@@ -19,3 +19,10 @@
 // Errors
 "error.cannot_login" = "Cannot login, please try again later";
 "error.undefined" = "Something went wrong, please try again later";
+
+// Settings
+"settingsWorkDuration" = "work duration";
+"settingsBreakDuration" = "break duration";
+"settingsLongBreak" = "long break duration";
+"settingsDailyGoal" = "daily goal";
+"settingsSessionsUntilLongBreak" = "sessions until long break";

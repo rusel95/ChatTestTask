@@ -13,7 +13,7 @@ import RxCocoa
 
 final class SettingsModel: EventNode, HasDisposeBag {
     
-    let workDurationChangedAction = PublishSubject<String?>()
+    let durationsModel = DurationsModel()
     
     override init(parent: EventNode) {
         super.init(parent: parent)
@@ -22,8 +22,7 @@ final class SettingsModel: EventNode, HasDisposeBag {
     }
     
     private func initializeBindings() {
-        
-        workDurationChangedAction
+        durationsModel.workDurationChangedAction
             .doOnNext { newWorkDurationText in
                 if let durations = RealmService.shared.realm.objects(Durations.self).first,
                     let newWorkDurationText = newWorkDurationText,
