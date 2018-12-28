@@ -5,10 +5,13 @@ PODS:
     - DBClient/Core
     - RealmSwift (~> 3.11.1)
     - YALResult (= 1.1)
+  - fluid-slider (1.0.0):
+    - pop
   - HandyText (1.4.3)
   - Kingfisher (4.10.1)
   - "NSObject+Rx (4.4.1)":
     - RxSwift (~> 4.3)
+  - pop (1.0.12)
   - Realm (3.11.2):
     - Realm/Headers (= 3.11.2)
   - Realm/Headers (3.11.2)
@@ -32,6 +35,7 @@ PODS:
 
 DEPENDENCIES:
   - DBClient/Realm
+  - fluid-slider
   - HandyText (~> 1.4.0)
   - Kingfisher (~> 4.10.1)
   - "NSObject+Rx (~> 4.4.1)"
@@ -47,9 +51,11 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DBClient
+    - fluid-slider
     - HandyText
     - Kingfisher
     - "NSObject+Rx"
+    - pop
     - Realm
     - RealmSwift
     - RxAtomic
@@ -65,9 +71,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   DBClient: d24d8defcd29a9282e303abb50d4cfcb036493d1
+  fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
   HandyText: aae8b8410c084493e2d3aa74ca1530d221b89462
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
   RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
@@ -81,6 +89,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
   YALResult: e7acf1405252ef9a2a1f121176cc44b588844d93
 
-PODFILE CHECKSUM: 54dfc31833eecee728fef2fcfce5af4e6b56ae12
+PODFILE CHECKSUM: d3ddf172ed5fbfcab81c7d48b0a76dd27232dfed
 
 COCOAPODS: 1.6.0.beta.2

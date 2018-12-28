@@ -22,7 +22,8 @@ abstract_target 'Shared' do
     # UI
     pod 'SnapKit', '~> 4.2.0'
     pod 'HandyText', '~> 1.4.0'
-
+    pod 'fluid-slider'
+    
     end
     
     target 'BrainFlowTimer' do

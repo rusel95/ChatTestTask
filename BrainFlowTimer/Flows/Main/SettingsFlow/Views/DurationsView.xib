@@ -28,18 +28,16 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="957-gI-wTy" userLabel="WORK">
                             <rect key="frame" x="0.0" y="0.0" width="355" height="30"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK DURATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjY-6p-Nky">
-                                    <rect key="frame" x="0.0" y="0.0" width="138.5" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjY-6p-Nky">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-Y8-0XA">
-                                    <rect key="frame" x="169.5" y="0.0" width="185.5" height="30"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" textContentType="postal-code"/>
-                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yzj-CN-Hak" customClass="Slider" customModule="fluid_slider">
+                                    <rect key="frame" x="81" y="0.0" width="274" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="fua-Bw-ir7"/>
@@ -48,18 +46,16 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="iV1-gd-Jgt" userLabel="WORK">
                             <rect key="frame" x="0.0" y="61" width="355" height="30"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREAK DURATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-aF-7g1">
-                                    <rect key="frame" x="0.0" y="0.0" width="141.5" height="30"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BREAK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGt-aF-7g1">
+                                    <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="exD-QQ-2HE">
-                                    <rect key="frame" x="172.5" y="0.0" width="182.5" height="30"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="tel"/>
-                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Phm-jy-e63" customClass="Slider" customModule="fluid_slider">
+                                    <rect key="frame" x="84.5" y="0.0" width="270.5" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="TM6-eg-SPy"/>
@@ -74,12 +70,10 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mbI-sw-WfO">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CG-bU-du6" customClass="Slider" customModule="fluid_slider">
                                     <rect key="frame" x="135" y="0.0" width="220" height="30"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" textContentType="tel"/>
-                                </textField>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="qND-1C-bSv"/>
@@ -94,12 +88,10 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g4g-YI-IOH">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xqb-23-aJU" customClass="Slider" customModule="fluid_slider">
                                     <rect key="frame" x="125.5" y="0.0" width="229.5" height="30"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" textContentType="tel"/>
-                                </textField>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="Bri-8w-vJ7"/>
@@ -108,18 +100,16 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="Ksh-oc-c7j" userLabel="WORK">
                             <rect key="frame" x="0.0" y="244" width="355" height="30"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESSIONS UNTIL LONG BREAK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zss-Ke-f2S">
-                                    <rect key="frame" x="0.0" y="0.0" width="241.5" height="30"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SESSIONS UNTIL LONG BREAK" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zss-Ke-f2S">
+                                    <rect key="frame" x="0.0" y="0.0" width="162" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-th-HiC">
-                                    <rect key="frame" x="272.5" y="0.0" width="82.5" height="30"/>
-                                    <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits" textContentType="tel"/>
-                                </textField>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGx-c9-A9L" customClass="Slider" customModule="fluid_slider">
+                                    <rect key="frame" x="193" y="0.0" width="162" height="30"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="dQb-jY-QFS"/>
@@ -142,10 +132,15 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="breakDurationLabel" destination="wGt-aF-7g1" id="3DI-Cs-Yea"/>
+                <outlet property="breakDurationSlider" destination="Phm-jy-e63" id="Ocf-sI-3fq"/>
                 <outlet property="dailyGoalLabel" destination="M53-fw-gvz" id="w23-UR-qQg"/>
+                <outlet property="dailyGoalSlider" destination="xqb-23-aJU" id="n33-Bo-34N"/>
                 <outlet property="longBreakDurationLabel" destination="hd1-i5-Fn9" id="PtF-w0-XHq"/>
+                <outlet property="longBreakDurationSlider" destination="9CG-bU-du6" id="XHi-uN-wy5"/>
                 <outlet property="sessionsUntilLongBreakLabel" destination="Zss-Ke-f2S" id="Pr5-Nz-VZK"/>
+                <outlet property="sessionsUntilLongBreakSlider" destination="AGx-c9-A9L" id="9Ri-Zo-J6g"/>
                 <outlet property="workDurationLabel" destination="XjY-6p-Nky" id="wJU-Uh-MTN"/>
+                <outlet property="workDurationSlider" destination="Yzj-CN-Hak" id="QDJ-bI-Gzu"/>
             </connections>
             <point key="canvasLocation" x="20" y="-110.64467766116942"/>
         </view>

@@ -10,15 +10,15 @@ import Foundation
 
 // swiftlint:disable function_parameter_count identifier_name line_length type_body_length
 internal enum L10n {
-  /// break duration
+  /// break
   internal static let settingsBreakDuration = L10n.tr("Localizable", "settingsBreakDuration")
   /// daily goal
   internal static let settingsDailyGoal = L10n.tr("Localizable", "settingsDailyGoal")
-  /// long break duration
+  /// long break
   internal static let settingsLongBreak = L10n.tr("Localizable", "settingsLongBreak")
   /// sessions until long break
   internal static let settingsSessionsUntilLongBreak = L10n.tr("Localizable", "settingsSessionsUntilLongBreak")
-  /// work duration
+  /// work
   internal static let settingsWorkDuration = L10n.tr("Localizable", "settingsWorkDuration")
   /// Error
   internal static let alertDefaultErrorTile = L10n.tr("Localizable", "alert.default_error_tile")

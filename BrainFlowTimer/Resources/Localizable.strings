@@ -21,8 +21,8 @@
 "error.undefined" = "Something went wrong, please try again later";
 
 // Settings
-"settingsWorkDuration" = "work duration";
-"settingsBreakDuration" = "break duration";
-"settingsLongBreak" = "long break duration";
+"settingsWorkDuration" = "work";
+"settingsBreakDuration" = "break";
+"settingsLongBreak" = "long break";
 "settingsDailyGoal" = "daily goal";
 "settingsSessionsUntilLongBreak" = "sessions until long break";
