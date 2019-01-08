@@ -25,16 +25,16 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 : 00 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNK-ih-DEE">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="313.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="278.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJt-gm-Tzf">
-                                        <rect key="frame" x="0.0" y="333.5" width="375" height="313.5"/>
+                                        <rect key="frame" x="0.0" y="298.5" width="375" height="278.5"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9W-BH-ttY">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="313.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="278.5"/>
                                                 <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <state key="normal" title="start">
@@ -42,7 +42,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlx-e1-e1E">
-                                                <rect key="frame" x="125" y="0.0" width="125" height="313.5"/>
+                                                <rect key="frame" x="125" y="0.0" width="125" height="278.5"/>
                                                 <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <state key="normal" title="pause">
@@ -50,7 +50,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-ox-IYQ">
-                                                <rect key="frame" x="250" y="0.0" width="125" height="313.5"/>
+                                                <rect key="frame" x="250" y="0.0" width="125" height="278.5"/>
                                                 <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <state key="normal" title="stop">
@@ -63,20 +63,49 @@
                                             <constraint firstItem="O9W-BH-ttY" firstAttribute="width" secondItem="Ftq-ox-IYQ" secondAttribute="width" id="tfW-ve-KMF"/>
                                         </constraints>
                                     </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJM-eC-qfn" userLabel="Navigation">
+                                        <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj8-K6-Wcl">
+                                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="statistic">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eqL-Rq-tm9">
+                                                <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                                                <color key="backgroundColor" red="0.47058823529999999" green="0.63921568630000003" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <state key="normal" title="settings">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0Xa-mk-MMk"/>
+                                            <constraint firstItem="eqL-Rq-tm9" firstAttribute="width" secondItem="Tj8-K6-Wcl" secondAttribute="width" id="2in-z1-jzG"/>
+                                            <constraint firstAttribute="bottom" secondItem="eqL-Rq-tm9" secondAttribute="bottom" id="EJu-x5-oo0"/>
+                                            <constraint firstAttribute="trailing" secondItem="eqL-Rq-tm9" secondAttribute="trailing" id="SRd-XK-B5B"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tj8-K6-Wcl" secondAttribute="bottom" id="Tge-KM-Irz"/>
+                                            <constraint firstItem="Tj8-K6-Wcl" firstAttribute="width" secondItem="WJM-eC-qfn" secondAttribute="width" multiplier="1/2" id="WXL-mU-K7g"/>
+                                            <constraint firstItem="Tj8-K6-Wcl" firstAttribute="top" secondItem="WJM-eC-qfn" secondAttribute="top" id="a90-wY-b9i"/>
+                                            <constraint firstItem="Tj8-K6-Wcl" firstAttribute="leading" secondItem="WJM-eC-qfn" secondAttribute="leading" id="r4b-6e-Qq4"/>
+                                            <constraint firstItem="eqL-Rq-tm9" firstAttribute="top" secondItem="WJM-eC-qfn" secondAttribute="top" id="zkA-t6-zov"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="iNK-ih-DEE" firstAttribute="height" secondItem="uJt-gm-Tzf" secondAttribute="height" id="UMm-Mj-Nh4"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPA-U6-uov">
-                                <rect key="frame" x="259" y="20" width="100" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="9OS-PL-Uak"/>
-                                    <constraint firstAttribute="height" constant="30" id="y6y-DO-fbs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <state key="normal" title="Settings"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -84,15 +113,13 @@
                             <constraint firstItem="Nky-If-HNZ" firstAttribute="top" secondItem="wji-vn-2Ut" secondAttribute="bottom" id="2g6-1B-5eR"/>
                             <constraint firstAttribute="trailing" secondItem="wji-vn-2Ut" secondAttribute="trailing" id="GCY-qQ-Mhm"/>
                             <constraint firstItem="wji-vn-2Ut" firstAttribute="top" secondItem="dTT-fO-RF7" secondAttribute="bottom" id="NG5-Hq-Tn8"/>
-                            <constraint firstItem="QPA-U6-uov" firstAttribute="top" secondItem="dTT-fO-RF7" secondAttribute="bottom" id="ODP-G3-fHR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="QPA-U6-uov" secondAttribute="trailing" id="RRR-Bq-BnW"/>
                             <constraint firstItem="wji-vn-2Ut" firstAttribute="leading" secondItem="pNt-Qj-Soq" secondAttribute="leading" id="hOg-Gv-V0l"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="pauseButton" destination="Nlx-e1-e1E" id="7YN-qS-x0o"/>
                         <outlet property="resetButton" destination="Ftq-ox-IYQ" id="n5u-F1-DOz"/>
-                        <outlet property="settingsButton" destination="QPA-U6-uov" id="moI-xq-dN3"/>
+                        <outlet property="settingsButton" destination="eqL-Rq-tm9" id="YCr-qh-fBf"/>
                         <outlet property="startButton" destination="O9W-BH-ttY" id="0MJ-YU-zbl"/>
                         <outlet property="timeLabel" destination="iNK-ih-DEE" id="xad-so-rbf"/>
                     </connections>

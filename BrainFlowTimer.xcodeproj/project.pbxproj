@@ -56,8 +56,12 @@
 		747170B021D6343D00A8CD52 /* DurationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747170AF21D6343D00A8CD52 /* DurationsViewModel.swift */; };
 		747170B221D6348B00A8CD52 /* DurationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747170B121D6348B00A8CD52 /* DurationsModel.swift */; };
 		747170B421D6369C00A8CD52 /* DurationsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747170B321D6369C00A8CD52 /* DurationsView.xib */; };
-		74AD592D21B0735D002FF176 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74AD592C21B0735D002FF176 /* Auth.storyboard */; };
-		74AD592F21B0739A002FF176 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AD592E21B0739A002FF176 /* LoginViewController.swift */; };
+		747170B621D6663C00A8CD52 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747170B521D6663C00A8CD52 /* UIView+IBInspectable.swift */; };
+		74A4D84421E48C3300D2CA2C /* Statistic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A4D83F21E48C3300D2CA2C /* Statistic.storyboard */; };
+		74A4D84521E48C3300D2CA2C /* StatisticModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4D84021E48C3300D2CA2C /* StatisticModel.swift */; };
+		74A4D84721E48C3300D2CA2C /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4D84221E48C3300D2CA2C /* StatisticViewController.swift */; };
+		74A4D84821E48C3300D2CA2C /* StatisticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4D84321E48C3300D2CA2C /* StatisticViewModel.swift */; };
+		74A4D84A21E4918A00D2CA2C /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 74A4D84921E4918A00D2CA2C /* swiftgen.yml */; };
 		74AD593121B081CE002FF176 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AD593021B081CE002FF176 /* Constants.swift */; };
 		74CB08DE21BFB0F1002E4813 /* startCountdown2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74CB08DD21BFB0F0002E4813 /* startCountdown2.wav */; };
 		74CB08E021BFC2E0002E4813 /* waves1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 74CB08DF21BFC2E0002E4813 /* waves1.wav */; };
@@ -178,8 +182,12 @@
 		747170AF21D6343D00A8CD52 /* DurationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationsViewModel.swift; sourceTree = "<group>"; };
 		747170B121D6348B00A8CD52 /* DurationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationsModel.swift; sourceTree = "<group>"; };
 		747170B321D6369C00A8CD52 /* DurationsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationsView.xib; sourceTree = "<group>"; };
-		74AD592C21B0735D002FF176 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
-		74AD592E21B0739A002FF176 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		747170B521D6663C00A8CD52 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		74A4D83F21E48C3300D2CA2C /* Statistic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Statistic.storyboard; sourceTree = "<group>"; };
+		74A4D84021E48C3300D2CA2C /* StatisticModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticModel.swift; sourceTree = "<group>"; };
+		74A4D84221E48C3300D2CA2C /* StatisticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
+		74A4D84321E48C3300D2CA2C /* StatisticViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticViewModel.swift; sourceTree = "<group>"; };
+		74A4D84921E4918A00D2CA2C /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		74AD593021B081CE002FF176 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		74CB08DD21BFB0F0002E4813 /* startCountdown2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = startCountdown2.wav; sourceTree = "<group>"; };
 		74CB08DF21BFC2E0002E4813 /* waves1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = waves1.wav; sourceTree = "<group>"; };
@@ -278,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				505FCBED2052E6B0006CF982 /* Info.plist */,
+				74A4D84921E4918A00D2CA2C /* swiftgen.yml */,
 				505FCBEB2052E68E006CF982 /* Notes.txt */,
 			);
 			path = SupportingFiles;
@@ -378,6 +387,7 @@
 				70BF67722045A6AD00803C08 /* UIImageView+Kingfisher.swift */,
 				70BF67732045A6AD00803C08 /* UITableView+Rx.swift */,
 				70BF67752045A6AD00803C08 /* UIViewController+RxLyfecycle.swift */,
+				747170B521D6663C00A8CD52 /* UIView+IBInspectable.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -420,8 +430,8 @@
 			children = (
 				70BF67592045A6AD00803C08 /* MainFlowAssembly.swift */,
 				70BF67972045A6AD00803C08 /* MainFlowCoordinator.swift */,
-				74AD592B21B07340002FF176 /* Auth */,
 				70BF67982045A6AD00803C08 /* TimerFlow */,
+				74A4D83E21E48BDB00D2CA2C /* StatisticFlow */,
 				74D55D5921B04B3400906D4E /* SettingsFlow */,
 			);
 			path = Main;
@@ -491,13 +501,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		74AD592B21B07340002FF176 /* Auth */ = {
+		74A4D83E21E48BDB00D2CA2C /* StatisticFlow */ = {
 			isa = PBXGroup;
 			children = (
-				74AD592C21B0735D002FF176 /* Auth.storyboard */,
-				74AD592E21B0739A002FF176 /* LoginViewController.swift */,
+				74A4D83F21E48C3300D2CA2C /* Statistic.storyboard */,
+				74A4D84221E48C3300D2CA2C /* StatisticViewController.swift */,
+				74A4D84321E48C3300D2CA2C /* StatisticViewModel.swift */,
+				74A4D84021E48C3300D2CA2C /* StatisticModel.swift */,
 			);
-			path = Auth;
+			path = StatisticFlow;
 			sourceTree = "<group>";
 		};
 		74AD593221B08210002FF176 /* Helpers */ = {
@@ -764,18 +776,19 @@
 				7426386921BA59B90063E6E8 /* startCountdown1.wav in Resources */,
 				7426386F21BA59B90063E6E8 /* clockcTick3.wav in Resources */,
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
+				74A4D84A21E4918A00D2CA2C /* swiftgen.yml in Resources */,
 				70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */,
 				74CB08E021BFC2E0002E4813 /* waves1.wav in Resources */,
 				74CB08DE21BFB0F1002E4813 /* startCountdown2.wav in Resources */,
 				70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */,
 				7426386E21BA59B90063E6E8 /* clockTick2.wav in Resources */,
 				747170B421D6369C00A8CD52 /* DurationsView.xib in Resources */,
+				74A4D84421E48C3300D2CA2C /* Statistic.storyboard in Resources */,
 				7426386C21BA59B90063E6E8 /* finish1.wav in Resources */,
 				74D55D6121B04BCC00906D4E /* Settings.storyboard in Resources */,
 				505FCBEC2052E68E006CF982 /* Notes.txt in Resources */,
 				70BF67E02045A6AE00803C08 /* Timer.storyboard in Resources */,
 				7426386D21BA59B90063E6E8 /* clockTick1.wav in Resources */,
-				74AD592D21B0735D002FF176 /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,6 +829,7 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/DBClient/DBClient.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyText/HandyText.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YALResult/YALResult.framework",
 				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
@@ -836,6 +850,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DBClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YALResult.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
@@ -858,7 +873,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen storyboards \"$PROJECT_DIR/BrainFlowTimer\" -t swift4 --output \"$PROJECT_DIR/$PROJECT_NAME/Common/Extensions/SwiftGen/Storyboards+SwiftGen.swift\" --param module=BrainFlowTimer\n\n$PODS_ROOT/SwiftGen/bin/swiftgen images \"$PROJECT_DIR/$PROJECT_NAME/Resources/Assets.xcassets\" -t swift3 --output \"$PROJECT_DIR/$PROJECT_NAME/Common/Extensions/SwiftGen/Images+SwiftGen.swift\"\n\n$PODS_ROOT/SwiftGen/bin/swiftgen strings \"$PROJECT_DIR/$PROJECT_NAME/Resources/Localizable.strings\" -t flat-swift4 --output \"$PROJECT_DIR/$PROJECT_NAME/Common/Extensions/SwiftGen/Localization+SwiftGen.swift\"\n\n";
+			shellScript = "$PODS_ROOT/SwiftGen/bin/swiftgen config run --config swiftgen.yml\n";
 		};
 		C5525E231DABB24D0016156E /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -922,7 +937,6 @@
 				70BF67C32045A6AD00803C08 /* Localization+SwiftGen.swift in Sources */,
 				7426387121BA5EC00063E6E8 /* NotificationsService.swift in Sources */,
 				74E1AA4421B005F90057C271 /* RxBinding.swift in Sources */,
-				74AD592F21B0739A002FF176 /* LoginViewController.swift in Sources */,
 				70BF67CB2045A6AD00803C08 /* EventNode.swift in Sources */,
 				70BF67BF2045A6AD00803C08 /* Reusable.swift in Sources */,
 				74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */,
@@ -933,10 +947,12 @@
 				70BF67CA2045A6AD00803C08 /* UIViewController+RxLyfecycle.swift in Sources */,
 				747170AE21D6337A00A8CD52 /* DurationsView.swift in Sources */,
 				74D55D5D21B04B8700906D4E /* SettingsViewModel.swift in Sources */,
+				74A4D84721E48C3300D2CA2C /* StatisticViewController.swift in Sources */,
 				70BF67BC2045A6AD00803C08 /* Spinner.swift in Sources */,
 				747170B221D6348B00A8CD52 /* DurationsModel.swift in Sources */,
 				70BF67E42045A6AE00803C08 /* TimerViewModel.swift in Sources */,
 				70BF67C12045A6AD00803C08 /* UITableView+Reusable.swift in Sources */,
+				74A4D84821E48C3300D2CA2C /* StatisticViewModel.swift in Sources */,
 				70BF67C42045A6AD00803C08 /* Storyboards+SwiftGen.swift in Sources */,
 				74E1AA3E21B005F90057C271 /* RxSwift+Scan.swift in Sources */,
 				70BF67C22045A6AD00803C08 /* Images+SwiftGen.swift in Sources */,
@@ -954,8 +970,10 @@
 				70BF67CC2045A6AD00803C08 /* FlowCoordinator.swift in Sources */,
 				7426386021BA538A0063E6E8 /* SoundService.swift in Sources */,
 				70BF67B72045A6AD00803C08 /* Alert.swift in Sources */,
+				74A4D84521E48C3300D2CA2C /* StatisticModel.swift in Sources */,
 				70BF67C82045A6AD00803C08 /* UITableView+Rx.swift in Sources */,
 				70BF67B42045A6AD00803C08 /* AppDelegate.swift in Sources */,
+				747170B621D6663C00A8CD52 /* UIView+IBInspectable.swift in Sources */,
 				70BF67BE2045A6AD00803C08 /* UIViewController+RequestState.swift in Sources */,
 				70BF67BA2045A6AD00803C08 /* ApplicationSpinner.swift in Sources */,
 				70BF67BB2045A6AD00803C08 /* RequestState.swift in Sources */,

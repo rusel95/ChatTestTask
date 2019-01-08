@@ -10,6 +10,7 @@ import Swinject
 
 enum MainFlowEvent: Event {
      case openSettings
+     case openStatistic
 }
 
 final class MainFlowCoordinator: EventNode, FlowCoordinator {
@@ -38,6 +39,8 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
             switch event {
             case .openSettings:
                 self?.openSettings()
+            case .openStatistic:
+                self?.openStatistic()
             }
         }
     }
@@ -45,6 +48,11 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
     private func openSettings() {
         let settingsController: SettingsViewController = container.autoresolve(argument: self)
         navigationController?.pushViewController(settingsController, animated: true)
+    }
+    
+    private func openStatistic() {
+        let statisticController: StatisticViewController = container.autoresolve(argument: self)
+        navigationController?.pushViewController(statisticController, animated: true)
     }
     
 }

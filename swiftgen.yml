@@ -1,0 +1,17 @@
+input_dir: BrainFlowTimer/
+output_dir: BrainFlowTimer/Common/Extensions/SwiftGen/
+strings:
+  inputs: Resources/Localizable.strings
+  outputs:
+     templateName: flat-swift4
+     output: Localization+SwiftGen.swift
+xcassets:
+  inputs: Resources/Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Images+SwiftGen.swift
+storyboards:
+  inputs: Flows
+  outputs:
+    templateName: segues-swift3
+    output: Storyboards+SwiftGen.swift

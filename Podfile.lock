@@ -25,6 +25,7 @@ PODS:
     - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
+  - SideMenu (5.0.3)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
   - SwiftGen (6.0.2)
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - RxCocoa (~> 4.4.0)
   - RxRealm (~> 0.7.6)
   - RxSwift (~> 4.4.0)
+  - SideMenu (~> 5.0)
   - SnapKit (~> 4.2.0)
   - SVProgressHUD (~> 2.2.5)
   - SwiftGen (~> 6.0.2)
@@ -62,6 +64,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRealm
     - RxSwift
+    - SideMenu
     - SnapKit
     - SVProgressHUD
     - SwiftGen
@@ -82,6 +85,7 @@ SPEC CHECKSUMS:
   RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxRealm: 5379eddd74f8d617ca7681d1f8d144af25b432b0
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
@@ -89,6 +93,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
   YALResult: e7acf1405252ef9a2a1f121176cc44b588844d93
 
-PODFILE CHECKSUM: d3ddf172ed5fbfcab81c7d48b0a76dd27232dfed
+PODFILE CHECKSUM: 39a0c4d3e6ff842e605c4ae6796de3a760a1ea55
 
 COCOAPODS: 1.6.0.beta.2

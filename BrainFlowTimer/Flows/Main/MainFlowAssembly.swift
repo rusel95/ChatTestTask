@@ -22,6 +22,13 @@ final class MainFlowAssembly: Assembly {
                 return controller
             }.inObjectScope(.transient)
         
+        container
+            .register(StatisticViewController.self) { (_, parent: EventNode) in
+                let controller = StoryboardScene.Statistic.statisticViewController.instantiate()
+                let model = StatisticModel(parent: parent)
+                controller.viewModel = StatisticViewModel(model: model)
+                return controller
+            }.inObjectScope(.transient)
     }
     
 }
