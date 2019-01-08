@@ -14,6 +14,7 @@ final class TimerViewController: UIViewController {
     
     @IBOutlet private var timeLabel: UILabel!
     @IBOutlet private weak var settingsButton: UIButton!
+    @IBOutlet private weak var statisticButton: UIButton!
     @IBOutlet private weak var startButton: UIButton!
     @IBOutlet private weak var pauseButton: UIButton!
     @IBOutlet private weak var resetButton: UIButton!
@@ -32,6 +33,10 @@ final class TimerViewController: UIViewController {
         
         settingsButton.rx.tap
             .bind(to: viewModel.settingsButtonTapped)
+            .disposed(by: disposeBag)
+        
+        statisticButton.rx.tap
+            .bind(to: viewModel.statisticButtonTapped)
             .disposed(by: disposeBag)
         
         startButton.rx.tap

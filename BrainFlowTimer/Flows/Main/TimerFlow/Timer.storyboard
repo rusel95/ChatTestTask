@@ -81,11 +81,6 @@
                                                 <state key="normal" title="settings">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="50"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,6 +116,7 @@
                         <outlet property="resetButton" destination="Ftq-ox-IYQ" id="n5u-F1-DOz"/>
                         <outlet property="settingsButton" destination="eqL-Rq-tm9" id="YCr-qh-fBf"/>
                         <outlet property="startButton" destination="O9W-BH-ttY" id="0MJ-YU-zbl"/>
+                        <outlet property="statisticButton" destination="Tj8-K6-Wcl" id="gZs-Od-4kT"/>
                         <outlet property="timeLabel" destination="iNK-ih-DEE" id="xad-so-rbf"/>
                     </connections>
                 </viewController>

@@ -12,20 +12,15 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
-  internal enum Auth: StoryboardType {
-    internal static let storyboardName = "Auth"
-
-    internal static let login = SceneType<BrainFlowTimer.LoginViewController>(storyboard: Auth.self, identifier: "Login")
-  }
-  internal enum LaunchScreen: StoryboardType {
-    internal static let storyboardName = "LaunchScreen"
-
-    internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
-  }
   internal enum Settings: StoryboardType {
     internal static let storyboardName = "Settings"
 
     internal static let settingsViewController = SceneType<BrainFlowTimer.SettingsViewController>(storyboard: Settings.self, identifier: "SettingsViewController")
+  }
+  internal enum Statistic: StoryboardType {
+    internal static let storyboardName = "Statistic"
+
+    internal static let statisticViewController = SceneType<BrainFlowTimer.StatisticViewController>(storyboard: Statistic.self, identifier: "StatisticViewController")
   }
   internal enum Timer: StoryboardType {
     internal static let storyboardName = "Timer"
@@ -43,7 +38,8 @@ internal protocol StoryboardType {
 
 internal extension StoryboardType {
   static var storyboard: UIStoryboard {
-    return UIStoryboard(name: self.storyboardName, bundle: Bundle(for: BundleToken.self))
+    let name = self.storyboardName
+    return UIStoryboard(name: name, bundle: Bundle(for: BundleToken.self))
   }
 }
 
@@ -52,6 +48,7 @@ internal struct SceneType<T: UIViewController> {
   internal let identifier: String
 
   internal func instantiate() -> T {
+    let identifier = self.identifier
     guard let controller = storyboard.storyboard.instantiateViewController(withIdentifier: identifier) as? T else {
       fatalError("ViewController '\(identifier)' is not of the expected class \(T.self).")
     }

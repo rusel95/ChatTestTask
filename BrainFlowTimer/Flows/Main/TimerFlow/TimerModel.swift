@@ -20,6 +20,7 @@ final class TimerModel: EventNode, HasDisposeBag {
     var currentSecond = BehaviorRelay<Int16>(value: 0)
     
     let settingsAction = PublishSubject<Void>()
+    let statisticAction = PublishSubject<Void>()
     let startCountdownAction = PublishSubject<Void>()
     let pauseCountdownAction = PublishSubject<Void>()
     let stopCountdownAction = PublishSubject<Void>()
@@ -42,6 +43,11 @@ final class TimerModel: EventNode, HasDisposeBag {
         settingsAction
             .doOnNext { [unowned self] _ in
                 self.raise(event: MainFlowEvent.openSettings)
+            }.disposed(by: disposeBag)
+        
+        statisticAction
+            .doOnNext { [unowned self] _ in
+                self.raise(event: MainFlowEvent.openStatistic)
             }.disposed(by: disposeBag)
         
         startCountdownAction

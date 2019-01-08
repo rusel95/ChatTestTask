@@ -13,6 +13,10 @@ final class TimerViewModel: HasDisposeBag {
         return model.settingsAction
     }
     
+    var statisticButtonTapped: PublishSubject<Void> {
+        return model.statisticAction
+    }
+    
     var startButtonTapped: PublishSubject<Void> {
         return model.startCountdownAction
     }

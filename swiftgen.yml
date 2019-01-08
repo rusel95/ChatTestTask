@@ -10,8 +10,8 @@ xcassets:
   outputs:
     templateName: swift4
     output: Images+SwiftGen.swift
-storyboards:
-  inputs: Flows
+ib:
+  inputs: Flows/
   outputs:
-    templateName: segues-swift3
+    templateName: scenes-swift4
     output: Storyboards+SwiftGen.swift
