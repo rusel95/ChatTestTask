@@ -1,98 +1,66 @@
 PODS:
-  - DBClient/Core (1.2):
-    - YALResult (= 1.1)
-  - DBClient/Realm (1.2):
-    - DBClient/Core
-    - RealmSwift (~> 3.11.1)
-    - YALResult (= 1.1)
-  - fluid-slider (1.0.0):
-    - pop
-  - HandyText (1.4.3)
   - Kingfisher (4.10.1)
   - "NSObject+Rx (4.4.1)":
     - RxSwift (~> 4.3)
-  - pop (1.0.12)
   - Realm (3.11.2):
     - Realm/Headers (= 3.11.2)
   - Realm/Headers (3.11.2)
   - RealmSwift (3.11.2):
     - Realm (= 3.11.2)
-  - RxAtomic (4.4.0)
-  - RxCocoa (4.4.0):
-    - RxSwift (~> 4.0)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
   - RxRealm (0.7.6):
     - RealmSwift (~> 3.0)
     - RxSwift (~> 4.0)
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
-  - SideMenu (5.0.3)
-  - SnapKit (4.2.0)
+  - RxSwift (4.5.0)
+  - SnapKit (5.0.0)
   - SVProgressHUD (2.2.5)
   - SwiftGen (6.0.2)
-  - Swinject (2.5.0)
-  - SwinjectAutoregistration (2.5.0):
-    - Swinject (~> 2.5)
-  - YALResult (1.1)
+  - Swinject (2.6.0)
+  - SwinjectAutoregistration (2.6.0):
+    - Swinject (~> 2.6)
 
 DEPENDENCIES:
-  - DBClient/Realm
-  - fluid-slider
-  - HandyText (~> 1.4.0)
   - Kingfisher (~> 4.10.1)
   - "NSObject+Rx (~> 4.4.1)"
-  - RxCocoa (~> 4.4.0)
-  - RxRealm (~> 0.7.6)
-  - RxSwift (~> 4.4.0)
-  - SideMenu (~> 5.0)
-  - SnapKit (~> 4.2.0)
+  - RxCocoa (~> 4.5.0)
+  - RxRealm
+  - RxSwift (~> 4.5.0)
+  - SnapKit (~> 5.0.0)
   - SVProgressHUD (~> 2.2.5)
   - SwiftGen (~> 6.0.2)
-  - Swinject (~> 2.5.0)
-  - SwinjectAutoregistration (~> 2.5.0)
+  - Swinject (~> 2.6.0)
+  - SwinjectAutoregistration (~> 2.6.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - DBClient
-    - fluid-slider
-    - HandyText
     - Kingfisher
     - "NSObject+Rx"
-    - pop
     - Realm
     - RealmSwift
-    - RxAtomic
     - RxCocoa
     - RxRealm
     - RxSwift
-    - SideMenu
     - SnapKit
     - SVProgressHUD
     - SwiftGen
     - Swinject
     - SwinjectAutoregistration
-    - YALResult
 
 SPEC CHECKSUMS:
-  DBClient: d24d8defcd29a9282e303abb50d4cfcb036493d1
-  fluid-slider: a19a991606a34a545cba9341e7422073b4ec3a66
-  HandyText: aae8b8410c084493e2d3aa74ca1530d221b89462
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
-  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   Realm: 864477d028db77f7c5a0cba64a4892ad53db128a
   RealmSwift: 12b8262fc08020b47de4fd88eb3d5c9425b34ec7
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxRealm: 5379eddd74f8d617ca7681d1f8d144af25b432b0
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
-  SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
-  Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
-  SwinjectAutoregistration: 0502a16e5f5baf181be80dc9510e0efa29130485
-  YALResult: e7acf1405252ef9a2a1f121176cc44b588844d93
+  Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
+  SwinjectAutoregistration: 93a908f7543c401b0c315305ac0ae501efdbce89
 
-PODFILE CHECKSUM: 39a0c4d3e6ff842e605c4ae6796de3a760a1ea55
+PODFILE CHECKSUM: 1cbebf346ee317ce2abbfbfb4416f02d7b9ecd05
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.7.0.beta.3
