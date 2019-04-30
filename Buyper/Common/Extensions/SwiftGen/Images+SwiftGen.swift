@@ -18,6 +18,9 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let launchScreenBackground = ImageAsset(name: "launch_screen_background")
+  internal static let launchScreenBuyperLogo = ImageAsset(name: "launch_screen_buyper_logo")
+  internal static let launchScreenBuyperTextLogo = ImageAsset(name: "launch_screen_buyper_text_logo")
   internal static let tabIconExploreSelected = ImageAsset(name: "tab_icon_explore_selected")
   internal static let tabIconExploreUnselected = ImageAsset(name: "tab_icon_explore_unselected")
   internal static let tabIconMapSelected = ImageAsset(name: "tab_icon_map_selected")
