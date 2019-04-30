@@ -26,3 +26,9 @@
 "settingsLongBreak" = "long break";
 "settingsDailyGoal" = "daily goal";
 "settingsSessionsUntilLongBreak" = "sessions until long break";
+
+// Tabs
+"exploreTabTitle" = "Explore";
+"mapTabTitle" = "Map";
+"ordersTabTitle" = "Orders";
+"profileTabTitle" = "Profile";

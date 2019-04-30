@@ -9,11 +9,11 @@
 import Foundation
 import RxSwift
 
-final class StatisticViewModel: HasDisposeBag {
+final class OrdersViewModel: HasDisposeBag {
     
-    private let model: StatisticModel
+    private let model: OrdrersModel
     
-    init(model: StatisticModel) {
+    init(model: OrdrersModel) {
         self.model = model
         initializeBindings()
     }

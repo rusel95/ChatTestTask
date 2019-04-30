@@ -9,15 +9,11 @@
 import Foundation
 import RxSwift
 
-final class SettingsViewModel: HasDisposeBag {
+final class MapViewModel: HasDisposeBag {
     
-    var durationsViewModel: DurationsViewModel {
-        return DurationsViewModel(model: model.durationsModel)
-    }
+    private let model: MapModel
     
-    private let model: SettingsModel
-    
-    init(model: SettingsModel) {
+    init(model: MapModel) {
         self.model = model
         initializeBindings()
     }

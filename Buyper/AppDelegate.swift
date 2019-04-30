@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //
-//  Copyright © 2016 Yalantis. All rights reserved.
+//  Copyright © 2019 Buyper. All rights reserved.
 //
 
 import UIKit

@@ -7,7 +7,7 @@
 import Foundation
 import RxSwift
 
-final class TimerViewModel: HasDisposeBag {
+final class ExploreViewModel: HasDisposeBag {
     
     var settingsButtonTapped: PublishSubject<Void> {
         return model.settingsAction
@@ -40,9 +40,9 @@ final class TimerViewModel: HasDisposeBag {
             })
         
     }
-    private let model: TimerModel
+    private let model: ExploreModel
     
-    init(model: TimerModel) {
+    init(model: ExploreModel) {
         self.model = model
     }
     

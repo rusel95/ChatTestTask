@@ -27,7 +27,7 @@ abstract_target 'Shared' do
         pod 'Kingfisher', '~> 4.10.1'
         pod 'SnapKit', '~> 5.0.0'
         # Tools
-        pod 'SwiftGen', '~> 6.0.2'
+        pod 'SwiftGen', '~> 6.1.0'
     end
 end
 

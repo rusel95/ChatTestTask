@@ -11,7 +11,7 @@ import Core
 import RxSwift
 import RxCocoa
 
-final class StatisticModel: EventNode, HasDisposeBag {
+final class OrdrersModel: EventNode, HasDisposeBag {
     
     override init(parent: EventNode) {
         super.init(parent: parent)
@@ -20,7 +20,7 @@ final class StatisticModel: EventNode, HasDisposeBag {
     }
     
     private func initializeBindings() {
-       
+
     }
     
     // MARK: - private

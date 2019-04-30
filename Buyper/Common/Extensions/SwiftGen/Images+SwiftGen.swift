@@ -1,5 +1,5 @@
 // swiftlint:disable all
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 #if os(OSX)
   import AppKit.NSImage
@@ -18,6 +18,12 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
+  internal static let tabIconExploreSelected = ImageAsset(name: "tab_icon_explore_selected")
+  internal static let tabIconExploreUnselected = ImageAsset(name: "tab_icon_explore_unselected")
+  internal static let tabIconMapSelected = ImageAsset(name: "tab_icon_map_selected")
+  internal static let tabIconMapUnselected = ImageAsset(name: "tab_icon_map_unselected")
+  internal static let tabIconProfileSelected = ImageAsset(name: "tab_icon_profile_selected")
+  internal static let tabIconProfileUnselected = ImageAsset(name: "tab_icon_profile_unselected")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

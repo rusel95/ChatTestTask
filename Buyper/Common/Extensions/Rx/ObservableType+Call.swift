@@ -2,7 +2,7 @@
 //  ObservableType+Call.swift
 //
 //  Created by Eugene on 4/9/18.
-//  Copyright © 2018 Yalantis. All rights reserved.
+//  Copyright © 2018 Buyper. All rights reserved.
 //
 
 import Foundation

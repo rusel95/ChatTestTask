@@ -1,5 +1,5 @@
 // swiftlint:disable all
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 import Foundation
 
@@ -10,6 +10,14 @@ import Foundation
 
 // swiftlint:disable function_parameter_count identifier_name line_length type_body_length
 internal enum L10n {
+  /// Explore
+  internal static let exploreTabTitle = L10n.tr("Localizable", "exploreTabTitle")
+  /// Map
+  internal static let mapTabTitle = L10n.tr("Localizable", "mapTabTitle")
+  /// Orders
+  internal static let ordersTabTitle = L10n.tr("Localizable", "ordersTabTitle")
+  /// Profile
+  internal static let profileTabTitle = L10n.tr("Localizable", "profileTabTitle")
   /// break
   internal static let settingsBreakDuration = L10n.tr("Localizable", "settingsBreakDuration")
   /// daily goal
@@ -43,6 +51,7 @@ internal enum L10n {
 
 extension L10n {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
+    // swiftlint:disable:next nslocalizedstring_key
     let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
     return String(format: format, locale: Locale.current, arguments: args)
   }

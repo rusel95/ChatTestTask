@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import RxRealm
 
-final class TimerModel: EventNode, HasDisposeBag {
+final class ExploreModel: EventNode, HasDisposeBag {
     
     var durations: Durations? {
         didSet {
@@ -36,18 +36,6 @@ final class TimerModel: EventNode, HasDisposeBag {
     }
     
     private func initializeBindings() {
-        
-        self.durations = RealmService.shared.realm.objects(Durations.self).first
-        
-        settingsAction
-            .doOnNext { [unowned self] _ in
-                self.raise(event: MainFlowEvent.openSettings)
-            }.disposed(by: disposeBag)
-        
-        statisticAction
-            .doOnNext { [unowned self] _ in
-                self.raise(event: MainFlowEvent.openStatistic)
-            }.disposed(by: disposeBag)
 
         pauseCountdownAction
             .doOnNext { [unowned self] _ in

@@ -1,5 +1,5 @@
 // swiftlint:disable all
-// Generated using SwiftGen, by O.Halligon — https://github.com/SwiftGen/SwiftGen
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 // swiftlint:disable sorted_imports
 import Foundation
@@ -12,20 +12,25 @@ import UIKit
 
 // swiftlint:disable explicit_type_interface identifier_name line_length type_body_length type_name
 internal enum StoryboardScene {
-  internal enum Settings: StoryboardType {
-    internal static let storyboardName = "Settings"
+  internal enum Explore: StoryboardType {
+    internal static let storyboardName = "Explore"
 
-    internal static let settingsViewController = SceneType<Buyper.SettingsViewController>(storyboard: Settings.self, identifier: "SettingsViewController")
+    internal static let exploreViewContoller = SceneType<Buyper.ExploreViewController>(storyboard: Explore.self, identifier: "ExploreViewContoller")
   }
-  internal enum Statistic: StoryboardType {
-    internal static let storyboardName = "Statistic"
+  internal enum Map: StoryboardType {
+    internal static let storyboardName = "Map"
 
-    internal static let statisticViewController = SceneType<Buyper.StatisticViewController>(storyboard: Statistic.self, identifier: "StatisticViewController")
+    internal static let mapViewController = SceneType<Buyper.MapViewController>(storyboard: Map.self, identifier: "MapViewController")
   }
-  internal enum Timer: StoryboardType {
-    internal static let storyboardName = "Timer"
+  internal enum Orders: StoryboardType {
+    internal static let storyboardName = "Orders"
 
-    internal static let timerViewController = SceneType<Buyper.TimerViewController>(storyboard: Timer.self, identifier: "TimerViewController")
+    internal static let ordersViewController = SceneType<Buyper.OrdersViewController>(storyboard: Orders.self, identifier: "OrdersViewController")
+  }
+  internal enum Profile: StoryboardType {
+    internal static let storyboardName = "Profile"
+
+    internal static let profileViewController = SceneType<Buyper.ProfileViewController>(storyboard: Profile.self, identifier: "ProfileViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

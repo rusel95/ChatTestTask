@@ -11,13 +11,13 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-final class StatisticViewController: UIViewController {
+final class MapViewController: UIViewController {
     
     // MARK: - Properties
     
     @IBOutlet private weak var container: UIView!
     
-    var viewModel: StatisticViewModel!
+    var viewModel: MapViewModel!
     
     // MARK: - View lifecycle
     override func viewDidLoad() {
