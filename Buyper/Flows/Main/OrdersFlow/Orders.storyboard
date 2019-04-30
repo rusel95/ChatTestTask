@@ -17,39 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="dIW-pD-CcG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFA-Hl-Y0b">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FTk-W1-5d6" userLabel="DurationsContainer">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="400" id="zro-dK-Z29"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="FTk-W1-5d6" firstAttribute="centerX" secondItem="cFA-Hl-Y0b" secondAttribute="centerX" id="1DK-vz-6Wc"/>
-                                    <constraint firstAttribute="bottom" secondItem="FTk-W1-5d6" secondAttribute="bottom" constant="347" id="3ko-LA-mgN"/>
-                                    <constraint firstAttribute="trailing" secondItem="FTk-W1-5d6" secondAttribute="trailing" id="5Sg-bE-5BB"/>
-                                    <constraint firstItem="FTk-W1-5d6" firstAttribute="leading" secondItem="cFA-Hl-Y0b" secondAttribute="leading" id="U2Z-hs-LFq"/>
-                                    <constraint firstItem="FTk-W1-5d6" firstAttribute="top" secondItem="cFA-Hl-Y0b" secondAttribute="top" id="pDG-IC-thc"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="cFA-Hl-Y0b" firstAttribute="trailing" secondItem="dIW-pD-CcG" secondAttribute="trailing" id="MiK-7A-WaA"/>
-                            <constraint firstItem="cFA-Hl-Y0b" firstAttribute="bottom" secondItem="dIW-pD-CcG" secondAttribute="bottom" id="cdy-KY-crf"/>
-                            <constraint firstItem="cFA-Hl-Y0b" firstAttribute="top" secondItem="Ivy-6R-Syh" secondAttribute="top" id="hcW-pX-RD4"/>
-                            <constraint firstItem="cFA-Hl-Y0b" firstAttribute="leading" secondItem="dIW-pD-CcG" secondAttribute="leading" id="hpD-O7-elw"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Ivy-6R-Syh"/>
                     </view>
-                    <connections>
-                        <outlet property="durationsContainer" destination="FTk-W1-5d6" id="zYj-wf-OzE"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOT-hg-AKy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

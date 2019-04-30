@@ -28,7 +28,7 @@
 "settingsSessionsUntilLongBreak" = "sessions until long break";
 
 // Tabs
-"exploreTabTitle" = "Explore";
-"mapTabTitle" = "Map";
-"ordersTabTitle" = "Orders";
-"profileTabTitle" = "Profile";
+"exploreTabTitle" = "EXPLORE";
+"mapTabTitle" = "MAP";
+"ordersTabTitle" = "ORDERS";
+"profileTabTitle" = "PROFILE";

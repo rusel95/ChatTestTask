@@ -28,6 +28,24 @@ final class MainFlowAssembly: Assembly {
             .inObjectScope(.transient)
         
         container
+            .register(MapFlowCoordinator.self) { (_, parent: EventNode) in
+                return MapFlowCoordinator(
+                    parent: parent,
+                    container: container
+                )
+            }
+            .inObjectScope(.transient)
+        
+        container
+            .register(OrdersFlowCoordinator.self) { (_, parent: EventNode) in
+                return OrdersFlowCoordinator(
+                    parent: parent,
+                    container: container
+                )
+            }
+            .inObjectScope(.transient)
+        
+        container
             .register(ProfileFlowCoordinator.self) { (_, parent: EventNode) in
                 return ProfileFlowCoordinator(
                     parent: parent,

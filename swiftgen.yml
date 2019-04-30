@@ -15,3 +15,8 @@ ib:
   outputs:
     templateName: scenes-swift4
     output: Storyboards+SwiftGen.swift
+colors:
+  inputs: Resources/Colors.txt
+  outputs:
+    templateName: swift4
+    output: Colors+SwiftGen.swift

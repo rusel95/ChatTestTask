@@ -71,6 +71,10 @@
 		74BAEAFB2277222200663CA2 /* ProfileFlowAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEAFA2277222200663CA2 /* ProfileFlowAssambly.swift */; };
 		74BAEB002278236F00663CA2 /* MapFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEAFF2278236F00663CA2 /* MapFlowCoordinator.swift */; };
 		74BAEB022278237C00663CA2 /* MapFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB012278237C00663CA2 /* MapFlowAssembly.swift */; };
+		74BAEB052278254A00663CA2 /* OrdersFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB042278254A00663CA2 /* OrdersFlowAssembly.swift */; };
+		74BAEB072278256000663CA2 /* OrdersFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB062278256000663CA2 /* OrdersFlowCoordinator.swift */; };
+		74BAEB092278279400663CA2 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74BAEB082278279400663CA2 /* Colors.txt */; };
+		74BAEB0B227828BF00663CA2 /* Colors+Swiftgen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB0A227828BF00663CA2 /* Colors+Swiftgen.swift */; };
 		74D55D5B21B04B7900906D4E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5A21B04B7900906D4E /* OrdersViewController.swift */; };
 		74D55D5D21B04B8700906D4E /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5C21B04B8700906D4E /* OrdersViewModel.swift */; };
 		74D55D5F21B04B9500906D4E /* OrdrersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5E21B04B9500906D4E /* OrdrersModel.swift */; };
@@ -205,6 +209,10 @@
 		74BAEAFA2277222200663CA2 /* ProfileFlowAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFlowAssambly.swift; sourceTree = "<group>"; };
 		74BAEAFF2278236F00663CA2 /* MapFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFlowCoordinator.swift; sourceTree = "<group>"; };
 		74BAEB012278237C00663CA2 /* MapFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFlowAssembly.swift; sourceTree = "<group>"; };
+		74BAEB042278254A00663CA2 /* OrdersFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFlowAssembly.swift; sourceTree = "<group>"; };
+		74BAEB062278256000663CA2 /* OrdersFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFlowCoordinator.swift; sourceTree = "<group>"; };
+		74BAEB082278279400663CA2 /* Colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
+		74BAEB0A227828BF00663CA2 /* Colors+Swiftgen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Swiftgen.swift"; sourceTree = "<group>"; };
 		74D55D5A21B04B7900906D4E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		74D55D5C21B04B8700906D4E /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		74D55D5E21B04B9500906D4E /* OrdrersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdrersModel.swift; sourceTree = "<group>"; };
@@ -384,6 +392,7 @@
 		70BF67692045A6AD00803C08 /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
+				74BAEB0A227828BF00663CA2 /* Colors+Swiftgen.swift */,
 				70BF676A2045A6AD00803C08 /* Images+SwiftGen.swift */,
 				70BF676B2045A6AD00803C08 /* Localization+SwiftGen.swift */,
 				70BF676C2045A6AD00803C08 /* Storyboards+SwiftGen.swift */,
@@ -476,6 +485,7 @@
 			children = (
 				70BF67AF2045A6AD00803C08 /* Assets.xcassets */,
 				70BF67B12045A6AD00803C08 /* Localizable.strings */,
+				74BAEB082278279400663CA2 /* Colors.txt */,
 				70BF67B22045A6AD00803C08 /* Storyboards */,
 			);
 			path = Resources;
@@ -576,9 +586,19 @@
 			path = FlowCore;
 			sourceTree = "<group>";
 		};
+		74BAEB032278253700663CA2 /* FlowCore */ = {
+			isa = PBXGroup;
+			children = (
+				74BAEB042278254A00663CA2 /* OrdersFlowAssembly.swift */,
+				74BAEB062278256000663CA2 /* OrdersFlowCoordinator.swift */,
+			);
+			path = FlowCore;
+			sourceTree = "<group>";
+		};
 		74D55D5921B04B3400906D4E /* OrdersFlow */ = {
 			isa = PBXGroup;
 			children = (
+				74BAEB032278253700663CA2 /* FlowCore */,
 				747170AC21D632EC00A8CD52 /* Views */,
 				74D55D6021B04BCC00906D4E /* Orders.storyboard */,
 				74D55D5A21B04B7900906D4E /* OrdersViewController.swift */,
@@ -828,6 +848,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74BAEB092278279400663CA2 /* Colors.txt in Resources */,
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
 				74A4D84A21E4918A00D2CA2C /* swiftgen.yml in Resources */,
 				74BAEAF12277191000663CA2 /* Profile.storyboard in Resources */,
@@ -956,6 +977,7 @@
 				70BF67BF2045A6AD00803C08 /* Reusable.swift in Sources */,
 				74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */,
 				70BF67CF2045A6AD00803C08 /* ApplicationFlowCoordinator.swift in Sources */,
+				74BAEB052278254A00663CA2 /* OrdersFlowAssembly.swift in Sources */,
 				70BF67B62045A6AD00803C08 /* MainFlowAssembly.swift in Sources */,
 				74BAEAED2277184800663CA2 /* ProfileViewController.swift in Sources */,
 				70BF67BD2045A6AD00803C08 /* SpinnerPresentable.swift in Sources */,
@@ -965,6 +987,7 @@
 				743053D122734D5900649FAE /* MainContainerModel.swift in Sources */,
 				70BF67CA2045A6AD00803C08 /* UIViewController+RxLyfecycle.swift in Sources */,
 				747170AE21D6337A00A8CD52 /* DurationsView.swift in Sources */,
+				74BAEB072278256000663CA2 /* OrdersFlowCoordinator.swift in Sources */,
 				74D55D5D21B04B8700906D4E /* OrdersViewModel.swift in Sources */,
 				743053CF22734D2000649FAE /* MainContainerViewModel.swift in Sources */,
 				74A4D84721E48C3300D2CA2C /* MapViewController.swift in Sources */,
@@ -984,6 +1007,7 @@
 				74BAEB022278237C00663CA2 /* MapFlowAssembly.swift in Sources */,
 				74BAEAEB2277182500663CA2 /* ProfileViewModel.swift in Sources */,
 				70BF67E32045A6AE00803C08 /* ExploreViewController.swift in Sources */,
+				74BAEB0B227828BF00663CA2 /* Colors+Swiftgen.swift in Sources */,
 				74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */,
 				74BAEAFB2277222200663CA2 /* ProfileFlowAssambly.swift in Sources */,
 				70BF67B92045A6AD00803C08 /* ApplicationAlert.swift in Sources */,

@@ -10,13 +10,13 @@ import Foundation
 
 // swiftlint:disable function_parameter_count identifier_name line_length type_body_length
 internal enum L10n {
-  /// Explore
+  /// EXPLORE
   internal static let exploreTabTitle = L10n.tr("Localizable", "exploreTabTitle")
-  /// Map
+  /// MAP
   internal static let mapTabTitle = L10n.tr("Localizable", "mapTabTitle")
-  /// Orders
+  /// ORDERS
   internal static let ordersTabTitle = L10n.tr("Localizable", "ordersTabTitle")
-  /// Profile
+  /// PROFILE
   internal static let profileTabTitle = L10n.tr("Localizable", "profileTabTitle")
   /// break
   internal static let settingsBreakDuration = L10n.tr("Localizable", "settingsBreakDuration")
