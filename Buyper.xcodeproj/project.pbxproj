@@ -41,6 +41,7 @@
 		70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67AF2045A6AD00803C08 /* Assets.xcassets */; };
 		70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B12045A6AD00803C08 /* Localizable.strings */; };
 		70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */; };
+		740F0F8A2278578B003452A1 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740F0F892278578B003452A1 /* UserService.swift */; };
 		741A9C3C21B7C18E00C0A2B1 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741A9C3B21B7C18E00C0A2B1 /* Day.swift */; };
 		7426387121BA5EC00063E6E8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426387021BA5EC00063E6E8 /* NotificationsService.swift */; };
 		743053CF22734D2000649FAE /* MainContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743053CE22734D2000649FAE /* MainContainerViewModel.swift */; };
@@ -75,6 +76,13 @@
 		74BAEB072278256000663CA2 /* OrdersFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB062278256000663CA2 /* OrdersFlowCoordinator.swift */; };
 		74BAEB092278279400663CA2 /* Colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 74BAEB082278279400663CA2 /* Colors.txt */; };
 		74BAEB0B227828BF00663CA2 /* Colors+Swiftgen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB0A227828BF00663CA2 /* Colors+Swiftgen.swift */; };
+		74BAEB10227831F200663CA2 /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BAEB0F227831F200663CA2 /* Authentication.storyboard */; };
+		74BAEB132278322D00663CA2 /* AuthFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB122278322D00663CA2 /* AuthFlowAssembly.swift */; };
+		74BAEB152278323800663CA2 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB142278323800663CA2 /* AuthFlowCoordinator.swift */; };
+		74BAEB192278358600663CA2 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB182278358600663CA2 /* AuthenticationViewController.swift */; };
+		74BAEB1B2278359500663CA2 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB1A2278359500663CA2 /* AuthenticationViewModel.swift */; };
+		74BAEB1D227835A300663CA2 /* AuthenticationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BAEB1C227835A300663CA2 /* AuthenticationModel.swift */; };
+		74BAEB2022783AED00663CA2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74BAEB1F22783AED00663CA2 /* GoogleService-Info.plist */; };
 		74D55D5B21B04B7900906D4E /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5A21B04B7900906D4E /* OrdersViewController.swift */; };
 		74D55D5D21B04B8700906D4E /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5C21B04B8700906D4E /* OrdersViewModel.swift */; };
 		74D55D5F21B04B9500906D4E /* OrdrersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5E21B04B9500906D4E /* OrdrersModel.swift */; };
@@ -179,6 +187,8 @@
 		70BF67AF2045A6AD00803C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70BF67B12045A6AD00803C08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		740F0F88227852A4003452A1 /* Buyper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Buyper.entitlements; sourceTree = "<group>"; };
+		740F0F892278578B003452A1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		741A9C3B21B7C18E00C0A2B1 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		7426387021BA5EC00063E6E8 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
 		743053CE22734D2000649FAE /* MainContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewModel.swift; sourceTree = "<group>"; };
@@ -213,6 +223,13 @@
 		74BAEB062278256000663CA2 /* OrdersFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFlowCoordinator.swift; sourceTree = "<group>"; };
 		74BAEB082278279400663CA2 /* Colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Colors.txt; sourceTree = "<group>"; };
 		74BAEB0A227828BF00663CA2 /* Colors+Swiftgen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+Swiftgen.swift"; sourceTree = "<group>"; };
+		74BAEB0F227831F200663CA2 /* Authentication.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authentication.storyboard; sourceTree = "<group>"; };
+		74BAEB122278322D00663CA2 /* AuthFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowAssembly.swift; sourceTree = "<group>"; };
+		74BAEB142278323800663CA2 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
+		74BAEB182278358600663CA2 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		74BAEB1A2278359500663CA2 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		74BAEB1C227835A300663CA2 /* AuthenticationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationModel.swift; sourceTree = "<group>"; };
+		74BAEB1F22783AED00663CA2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74D55D5A21B04B7900906D4E /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		74D55D5C21B04B8700906D4E /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		74D55D5E21B04B9500906D4E /* OrdrersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdrersModel.swift; sourceTree = "<group>"; };
@@ -311,6 +328,7 @@
 		505FCBEA2052E68E006CF982 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				74BAEB1F22783AED00663CA2 /* GoogleService-Info.plist */,
 				505FCBED2052E6B0006CF982 /* Info.plist */,
 				74A4D84921E4918A00D2CA2C /* swiftgen.yml */,
 				505FCBEB2052E68E006CF982 /* Notes.txt */,
@@ -321,6 +339,7 @@
 		70BF67542045A6AD00803C08 /* Buyper */ = {
 			isa = PBXGroup;
 			children = (
+				740F0F88227852A4003452A1 /* Buyper.entitlements */,
 				70BF67552045A6AD00803C08 /* AppDelegate.swift */,
 				70BF67562045A6AD00803C08 /* Common */,
 				70BF677D2045A6AD00803C08 /* Flows */,
@@ -457,6 +476,7 @@
 			isa = PBXGroup;
 			children = (
 				743053CD22734D0200649FAE /* FlowCore */,
+				74BAEB0E2278319A00663CA2 /* AuthenticationFlow */,
 				70BF67982045A6AD00803C08 /* ExploreFlow */,
 				74A4D83E21E48BDB00D2CA2C /* MapFlow */,
 				74D55D5921B04B3400906D4E /* OrdersFlow */,
@@ -595,6 +615,27 @@
 			path = FlowCore;
 			sourceTree = "<group>";
 		};
+		74BAEB0E2278319A00663CA2 /* AuthenticationFlow */ = {
+			isa = PBXGroup;
+			children = (
+				74BAEB0F227831F200663CA2 /* Authentication.storyboard */,
+				74BAEB112278321C00663CA2 /* FlowCore */,
+				74BAEB182278358600663CA2 /* AuthenticationViewController.swift */,
+				74BAEB1A2278359500663CA2 /* AuthenticationViewModel.swift */,
+				74BAEB1C227835A300663CA2 /* AuthenticationModel.swift */,
+			);
+			path = AuthenticationFlow;
+			sourceTree = "<group>";
+		};
+		74BAEB112278321C00663CA2 /* FlowCore */ = {
+			isa = PBXGroup;
+			children = (
+				74BAEB122278322D00663CA2 /* AuthFlowAssembly.swift */,
+				74BAEB142278323800663CA2 /* AuthFlowCoordinator.swift */,
+			);
+			path = FlowCore;
+			sourceTree = "<group>";
+		};
 		74D55D5921B04B3400906D4E /* OrdersFlow */ = {
 			isa = PBXGroup;
 			children = (
@@ -655,6 +696,7 @@
 			children = (
 				74E1AA4621B0214A0057C271 /* UserDataService.swift */,
 				743A955021B18B30006F7A4D /* RealmService.swift */,
+				740F0F892278578B003452A1 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -743,6 +785,7 @@
 				6F2A188B7A34A4FE0D44D2B6 /* [CP] Embed Pods Frameworks */,
 				C5525E231DABB24D0016156E /* SwiftLint */,
 				E8CBE417202228FD00186010 /* Embed Frameworks */,
+				C67E0A9B8DF72BC92F70E52E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -808,6 +851,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -848,6 +894,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74BAEB2022783AED00663CA2 /* GoogleService-Info.plist in Resources */,
+				74BAEB10227831F200663CA2 /* Authentication.storyboard in Resources */,
 				74BAEB092278279400663CA2 /* Colors.txt in Resources */,
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
 				74A4D84A21E4918A00D2CA2C /* swiftgen.yml in Resources */,
@@ -924,6 +972,23 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
+		C67E0A9B8DF72BC92F70E52E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shared-Buyper/Pods-Shared-Buyper-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shared-Buyper/Pods-Shared-Buyper-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shared-Buyper/Pods-Shared-Buyper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D4F30CD475A63E5095215808 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -975,6 +1040,7 @@
 				74E1AA4421B005F90057C271 /* RxBinding.swift in Sources */,
 				70BF67CB2045A6AD00803C08 /* EventNode.swift in Sources */,
 				70BF67BF2045A6AD00803C08 /* Reusable.swift in Sources */,
+				74BAEB1B2278359500663CA2 /* AuthenticationViewModel.swift in Sources */,
 				74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */,
 				70BF67CF2045A6AD00803C08 /* ApplicationFlowCoordinator.swift in Sources */,
 				74BAEB052278254A00663CA2 /* OrdersFlowAssembly.swift in Sources */,
@@ -983,23 +1049,27 @@
 				70BF67BD2045A6AD00803C08 /* SpinnerPresentable.swift in Sources */,
 				74BAEAF92277209B00663CA2 /* ProfileFlowCoordinator.swift in Sources */,
 				70BF67E12045A6AE00803C08 /* MainFlowCoordinator.swift in Sources */,
+				74BAEB1D227835A300663CA2 /* AuthenticationModel.swift in Sources */,
 				74BAEAEF2277185900663CA2 /* ProfileModel.swift in Sources */,
 				743053D122734D5900649FAE /* MainContainerModel.swift in Sources */,
 				70BF67CA2045A6AD00803C08 /* UIViewController+RxLyfecycle.swift in Sources */,
 				747170AE21D6337A00A8CD52 /* DurationsView.swift in Sources */,
 				74BAEB072278256000663CA2 /* OrdersFlowCoordinator.swift in Sources */,
+				74BAEB132278322D00663CA2 /* AuthFlowAssembly.swift in Sources */,
 				74D55D5D21B04B8700906D4E /* OrdersViewModel.swift in Sources */,
 				743053CF22734D2000649FAE /* MainContainerViewModel.swift in Sources */,
 				74A4D84721E48C3300D2CA2C /* MapViewController.swift in Sources */,
 				70BF67BC2045A6AD00803C08 /* Spinner.swift in Sources */,
 				747170B221D6348B00A8CD52 /* DurationsModel.swift in Sources */,
 				74BAEAF622771C6000663CA2 /* ExploreFlowAssambly.swift in Sources */,
+				74BAEB192278358600663CA2 /* AuthenticationViewController.swift in Sources */,
 				70BF67E42045A6AE00803C08 /* ExploreViewModel.swift in Sources */,
 				70BF67C12045A6AD00803C08 /* UITableView+Reusable.swift in Sources */,
 				74A4D84821E48C3300D2CA2C /* MapViewModel.swift in Sources */,
 				70BF67C42045A6AD00803C08 /* Storyboards+SwiftGen.swift in Sources */,
 				74E1AA3E21B005F90057C271 /* RxSwift+Scan.swift in Sources */,
 				70BF67C22045A6AD00803C08 /* Images+SwiftGen.swift in Sources */,
+				74BAEB152278323800663CA2 /* AuthFlowCoordinator.swift in Sources */,
 				74AD593121B081CE002FF176 /* Constants.swift in Sources */,
 				74D55D5F21B04B9500906D4E /* OrdrersModel.swift in Sources */,
 				70BF67B82045A6AD00803C08 /* AlertPresentable.swift in Sources */,
@@ -1038,6 +1108,7 @@
 			files = (
 				E8CBE42B20222BFD00186010 /* Constants.swift in Sources */,
 				74E1AA4721B0214A0057C271 /* UserDataService.swift in Sources */,
+				740F0F8A2278578B003452A1 /* UserService.swift in Sources */,
 				741A9C3C21B7C18E00C0A2B1 /* Day.swift in Sources */,
 				743A955121B18B30006F7A4D /* RealmService.swift in Sources */,
 				E858DD4C20247D4600A7867A /* Resolver+Autoresolve.swift in Sources */,
@@ -1197,6 +1268,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Buyper/Buyper.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 46V7933WWZ;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/SupportingFiles/Info.plist";
@@ -1218,6 +1290,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Buyper/Buyper.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 46V7933WWZ;
 				INFOPLIST_FILE = "$(PRODUCT_NAME)/SupportingFiles/Info.plist";

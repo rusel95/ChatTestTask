@@ -17,6 +17,7 @@ abstract_target 'Shared' do
 
     # DB client component
     pod 'RxRealm'
+    pod 'Alamofire'
 
     end
     
@@ -28,6 +29,11 @@ abstract_target 'Shared' do
         pod 'SnapKit', '~> 5.0.0'
         # Tools
         pod 'SwiftGen', '~> 6.1.0'
+        
+        # Firebase
+        pod 'Firebase/Core'
+        pod 'Firebase/Auth'
+        pod 'GoogleSignIn'
     end
 end
 
