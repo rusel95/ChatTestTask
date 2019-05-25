@@ -11,7 +11,7 @@ import SwinjectAutoregistration
 import Core
 
 enum MessagesNavigationEvent: Event {
-    
+    case presentChat(selectedMessage: Message)
 }
 
 final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
@@ -38,7 +38,9 @@ final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
     
     private func handle(_ event: MessagesNavigationEvent) {
         switch event {
-            
+        case .presentChat:
+        //TODO: made presenting here
+            break
         }
     }
     

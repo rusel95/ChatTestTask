@@ -11,6 +11,12 @@ import RxSwift
 
 final class MessagesViewModel: HasDisposeBag {
     
+    var messagesDataSource: Observable<[Message]> {
+        return model.messages.asObservable()
+    }
+    
+    let selectMessageAction = PublishSubject<Int>()
+    
     private let model: MessagesModel
     
     init(model: MessagesModel) {
@@ -19,7 +25,12 @@ final class MessagesViewModel: HasDisposeBag {
     }
     
     private func initializeBindings() {
-        
+        selectMessageAction.withLatestFrom(model.messages) { ($0, $1) }
+            .map { index, messages in
+                messages[index]
+            }
+            .bind(to: model.selectMessageAction)
+            .disposed(by: disposeBag)
     }
     
 }

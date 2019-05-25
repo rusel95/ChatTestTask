@@ -19,7 +19,9 @@
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
   internal static let launchScreenLogo = ImageAsset(name: "launch_screen_logo")
+  internal static let logo = ImageAsset(name: "Logo")
   internal static let greyMini = ImageAsset(name: "greyMini")
+  internal static let photoPlaceholder = ImageAsset(name: "photoPlaceholder")
   internal static let red = ImageAsset(name: "red")
   internal static let tabIconExploreSelected = ImageAsset(name: "tab_icon_explore_selected")
   internal static let tabIconExploreUnselected = ImageAsset(name: "tab_icon_explore_unselected")
@@ -27,7 +29,6 @@ internal enum Asset {
   internal static let tabIconMapUnselected = ImageAsset(name: "tab_icon_map_unselected")
   internal static let tabIconProfileSelected = ImageAsset(name: "tab_icon_profile_selected")
   internal static let tabIconProfileUnselected = ImageAsset(name: "tab_icon_profile_unselected")
-  internal static let logo1 = ImageAsset(name: "logo1")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

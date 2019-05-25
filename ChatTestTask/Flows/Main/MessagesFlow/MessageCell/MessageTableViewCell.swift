@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class MessageTableViewCell: UITableViewCell {
+class MessageTableViewCell: UITableViewCell, Reusable {
 
     @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var fullNameLabel: UILabel!
@@ -17,9 +18,13 @@ class MessageTableViewCell: UITableViewCell {
     @IBOutlet private weak var roleLabel: UILabel!
     @IBOutlet private weak var livePlaceLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(with message: Message) {
+        photoImageView?.setImage(with: message.profileURL, placeholder: Asset.photoPlaceholder.image)
+        fullNameLabel?.text = message.fullName
+        receivedTimeLabel?.text = message.receivedDate.description
+        messageTextLabel?.text = message.messageText
+        roleLabel?.text = message.role
+        livePlaceLabel?.text = message.livePlace
     }
     
 }

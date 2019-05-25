@@ -92,7 +92,6 @@
 		74D5CB8B2299670200A365F5 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB8A2299670200A365F5 /* MessagesViewModel.swift */; };
 		74D5CB8D2299670F00A365F5 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB8C2299670F00A365F5 /* MessagesModel.swift */; };
 		74D5CB9122996DD300A365F5 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB8F22996DD300A365F5 /* MessageTableViewCell.swift */; };
-		74D5CB9222996DD300A365F5 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D5CB9022996DD300A365F5 /* MessageTableViewCell.xib */; };
 		74E1AA3E21B005F90057C271 /* RxSwift+Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */; };
 		74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3721B005F80057C271 /* ObservableType+Call.swift */; };
 		74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */; };
@@ -240,7 +239,6 @@
 		74D5CB8A2299670200A365F5 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
 		74D5CB8C2299670F00A365F5 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		74D5CB8F22996DD300A365F5 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
-		74D5CB9022996DD300A365F5 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+Scan.swift"; sourceTree = "<group>"; };
 		74E1AA3721B005F80057C271 /* ObservableType+Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Call.swift"; sourceTree = "<group>"; };
 		74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+HandyFunctions.swift"; sourceTree = "<group>"; };
@@ -628,7 +626,8 @@
 			isa = PBXGroup;
 			children = (
 				74D5CB812299664400A365F5 /* FlowCore */,
-				74D5CB8E22996DA500A365F5 /* Views */,
+				74D5CB932299960200A365F5 /* Chat */,
+				74D5CB8E22996DA500A365F5 /* MessageCell */,
 				74D5CB862299669F00A365F5 /* Messages.storyboard */,
 				74D5CB88229966EC00A365F5 /* MessagesViewController.swift */,
 				74D5CB8A2299670200A365F5 /* MessagesViewModel.swift */,
@@ -646,13 +645,19 @@
 			path = FlowCore;
 			sourceTree = "<group>";
 		};
-		74D5CB8E22996DA500A365F5 /* Views */ = {
+		74D5CB8E22996DA500A365F5 /* MessageCell */ = {
 			isa = PBXGroup;
 			children = (
 				74D5CB8F22996DD300A365F5 /* MessageTableViewCell.swift */,
-				74D5CB9022996DD300A365F5 /* MessageTableViewCell.xib */,
 			);
-			path = Views;
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
+		74D5CB932299960200A365F5 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		74E1AA1B21AFEC2D0057C271 /* UserSession */ = {
@@ -914,7 +919,6 @@
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
 				74A4D84A21E4918A00D2CA2C /* swiftgen.yml in Resources */,
 				74D5CB872299669F00A365F5 /* Messages.storyboard in Resources */,
-				74D5CB9222996DD300A365F5 /* MessageTableViewCell.xib in Resources */,
 				74BAEAF12277191000663CA2 /* Profile.storyboard in Resources */,
 				70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */,
 				70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */,
