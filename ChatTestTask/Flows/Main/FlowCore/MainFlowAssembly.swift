@@ -37,6 +37,15 @@ final class MainFlowAssembly: Assembly {
             .inObjectScope(.transient)
         
         container
+            .register(MessagesFlowCoordinator.self) { (_, parent: EventNode) in
+                return MessagesFlowCoordinator(
+                    parent: parent,
+                    container: container
+                )
+            }
+            .inObjectScope(.transient)
+        
+        container
             .register(OrdersFlowCoordinator.self) { (_, parent: EventNode) in
                 return OrdersFlowCoordinator(
                     parent: parent,

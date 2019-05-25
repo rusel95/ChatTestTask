@@ -85,6 +85,14 @@
 		74D55D5D21B04B8700906D4E /* OrdersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5C21B04B8700906D4E /* OrdersViewModel.swift */; };
 		74D55D5F21B04B9500906D4E /* OrdrersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D55D5E21B04B9500906D4E /* OrdrersModel.swift */; };
 		74D55D6121B04BCC00906D4E /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D55D6021B04BCC00906D4E /* Orders.storyboard */; };
+		74D5CB832299665800A365F5 /* MessagesFlowAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB822299665800A365F5 /* MessagesFlowAssembly.swift */; };
+		74D5CB852299667A00A365F5 /* MessagesFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB842299667A00A365F5 /* MessagesFlowCoordinator.swift */; };
+		74D5CB872299669F00A365F5 /* Messages.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74D5CB862299669F00A365F5 /* Messages.storyboard */; };
+		74D5CB89229966EC00A365F5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB88229966EC00A365F5 /* MessagesViewController.swift */; };
+		74D5CB8B2299670200A365F5 /* MessagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB8A2299670200A365F5 /* MessagesViewModel.swift */; };
+		74D5CB8D2299670F00A365F5 /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB8C2299670F00A365F5 /* MessagesModel.swift */; };
+		74D5CB9122996DD300A365F5 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D5CB8F22996DD300A365F5 /* MessageTableViewCell.swift */; };
+		74D5CB9222996DD300A365F5 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D5CB9022996DD300A365F5 /* MessageTableViewCell.xib */; };
 		74E1AA3E21B005F90057C271 /* RxSwift+Scan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */; };
 		74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3721B005F80057C271 /* ObservableType+Call.swift */; };
 		74E1AA4021B005F90057C271 /* ObservableType+HandyFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */; };
@@ -225,6 +233,14 @@
 		74D55D5C21B04B8700906D4E /* OrdersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewModel.swift; sourceTree = "<group>"; };
 		74D55D5E21B04B9500906D4E /* OrdrersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdrersModel.swift; sourceTree = "<group>"; };
 		74D55D6021B04BCC00906D4E /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
+		74D5CB822299665800A365F5 /* MessagesFlowAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesFlowAssembly.swift; sourceTree = "<group>"; };
+		74D5CB842299667A00A365F5 /* MessagesFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesFlowCoordinator.swift; sourceTree = "<group>"; };
+		74D5CB862299669F00A365F5 /* Messages.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Messages.storyboard; sourceTree = "<group>"; };
+		74D5CB88229966EC00A365F5 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		74D5CB8A2299670200A365F5 /* MessagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewModel.swift; sourceTree = "<group>"; };
+		74D5CB8C2299670F00A365F5 /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		74D5CB8F22996DD300A365F5 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		74D5CB9022996DD300A365F5 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		74E1AA3621B005F80057C271 /* RxSwift+Scan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+Scan.swift"; sourceTree = "<group>"; };
 		74E1AA3721B005F80057C271 /* ObservableType+Call.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Call.swift"; sourceTree = "<group>"; };
 		74E1AA3821B005F80057C271 /* ObservableType+HandyFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+HandyFunctions.swift"; sourceTree = "<group>"; };
@@ -437,6 +453,7 @@
 				743053CD22734D0200649FAE /* FlowCore */,
 				70BF67982045A6AD00803C08 /* ExploreFlow */,
 				74A4D83E21E48BDB00D2CA2C /* MapFlow */,
+				74D5CB802299663500A365F5 /* MessagesFlow */,
 				74D55D5921B04B3400906D4E /* OrdersFlow */,
 				74BAEAE92277170800663CA2 /* ProfileFlow */,
 				7438D9C922731EC00052558E /* MainContainerController.swift */,
@@ -605,6 +622,37 @@
 				74D55D5E21B04B9500906D4E /* OrdrersModel.swift */,
 			);
 			path = OrdersFlow;
+			sourceTree = "<group>";
+		};
+		74D5CB802299663500A365F5 /* MessagesFlow */ = {
+			isa = PBXGroup;
+			children = (
+				74D5CB812299664400A365F5 /* FlowCore */,
+				74D5CB8E22996DA500A365F5 /* Views */,
+				74D5CB862299669F00A365F5 /* Messages.storyboard */,
+				74D5CB88229966EC00A365F5 /* MessagesViewController.swift */,
+				74D5CB8A2299670200A365F5 /* MessagesViewModel.swift */,
+				74D5CB8C2299670F00A365F5 /* MessagesModel.swift */,
+			);
+			path = MessagesFlow;
+			sourceTree = "<group>";
+		};
+		74D5CB812299664400A365F5 /* FlowCore */ = {
+			isa = PBXGroup;
+			children = (
+				74D5CB822299665800A365F5 /* MessagesFlowAssembly.swift */,
+				74D5CB842299667A00A365F5 /* MessagesFlowCoordinator.swift */,
+			);
+			path = FlowCore;
+			sourceTree = "<group>";
+		};
+		74D5CB8E22996DA500A365F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				74D5CB8F22996DD300A365F5 /* MessageTableViewCell.swift */,
+				74D5CB9022996DD300A365F5 /* MessageTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		74E1AA1B21AFEC2D0057C271 /* UserSession */ = {
@@ -865,6 +913,8 @@
 				74BAEB092278279400663CA2 /* Colors.txt in Resources */,
 				70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */,
 				74A4D84A21E4918A00D2CA2C /* swiftgen.yml in Resources */,
+				74D5CB872299669F00A365F5 /* Messages.storyboard in Resources */,
+				74D5CB9222996DD300A365F5 /* MessageTableViewCell.xib in Resources */,
 				74BAEAF12277191000663CA2 /* Profile.storyboard in Resources */,
 				70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */,
 				70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */,
@@ -1039,9 +1089,12 @@
 				70BF67B62045A6AD00803C08 /* MainFlowAssembly.swift in Sources */,
 				74BAEAED2277184800663CA2 /* ProfileViewController.swift in Sources */,
 				70BF67BD2045A6AD00803C08 /* SpinnerPresentable.swift in Sources */,
+				74D5CB9122996DD300A365F5 /* MessageTableViewCell.swift in Sources */,
+				74D5CB8B2299670200A365F5 /* MessagesViewModel.swift in Sources */,
 				74BAEAF92277209B00663CA2 /* ProfileFlowCoordinator.swift in Sources */,
 				70BF67E12045A6AE00803C08 /* MainFlowCoordinator.swift in Sources */,
 				74BAEB1D227835A300663CA2 /* AuthenticationModel.swift in Sources */,
+				74D5CB852299667A00A365F5 /* MessagesFlowCoordinator.swift in Sources */,
 				74BAEAEF2277185900663CA2 /* ProfileModel.swift in Sources */,
 				743053D122734D5900649FAE /* MainContainerModel.swift in Sources */,
 				70BF67CA2045A6AD00803C08 /* UIViewController+RxLyfecycle.swift in Sources */,
@@ -1053,6 +1106,7 @@
 				74A4D84721E48C3300D2CA2C /* MapViewController.swift in Sources */,
 				70BF67BC2045A6AD00803C08 /* Spinner.swift in Sources */,
 				747170B221D6348B00A8CD52 /* DurationsModel.swift in Sources */,
+				74D5CB8D2299670F00A365F5 /* MessagesModel.swift in Sources */,
 				74BAEAF622771C6000663CA2 /* ExploreFlowAssambly.swift in Sources */,
 				74BAEB192278358600663CA2 /* AuthenticationViewController.swift in Sources */,
 				70BF67E42045A6AE00803C08 /* ExploreViewModel.swift in Sources */,
@@ -1073,9 +1127,11 @@
 				74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */,
 				74BAEAFB2277222200663CA2 /* ProfileFlowAssambly.swift in Sources */,
 				70BF67B92045A6AD00803C08 /* ApplicationAlert.swift in Sources */,
+				74D5CB89229966EC00A365F5 /* MessagesViewController.swift in Sources */,
 				70BF67C72045A6AD00803C08 /* UIImageView+Kingfisher.swift in Sources */,
 				70BF67E22045A6AE00803C08 /* ExploreModel.swift in Sources */,
 				70BF67CD2045A6AD00803C08 /* ModuleInput.swift in Sources */,
+				74D5CB832299665800A365F5 /* MessagesFlowAssembly.swift in Sources */,
 				74E1AA4321B005F90057C271 /* NSObject+DisposeBag.swift in Sources */,
 				70BF67CC2045A6AD00803C08 /* FlowCoordinator.swift in Sources */,
 				7438D9CA22731EC00052558E /* MainContainerController.swift in Sources */,

@@ -1,2 +1,2 @@
-buyperTabBarFontUnselectedColor: #505050
-buyperTabBarFontSelectedColor: #FF596D
+tabBarFontUnselectedColor: #505050
+tabBarFontSelectedColor: #FF596D

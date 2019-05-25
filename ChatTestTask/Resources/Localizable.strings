@@ -30,5 +30,6 @@
 // Tabs
 "exploreTabTitle" = "EXPLORE";
 "mapTabTitle" = "MAP";
+"messagesTabTitle" = "MESSAGES";
 "ordersTabTitle" = "ORDERS";
 "profileTabTitle" = "PROFILE";

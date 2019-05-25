@@ -8,12 +8,15 @@ import Foundation
 
 // MARK: - Strings
 
-// swiftlint:disable function_parameter_count identifier_name line_length type_body_length
+// swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
   /// EXPLORE
   internal static let exploreTabTitle = L10n.tr("Localizable", "exploreTabTitle")
   /// MAP
   internal static let mapTabTitle = L10n.tr("Localizable", "mapTabTitle")
+  /// MESSAGES
+  internal static let messagesTabTitle = L10n.tr("Localizable", "messagesTabTitle")
   /// ORDERS
   internal static let ordersTabTitle = L10n.tr("Localizable", "ordersTabTitle")
   /// PROFILE
@@ -28,24 +31,43 @@ internal enum L10n {
   internal static let settingsSessionsUntilLongBreak = L10n.tr("Localizable", "settingsSessionsUntilLongBreak")
   /// work
   internal static let settingsWorkDuration = L10n.tr("Localizable", "settingsWorkDuration")
-  /// Error
-  internal static let alertDefaultErrorTile = L10n.tr("Localizable", "alert.default_error_tile")
-  /// Information
-  internal static let alertDefaultInfoTile = L10n.tr("Localizable", "alert.default_info_tile")
-  /// Success
-  internal static let alertDefaultSuccessTile = L10n.tr("Localizable", "alert.default_success_tile")
-  /// Login testing again
-  internal static let authLoginButtonTitle = L10n.tr("Localizable", "auth.login_button.title")
-  /// OK
-  internal static let commonButtonsOkButtonTitle = L10n.tr("Localizable", "common_buttons.ok_button.title")
-  /// Save
-  internal static let commonButtonsSaveButtonTitle = L10n.tr("Localizable", "common_buttons.save_button.title")
-  /// Cannot login, please try again later
-  internal static let errorCannotLogin = L10n.tr("Localizable", "error.cannot_login")
-  /// Something went wrong, please try again later
-  internal static let errorUndefined = L10n.tr("Localizable", "error.undefined")
+
+  internal enum Alert {
+    /// Error
+    internal static let defaultErrorTile = L10n.tr("Localizable", "alert.default_error_tile")
+    /// Information
+    internal static let defaultInfoTile = L10n.tr("Localizable", "alert.default_info_tile")
+    /// Success
+    internal static let defaultSuccessTile = L10n.tr("Localizable", "alert.default_success_tile")
+  }
+
+  internal enum Auth {
+    internal enum LoginButton {
+      /// Login testing again
+      internal static let title = L10n.tr("Localizable", "auth.login_button.title")
+    }
+  }
+
+  internal enum CommonButtons {
+    internal enum OkButton {
+      /// OK
+      internal static let title = L10n.tr("Localizable", "common_buttons.ok_button.title")
+    }
+    internal enum SaveButton {
+      /// Save
+      internal static let title = L10n.tr("Localizable", "common_buttons.save_button.title")
+    }
+  }
+
+  internal enum Error {
+    /// Cannot login, please try again later
+    internal static let cannotLogin = L10n.tr("Localizable", "error.cannot_login")
+    /// Something went wrong, please try again later
+    internal static let undefined = L10n.tr("Localizable", "error.undefined")
+  }
 }
-// swiftlint:enable function_parameter_count identifier_name line_length type_body_length
+// swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
+// swiftlint:enable nesting type_body_length type_name
 
 // MARK: - Implementation Details
 

@@ -22,16 +22,16 @@ extension AlertPresentable {
         
         switch style {
         case .error:
-            title = L10n.alertDefaultErrorTile
+            title = L10n.Alert.defaultErrorTile
             
         case .success:
-            title = L10n.alertDefaultSuccessTile
+            title = L10n.Alert.defaultSuccessTile
             
         case .info:
-            title = L10n.alertDefaultInfoTile
+            title = L10n.Alert.defaultInfoTile
         }
         
-        showAlert(with: style, title: title, message: message, actionTitle: L10n.commonButtonsOkButtonTitle)
+        showAlert(with: style, title: title, message: message, actionTitle: L10n.CommonButtons.OkButton.title)
     }
     
 }

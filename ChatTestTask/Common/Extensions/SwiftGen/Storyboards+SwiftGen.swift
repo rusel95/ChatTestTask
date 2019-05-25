@@ -27,6 +27,11 @@ internal enum StoryboardScene {
 
     internal static let mapViewController = SceneType<ChatTestTask.MapViewController>(storyboard: Map.self, identifier: "MapViewController")
   }
+  internal enum Messages: StoryboardType {
+    internal static let storyboardName = "Messages"
+
+    internal static let messagesViewController = SceneType<ChatTestTask.MessagesViewController>(storyboard: Messages.self, identifier: "MessagesViewController")
+  }
   internal enum Orders: StoryboardType {
     internal static let storyboardName = "Orders"
 

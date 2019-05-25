@@ -2,11 +2,11 @@
 // Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
 #if os(OSX)
-  import AppKit.NSColor
-  internal typealias Color = NSColor
+  import AppKit
+  internal enum ColorName { }
 #elseif os(iOS) || os(tvOS) || os(watchOS)
-  import UIKit.UIColor
-  internal typealias Color = UIColor
+  import UIKit
+  internal enum ColorName { }
 #endif
 
 // swiftlint:disable superfluous_disable_command
@@ -15,36 +15,10 @@
 // MARK: - Colors
 
 // swiftlint:disable identifier_name line_length type_body_length
-internal struct ColorName {
-  internal let rgbaValue: UInt32
-  internal var color: Color { return Color(named: self) }
-
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ff596d"></span>
-  /// Alpha: 100% <br/> (0xff596dff)
-  internal static let buyperTabBarFontSelectedColor = ColorName(rgbaValue: 0xff596dff)
-  /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#505050"></span>
-  /// Alpha: 100% <br/> (0x505050ff)
-  internal static let buyperTabBarFontUnselectedColor = ColorName(rgbaValue: 0x505050ff)
+internal extension ColorName {
+  /// 0xff596dff (r: 255, g: 89, b: 109, a: 255)
+  internal static let tabBarFontSelectedColor = #colorLiteral(red: 1.0, green: 0.34901962, blue: 0.42745098, alpha: 1.0)
+  /// 0x505050ff (r: 80, g: 80, b: 80, a: 255)
+  internal static let tabBarFontUnselectedColor = #colorLiteral(red: 0.3137255, green: 0.3137255, blue: 0.3137255, alpha: 1.0)
 }
 // swiftlint:enable identifier_name line_length type_body_length
-
-// MARK: - Implementation Details
-
-// swiftlint:disable operator_usage_whitespace
-internal extension Color {
-  convenience init(rgbaValue: UInt32) {
-    let red   = CGFloat((rgbaValue >> 24) & 0xff) / 255.0
-    let green = CGFloat((rgbaValue >> 16) & 0xff) / 255.0
-    let blue  = CGFloat((rgbaValue >>  8) & 0xff) / 255.0
-    let alpha = CGFloat((rgbaValue      ) & 0xff) / 255.0
-
-    self.init(red: red, green: green, blue: blue, alpha: alpha)
-  }
-}
-// swiftlint:enable operator_usage_whitespace
-
-internal extension Color {
-  convenience init(named color: ColorName) {
-    self.init(rgbaValue: color.rgbaValue)
-  }
-}

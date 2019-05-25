@@ -47,6 +47,8 @@ final class MainContainerModel: EventNode, HasDisposeBag {
                     self.raise(event: MainFlowEvent.switchToList)
                 case .map:
                     self.raise(event: MainFlowEvent.switchToMap)
+                case .messages:
+                    self.raise(event: MainFlowEvent.switchToMessages)
                 case .orders:
                     self.raise(event: MainFlowEvent.switchToOrders)
                 case .profile:

@@ -12,6 +12,7 @@ enum MainFlowEvent: Event {
     
     case switchToList
     case switchToMap
+    case switchToMessages
     case switchToOrders
     case switchToProfile
     
@@ -21,6 +22,7 @@ enum Tab: Int {
     
     case list
     case map
+    case messages
     case orders
     case profile
     
@@ -52,11 +54,11 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
             selectedImage: Asset.tabIconExploreSelected.image.withRenderingMode(.alwaysOriginal)
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontUnselectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontUnselectedColor],
             for: .normal
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontSelectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontSelectedColor],
             for: .selected
         )
         exploreViewController.tabBarItem = item
@@ -84,11 +86,43 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
             selectedImage: Asset.tabIconMapSelected.image.withRenderingMode(.alwaysOriginal)
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontUnselectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontUnselectedColor],
             for: .normal
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontSelectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontSelectedColor],
+            for: .selected
+        )
+        viewController.tabBarItem = item
+        
+        return containerViewController
+    }()
+    
+    private lazy var messagesController: UIViewController = {
+        let flowCoordinator: MessagesFlowCoordinator = container.autoresolve(argument: self)
+        
+        let viewController = flowCoordinator.createFlow()
+        let containerViewController = UINavigationController(rootViewController: viewController)
+        
+        viewController.navigationController?.isNavigationBarHidden = true
+        containerViewController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        containerViewController.navigationBar.shadowImage = UIImage()
+        containerViewController.navigationBar.isTranslucent = true
+        containerViewController.view.backgroundColor = .clear
+        
+        flowCoordinator.containerViewController = containerViewController
+        
+        let item = UITabBarItem(
+            title: L10n.messagesTabTitle,
+            image: Asset.tabIconMapUnselected.image.withRenderingMode(.alwaysOriginal),
+            selectedImage: Asset.tabIconMapSelected.image.withRenderingMode(.alwaysOriginal)
+        )
+        item.setTitleTextAttributes(
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontUnselectedColor],
+            for: .normal
+        )
+        item.setTitleTextAttributes(
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontSelectedColor],
             for: .selected
         )
         viewController.tabBarItem = item
@@ -116,11 +150,11 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
             selectedImage: Asset.tabIconMapSelected.image.withRenderingMode(.alwaysOriginal)
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontUnselectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontUnselectedColor],
             for: .normal
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontSelectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontSelectedColor],
             for: .selected
         )
         viewController.tabBarItem = item
@@ -140,11 +174,11 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
             selectedImage: Asset.tabIconProfileSelected.image.withRenderingMode(.alwaysOriginal)
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontUnselectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontSelectedColor],
             for: .normal
         )
         item.setTitleTextAttributes(
-            [NSAttributedString.Key.foregroundColor: ColorName.buyperTabBarFontSelectedColor.color],
+            [NSAttributedString.Key.foregroundColor: ColorName.tabBarFontUnselectedColor],
             for: .selected
         )
         viewController.tabBarItem = item
@@ -175,6 +209,7 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
         tabBarController.viewControllers = [
             exploreController,
             mapController,
+            messagesController,
             ordersController,
             profileController
         ]
@@ -187,6 +222,8 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
                 self?.tabBarController.selectedIndex = Tab.list.rawValue
             case .switchToMap:
                 self?.tabBarController.selectedIndex = Tab.map.rawValue
+            case .switchToMessages:
+                self?.tabBarController.selectedIndex = Tab.messages.rawValue
             case .switchToOrders:
                 self?.tabBarController.selectedIndex = Tab.orders.rawValue
             case .switchToProfile:
