@@ -1,5 +1,5 @@
-input_dir: Buyper/
-output_dir: Buyper/Common/Extensions/SwiftGen/
+input_dir: ChatTestTask/
+output_dir: ChatTestTask/Common/Extensions/SwiftGen/
 strings:
   inputs: Resources/Localizable.strings
   outputs:

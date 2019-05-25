@@ -9,31 +9,32 @@ abstract_target 'Shared' do
     pod 'SwinjectAutoregistration', '~> 2.6.0'
     
     # FRP
-    pod 'RxCocoa', '~> 4.5.0'
-    pod 'RxSwift', '~> 4.5.0'
-    pod 'NSObject+Rx', '~> 4.4.1'
+    pod 'RxCocoa', '5.0.0'
+    pod 'RxSwift', '5.0.0'
+    pod 'RxGesture', '3.0.0'
+    pod 'NSObject+Rx', '5.0.0'
 
     target 'Core' do
 
     # DB client component
-    pod 'RxRealm'
+    pod 'RxRealm', '1.0.0'
     pod 'Alamofire'
+    
+    # Char SDK
+    pod 'Chatto', '= 3.4.0'
+    pod 'ChattoAdditions', '= 3.4.0' # if you want to use the cells or the input component
 
     end
     
-    target 'Buyper' do
+    target 'ChatTestTask' do
         # Controls
         pod 'SVProgressHUD', '~> 2.2.5'
         
-        pod 'Kingfisher', '~> 4.10.1'
+        pod 'Kingfisher', '5.5.0'
         pod 'SnapKit', '~> 5.0.0'
         # Tools
         pod 'SwiftGen', '~> 6.1.0'
-        
-        # Firebase
-        pod 'Firebase/Core'
-        pod 'Firebase/Auth'
-        pod 'GoogleSignIn'
+      
     end
 end
 
