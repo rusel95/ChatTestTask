@@ -28,18 +28,9 @@ final class MessagesModel: EventNode, HasDisposeBag {
     
     override init(parent: EventNode) {
         super.init(parent: parent)
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
-            self.messages.accept([Message(id: 0,
-                                     profileURL: URL(string: "https://picsum.photos/40/40?grayscale")!,
-                                     fullName: "Edwige Arnaud",
-                                     receivedDate: Date(),
-                                     messageText: "There are millions of users, and there wil…",
-                                     role: "Graphic Designer - 2D Artist",
-                                     livePlace: "Havana")])
-        }
       
         initializeBindings()
+        fetchMessages()
     }
     
     private func initializeBindings() {
@@ -51,5 +42,14 @@ final class MessagesModel: EventNode, HasDisposeBag {
     }
     
     // MARK: - private
-    
+    private func fetchMessages() {
+        // NOTE: just a test data
+        messages.accept([Message(id: 0,
+                                 profileURL: URL(string: "https://picsum.photos/40/40?grayscale")!,
+                                 fullName: "Edwige Arnaud",
+                                 receivedDate: Date(),
+                                 messageText: "There are millions of users, and there wil…",
+                                 role: "Graphic Designer - 2D Artist",
+                                 livePlace: "Havana") ] )
+    }
 }

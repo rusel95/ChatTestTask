@@ -6,6 +6,7 @@
 
 import UIKit
 import Core
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        FirebaseApp.configure()
         NotificationsService.shared.didFinishLaunching(application: application, launchOptions: launchOptions)
         applicationFlowCoordinator = ApplicationFlowCoordinator(window: window!)
         applicationFlowCoordinator.execute()

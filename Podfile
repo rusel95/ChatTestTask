@@ -20,6 +20,9 @@ abstract_target 'Shared' do
     pod 'RxRealm', '1.0.0'
     pod 'Alamofire'
     
+    # Firebase
+    pod 'Firebase/Core'
+    
     # Char SDK
     pod 'Chatto', '= 3.4.0'
     pod 'ChattoAdditions', '= 3.4.0' # if you want to use the cells or the input component

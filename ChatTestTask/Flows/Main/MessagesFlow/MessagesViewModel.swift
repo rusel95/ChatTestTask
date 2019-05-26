@@ -15,6 +15,8 @@ final class MessagesViewModel: HasDisposeBag {
         return model.messages.asObservable()
     }
     
+    var navigationBarTitle = Observable.just(L10n.messagesNavitaionTitle)
+    
     let selectMessageAction = PublishSubject<Int>()
     
     private let model: MessagesModel

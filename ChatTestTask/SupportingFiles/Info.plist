@@ -55,5 +55,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>You will able to make some photos and send them in chat</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>You will able to choose phoro from library</string>
 </dict>
 </plist>

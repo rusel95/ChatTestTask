@@ -28,6 +28,10 @@ final class MessagesViewController: UIViewController {
     
     // MARK: - Private Methods
     private func initializeBindings() {
+        viewModel.navigationBarTitle
+            .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
+        
         tableView.register(MessageTableViewCell.self,
                            forCellReuseIdentifier: MessageTableViewCell.reuseIdentifier)
         

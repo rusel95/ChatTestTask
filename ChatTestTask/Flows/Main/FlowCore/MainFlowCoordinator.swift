@@ -199,7 +199,7 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
         self.tabBarController = tabBarController
         assembleActualTabs()
         containerViewController = self.tabBarController
-        self.tabBarController.selectedIndex = Tab.map.rawValue
+        self.tabBarController.selectedIndex = Tab.messages.rawValue
         return tabBarController
     }
     

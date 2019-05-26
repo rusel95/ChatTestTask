@@ -3,7 +3,57 @@ PODS:
   - Chatto (3.4.0)
   - ChattoAdditions (3.4.0):
     - Chatto
+  - Firebase/Core (6.1.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 6.0.1)
+  - Firebase/CoreOnly (6.1.0):
+    - FirebaseCore (= 6.0.1)
+  - FirebaseAnalytics (6.0.1):
+    - FirebaseCore (~> 6.0)
+    - FirebaseInstanceID (~> 4.1)
+    - GoogleAppMeasurement (= 6.0.1)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (6.0.1):
+    - GoogleUtilities/Environment (~> 6.0)
+    - GoogleUtilities/Logger (~> 6.0)
+  - FirebaseInstanceID (4.1.0):
+    - FirebaseCore (~> 6.0)
+    - GoogleUtilities/Environment (~> 6.0)
+    - GoogleUtilities/UserDefaults (~> 6.0)
+  - GoogleAppMeasurement (6.0.1):
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
+    - GoogleUtilities/MethodSwizzler (~> 6.0)
+    - GoogleUtilities/Network (~> 6.0)
+    - "GoogleUtilities/NSData+zlib (~> 6.0)"
+    - nanopb (~> 0.3)
+  - GoogleUtilities/AppDelegateSwizzler (6.1.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+  - GoogleUtilities/Environment (6.1.0)
+  - GoogleUtilities/Logger (6.1.0):
+    - GoogleUtilities/Environment
+  - GoogleUtilities/MethodSwizzler (6.1.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/Network (6.1.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (6.1.0)"
+  - GoogleUtilities/Reachability (6.1.0):
+    - GoogleUtilities/Logger
+  - GoogleUtilities/UserDefaults (6.1.0):
+    - GoogleUtilities/Logger
   - Kingfisher (5.5.0)
+  - nanopb (0.3.901):
+    - nanopb/decode (= 0.3.901)
+    - nanopb/encode (= 0.3.901)
+  - nanopb/decode (0.3.901)
+  - nanopb/encode (0.3.901)
   - "NSObject+Rx (5.0.0)":
     - RxSwift (~> 5.0)
   - Realm (3.15.0):
@@ -34,6 +84,7 @@ DEPENDENCIES:
   - Alamofire
   - Chatto (= 3.4.0)
   - ChattoAdditions (= 3.4.0)
+  - Firebase/Core
   - Kingfisher (= 5.5.0)
   - "NSObject+Rx (= 5.0.0)"
   - RxCocoa (= 5.0.0)
@@ -51,7 +102,14 @@ SPEC REPOS:
     - Alamofire
     - Chatto
     - ChattoAdditions
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
+    - GoogleAppMeasurement
+    - GoogleUtilities
     - Kingfisher
+    - nanopb
     - "NSObject+Rx"
     - Realm
     - RealmSwift
@@ -70,7 +128,14 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Chatto: c00cb1af4c57b797041ce77a115d4f535ec54991
   ChattoAdditions: 24617c63386fbaf971f11514fdc748d37f66f093
+  Firebase: 8d77bb33624ae9b62d745d82ec023de5f70f7e4f
+  FirebaseAnalytics: 629301c2b9925f3537d4093a17a72751ae5b7084
+  FirebaseCore: 66bdef3b310a026880e2a5bc8aa586ab62ce4543
+  FirebaseInstanceID: 27bed93a59b6685f5c3e0c028a878a764fd75c33
+  GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
+  GoogleUtilities: 84df567c76ca84f67b7bb40e769fdd4acc746a10
   Kingfisher: 6fe5e67a90fd335e49b0f5c075ff55ac5ebedd94
+  nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   "NSObject+Rx": 6151a97d171f7187c4183746acc42d9451952a7b
   Realm: 9b834e1be6062f544805252c812348872dc5d4ed
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
@@ -85,6 +150,6 @@ SPEC CHECKSUMS:
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectAutoregistration: 93a908f7543c401b0c315305ac0ae501efdbce89
 
-PODFILE CHECKSUM: cff7d86ef97daadbd9c0d55aed490dc13fb5cfab
+PODFILE CHECKSUM: b66ca8cbeeef8e13c98387482aaf51a55306e41d
 
 COCOAPODS: 1.6.1

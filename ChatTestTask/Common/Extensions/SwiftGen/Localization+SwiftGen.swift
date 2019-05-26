@@ -11,26 +11,39 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 internal enum L10n {
+  /// Add random incoming message
+  internal static let chatScreenAddRandomIncomingMessageButtonText = L10n.tr("Localizable", "chatScreenAddRandomIncomingMessageButtonText")
+  /// Type a messages
+  internal static let chatScreenInputTextPlaceholder = L10n.tr("Localizable", "chatScreenInputTextPlaceholder")
+  /// Add random incoming message
+  internal static let chatScreenRandomMessageText = L10n.tr("Localizable", "chatScreenRandomMessageText")
+  /// Send
+  internal static let chatScreenSendButtonText = L10n.tr("Localizable", "chatScreenSendButtonText")
   /// EXPLORE
   internal static let exploreTabTitle = L10n.tr("Localizable", "exploreTabTitle")
   /// MAP
   internal static let mapTabTitle = L10n.tr("Localizable", "mapTabTitle")
+  /// Messages
+  internal static let messagesNavitaionTitle = L10n.tr("Localizable", "messagesNavitaionTitle")
   /// MESSAGES
   internal static let messagesTabTitle = L10n.tr("Localizable", "messagesTabTitle")
   /// ORDERS
   internal static let ordersTabTitle = L10n.tr("Localizable", "ordersTabTitle")
   /// PROFILE
   internal static let profileTabTitle = L10n.tr("Localizable", "profileTabTitle")
-  /// break
-  internal static let settingsBreakDuration = L10n.tr("Localizable", "settingsBreakDuration")
-  /// daily goal
-  internal static let settingsDailyGoal = L10n.tr("Localizable", "settingsDailyGoal")
-  /// long break
-  internal static let settingsLongBreak = L10n.tr("Localizable", "settingsLongBreak")
-  /// sessions until long break
-  internal static let settingsSessionsUntilLongBreak = L10n.tr("Localizable", "settingsSessionsUntilLongBreak")
-  /// work
-  internal static let settingsWorkDuration = L10n.tr("Localizable", "settingsWorkDuration")
+
+  internal enum LoremIpsumDolorSitAmet😇HttpsGithub {
+    internal enum ComBadooChattoConsecteturAdipiscingElitSedDoEiusmodTemporIncididunt07400000000📞UtLaboreEtDoloreMagnaAliqua {
+      internal enum UtEnimAdMinimVeniamQuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequat {
+        internal enum DuisAuteIrureDolorInReprehenderitInVoluptateVelitEsseCillumDoloreHttpsGithub {
+          internal enum ComBadooChattoEuFugiatNullaPariatur {
+            /// Lorem ipsum dolor sit amet 😇, https://github.com/badoo/Chatto consectetur adipiscing elit , sed do eiusmod tempor incididunt 07400000000 📞 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore https://github.com/badoo/Chatto eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 07400000000 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            internal static let excepteurSintOccaecatCupidatat07400000000NonProidentSuntInCulpaQuiOfficiaDeseruntMollitAnimIdEstLaborum = L10n.tr("Localizable", "Lorem ipsum dolor sit amet 😇, https://github.com/badoo/Chatto consectetur adipiscing elit , sed do eiusmod tempor incididunt 07400000000 📞 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore https://github.com/badoo/Chatto eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat 07400000000 non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+          }
+        }
+      }
+    }
+  }
 
   internal enum Alert {
     /// Error

@@ -17,9 +17,10 @@ enum MessagesNavigationEvent: Event {
 final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
     
     weak var containerViewController: UIViewController?
-    private let container: Container
     
     private var rootViewController: MessagesViewController?
+    
+    private let container: Container
     
     init(parent: EventNode, container: Container) {
         self.container = Container(parent: container)
@@ -39,8 +40,8 @@ final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
     private func handle(_ event: MessagesNavigationEvent) {
         switch event {
         case .presentChat:
-        //TODO: made presenting here
-            break
+            let controller: ChatViewController = container.autoresolve(argument: self)
+            navigationController?.pushViewController(controller, animated: true)
         }
     }
     
