@@ -20,12 +20,11 @@ class TestChatMessageFactory {
     }
     
     class func makeRandomMessage(_ uid: String, isIncoming: Bool) -> MessageModelProtocol {
-//        if arc4random_uniform(100) % 2 == 0 {
-        return self.makeRandomMessage(uid, isIncoming: isIncoming)
-//        }
-//        } else {
-//            return self.makeRandomPhotoMessage(uid, isIncoming: isIncoming)
-//        }
+        if arc4random_uniform(100) % 2 == 0 {
+            return self.makeRandomMessage(uid, isIncoming: isIncoming)
+        } else {
+            return self.makeRandomPhotoMessage(uid, isIncoming: isIncoming)
+        }
     }
     
     class func makeTextMessage(_ uid: String, text: String, isIncoming: Bool) -> TestTextMessageModel {
@@ -36,11 +35,11 @@ class TestChatMessageFactory {
         return textMessageModel
     }
     
-//    class func makePhotoMessage(_ uid: String, image: UIImage, size: CGSize, isIncoming: Bool) -> TestPhotoMessageModel {
-//        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: PhotoMessageModel<MessageModel>.chatItemType)
-//        let photoMessageModel = TestPhotoMessageModel(messageModel: messageModel, imageSize: size, image: image)
-//        return photoMessageModel
-//    }
+    class func makePhotoMessage(_ uid: String, image: UIImage, size: CGSize, isIncoming: Bool) -> TestPhotoMessageModel {
+        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: PhotoMessageModel<MessageModel>.chatItemType)
+        let photoMessageModel = TestPhotoMessageModel(messageModel: messageModel, imageSize: size, image: image)
+        return photoMessageModel
+    }
     
 //    static func makeCompoundMessage(isIncoming: Bool) -> TestCompoundMessageModel {
 //        let messageModel = self.makeMessageModel(UUID().uuidString,
@@ -53,37 +52,37 @@ class TestChatMessageFactory {
 //                                        image: image,
 //                                        messageModel: messageModel)
 //    }
-//
-//    private class func makeRandomTextMessage(_ uid: String, isIncoming: Bool) -> TestTextMessageModel {
-//        let incomingText: String = isIncoming ? "incoming" : "outgoing"
-//        let maxText = self.demoText
-//        let length: Int = 10 + Int(arc4random_uniform(300))
-//        let text = "\(String(maxText[..<maxText.index(maxText.startIndex, offsetBy: length)]))\n\n\(incomingText)\n#\(uid)"
-//        return self.makeTextMessage(uid, text: text, isIncoming: isIncoming)
-//    }
+
+    private class func makeRandomTextMessage(_ uid: String, isIncoming: Bool) -> TestTextMessageModel {
+        let incomingText: String = isIncoming ? "incoming" : "outgoing"
+        let maxText = self.demoText
+        let length: Int = 10 + Int(arc4random_uniform(300))
+        let text = "\(String(maxText[..<maxText.index(maxText.startIndex, offsetBy: length)]))\n\n\(incomingText)\n#\(uid)"
+        return self.makeTextMessage(uid, text: text, isIncoming: isIncoming)
+    }
     
-//    private class func makeRandomPhotoMessage(_ uid: String, isIncoming: Bool) -> DemoPhotoMessageModel {
-//        var imageSize = CGSize.zero
-//        switch arc4random_uniform(100) % 3 {
-//        case 0:
-//            imageSize = CGSize(width: 400, height: 300)
-//        case 1:
-//            imageSize = CGSize(width: 300, height: 400)
-//        default:
-//            imageSize = CGSize(width: 300, height: 300)
-//        }
-//
-//        var imageName: String
-//        switch arc4random_uniform(100) % 3 {
-//        case 0:
-//            imageName = "pic-test-1"
-//        case 1:
-//            imageName = "pic-test-2"
-//        default:
-//            imageName = "pic-test-3"
-//        }
-//        return self.makePhotoMessage(uid, image: UIImage(named: imageName)!, size: imageSize, isIncoming: isIncoming)
-//    }
+    private class func makeRandomPhotoMessage(_ uid: String, isIncoming: Bool) -> TestPhotoMessageModel {
+        var imageSize = CGSize.zero
+        switch arc4random_uniform(100) % 3 {
+        case 0:
+            imageSize = CGSize(width: 400, height: 300)
+        case 1:
+            imageSize = CGSize(width: 300, height: 400)
+        default:
+            imageSize = CGSize(width: 300, height: 300)
+        }
+
+        var image: UIImage
+        switch arc4random_uniform(100) % 3 {
+        case 0:
+            image = Asset.test1.image
+        case 1:
+            image = Asset.test2.image
+        default:
+            image = Asset.test3.image
+        }
+        return self.makePhotoMessage(uid, image: image, size: imageSize, isIncoming: isIncoming)
+    }
     
     private class func makeMessageModel(_ uid: String, isIncoming: Bool, type: String) -> MessageModel {
         let senderId = isIncoming ? "1" : "2"
@@ -143,9 +142,8 @@ extension TestChatMessageFactory {
             case .text(let text):
                 return TestChatMessageFactory.makeTextMessage(NSUUID().uuidString, text: text, isIncoming: isIncoming)
             case .image(let name):
-                return TestChatMessageFactory.makeTextMessage(NSUUID().uuidString, text: name, isIncoming: isIncoming)
-                //let image = UIImage(named: name)!
-                //return TestChatMessageFactory.makePhotoMessage(NSUUID().uuidString, image: image, size: image.size, isIncoming: isIncoming)
+                let image = UIImage(named: name)!
+                return TestChatMessageFactory.makePhotoMessage(NSUUID().uuidString, image: image, size: image.size, isIncoming: isIncoming)
             }
         }
     }

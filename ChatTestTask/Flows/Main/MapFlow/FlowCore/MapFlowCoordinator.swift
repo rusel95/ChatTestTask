@@ -8,7 +8,6 @@
 
 import Swinject
 import SwinjectAutoregistration
-import Core
 
 enum MapNavigationEvent: Event {
     

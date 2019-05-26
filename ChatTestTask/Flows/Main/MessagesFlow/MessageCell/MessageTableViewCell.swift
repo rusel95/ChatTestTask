@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MessageTableViewCell: UITableViewCell, Reusable {
+class MessageTableViewCell: UITableViewCell, NibReusable {
 
     @IBOutlet private weak var photoImageView: UIImageView!
     @IBOutlet private weak var fullNameLabel: UILabel!
@@ -18,13 +18,13 @@ class MessageTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var roleLabel: UILabel!
     @IBOutlet private weak var livePlaceLabel: UILabel!
     
-    func configure(with message: Message) {
+    func configure(with message: UserChat) {
         photoImageView?.setImage(with: message.profileURL, placeholder: Asset.photoPlaceholder.image)
         fullNameLabel?.text = message.fullName
-        receivedTimeLabel?.text = message.receivedDate.description
-        messageTextLabel?.text = message.messageText
+        receivedTimeLabel?.text = message.receivedDate?.description
+        messageTextLabel?.text = message.lastMessageText
         roleLabel?.text = message.role
-        livePlaceLabel?.text = message.livePlace
+        livePlaceLabel?.text = message.currentLocationPlace
     }
     
 }

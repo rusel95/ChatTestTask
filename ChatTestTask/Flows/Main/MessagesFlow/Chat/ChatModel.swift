@@ -13,14 +13,18 @@ import RxCocoa
 
 final class ChatModel: EventNode, HasDisposeBag {
     
-    override init(parent: EventNode) {
+    let userChat = BehaviorSubject<UserChat?>(value: nil)
+    
+    init(parent: EventNode, userChat: UserChat) {
         super.init(parent: parent)
+        
+        self.userChat.onNext(userChat)
         
         initializeBindings()
     }
     
     private func initializeBindings() {
-       
+        
     }
     
     // MARK: - private

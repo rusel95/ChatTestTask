@@ -26,15 +26,16 @@ public class TestTextMessageViewModel: TextMessageViewModel<TestTextMessageModel
 }
 
 public class TestTextMessageViewModelBuilder: ViewModelBuilderProtocol {
-    public init() {}
     
     let messageViewModelBuilder = MessageViewModelDefaultBuilder()
+    
+    public init() {}
     
     public func createViewModel(_ textMessage: TestTextMessageModel) -> TestTextMessageViewModel {
         let messageViewModel = self.messageViewModelBuilder.createMessageViewModel(textMessage)
         let textMessageViewModel = TestTextMessageViewModel(textMessage: textMessage,
                                                             messageViewModel: messageViewModel)
-        textMessageViewModel.avatarImage.value = UIImage(named: "userAvatar")
+        textMessageViewModel.avatarImage.value = Asset.photoPlaceholder.image
         return textMessageViewModel
     }
     

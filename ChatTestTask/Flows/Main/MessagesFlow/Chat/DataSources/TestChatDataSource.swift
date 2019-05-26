@@ -72,14 +72,14 @@ class TestChatDataSource: ChatDataSourceProtocol {
         self.delegate?.chatDataSourceDidUpdate(self)
     }
     
-//    func addPhotoMessage(_ image: UIImage) {
-//        let uid = "\(self.nextMessageId)"
-//        self.nextMessageId += 1
-//        let message = TestChatMessageFactory.makePhotoMessage(uid, image: image, size: image.size, isIncoming: false)
-//        self.messageSender.sendMessage(message)
-//        self.slidingWindow.insertItem(message, position: .bottom)
-//        self.delegate?.chatDataSourceDidUpdate(self)
-//    }
+    func addPhotoMessage(_ image: UIImage) {
+        let uid = "\(self.nextMessageId)"
+        self.nextMessageId += 1
+        let message = TestChatMessageFactory.makePhotoMessage(uid, image: image, size: image.size, isIncoming: false)
+        self.messageSender.sendMessage(message)
+        self.slidingWindow.insertItem(message, position: .bottom)
+        self.delegate?.chatDataSourceDidUpdate(self)
+    }
     
     func addRandomIncomingMessage() {
         let message = TestChatMessageFactory.makeRandomMessage("\(self.nextMessageId)", isIncoming: true)

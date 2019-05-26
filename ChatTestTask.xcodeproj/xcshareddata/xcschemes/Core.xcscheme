@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8CBE3FA202228FD00186010"
+               BlueprintIdentifier = "747E598D229AF639003C99DA"
                BuildableName = "Core.framework"
                BlueprintName = "Core"
-               ReferencedContainer = "container:BrainFlowTimer.xcodeproj">
+               ReferencedContainer = "container:ChatTestTask.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,10 +45,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8CBE3FA202228FD00186010"
+            BlueprintIdentifier = "747E598D229AF639003C99DA"
             BuildableName = "Core.framework"
             BlueprintName = "Core"
-            ReferencedContainer = "container:BrainFlowTimer.xcodeproj">
+            ReferencedContainer = "container:ChatTestTask.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -63,10 +63,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E8CBE3FA202228FD00186010"
+            BlueprintIdentifier = "747E598D229AF639003C99DA"
             BuildableName = "Core.framework"
             BlueprintName = "Core"
-            ReferencedContainer = "container:BrainFlowTimer.xcodeproj">
+            ReferencedContainer = "container:ChatTestTask.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

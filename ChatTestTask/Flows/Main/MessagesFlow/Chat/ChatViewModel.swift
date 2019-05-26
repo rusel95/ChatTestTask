@@ -21,6 +21,8 @@ final class ChatViewModel: HasDisposeBag {
     let chatScreenSendButtonText = L10n.chatScreenSendButtonText
     let chatScreenInputTextPlaceholder = L10n.chatScreenInputTextPlaceholder
     
+    var navigationBarTitle = Observable.just(L10n.messagesNavitaionTitle)
+    
     private let model: ChatModel
     
     init(model: ChatModel) {

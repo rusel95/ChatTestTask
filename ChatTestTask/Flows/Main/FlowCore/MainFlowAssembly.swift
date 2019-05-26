@@ -1,6 +1,5 @@
 import Swinject
 import SwinjectAutoregistration
-import Core
 
 final class MainFlowAssembly: Assembly {
 

@@ -26,8 +26,8 @@ final class MessagesFlowAssembly: Assembly {
             .inObjectScope(.transient)
         
         container
-            .register(ChatViewController.self) { (_, parent: EventNode) in
-                let model = ChatModel(parent: parent)
+            .register(ChatViewController.self) { (_, parent: EventNode, userChat: UserChat) in
+                let model = ChatModel(parent: parent, userChat: userChat)
                 let viewController = StoryboardScene.Messages.chatViewController.instantiate()
                 viewController.viewModel = ChatViewModel(model: model)
                 

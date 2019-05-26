@@ -8,10 +8,9 @@
 
 import Swinject
 import SwinjectAutoregistration
-import Core
 
 enum MessagesNavigationEvent: Event {
-    case presentChat(selectedMessage: Message)
+    case presentChat(selectedMessage: UserChat)
 }
 
 final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
@@ -39,8 +38,8 @@ final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
     
     private func handle(_ event: MessagesNavigationEvent) {
         switch event {
-        case .presentChat:
-            let controller: ChatViewController = container.autoresolve(argument: self)
+        case .presentChat(let selectedChat):
+            let controller: ChatViewController = container.autoresolve(arguments: self, selectedChat)
             navigationController?.pushViewController(controller, animated: true)
         }
     }

@@ -20,3 +20,8 @@ colors:
   outputs:
     templateName: literals-swift4
     output: Colors+SwiftGen.swift
+json:
+  inputs: Resources/
+  outputs:
+    templateName: runtime-swift4
+    output: JSON.swift

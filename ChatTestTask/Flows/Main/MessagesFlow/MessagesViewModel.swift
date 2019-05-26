@@ -11,7 +11,7 @@ import RxSwift
 
 final class MessagesViewModel: HasDisposeBag {
     
-    var messagesDataSource: Observable<[Message]> {
+    var messagesDataSource: Observable<[UserChat]> {
         return model.messages.asObservable()
     }
     

@@ -8,7 +8,6 @@
 
 import RxSwift
 import RxCocoa
-import Core
 
 final class MainContainerModel: EventNode, HasDisposeBag {
     

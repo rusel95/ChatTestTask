@@ -7,7 +7,6 @@
 //
 
 import RxSwift
-import Core
 import RxRealm
 import RxCocoa
 

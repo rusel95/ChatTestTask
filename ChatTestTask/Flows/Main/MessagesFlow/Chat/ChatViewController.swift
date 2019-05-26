@@ -27,14 +27,16 @@ final class ChatViewController: BaseChatViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Chat"
-        chatDataSource = viewModel.dataSource
-        viewModel.messagesSelector.delegate = self
+        self.chatDataSource = viewModel.dataSource
+        self.viewModel.messagesSelector.delegate = self
+        self.chatItemsDecorator = TestChatItemsDecorator(messagesSelector: self.viewModel.messagesSelector)
+        addRandomIncomingMessagesButton()
+        initializeBindings()
     }
     
     // MARK: - Private Methods
     private func initializeBindings() {
-        
+        viewModel.navigationBarTitle.bind(to: navigationItem.rx.title).disposed(by: disposeBag)
     }
     
     override func createChatInputView() -> UIView {
@@ -44,15 +46,15 @@ final class ChatViewController: BaseChatViewController {
         appearance.sendButtonAppearance.title = viewModel.chatScreenSendButtonText
         appearance.textInputAppearance.placeholderText = viewModel.chatScreenInputTextPlaceholder
         viewModel.chatInputPresenter = BasicChatInputBarPresenter(chatInputBar: chatInputView,
-                                                             chatInputItems: self.createChatInputItems(),
-                                                             chatInputBarAppearance: appearance)
+                                                                  chatInputItems: self.createChatInputItems(),
+                                                                  chatInputBarAppearance: appearance)
         return chatInputView
     }
     
     private func createChatInputItems() -> [ChatInputItemProtocol] {
         var items = [ChatInputItemProtocol]()
-        items.append(self.createTextInputItem())
-        items.append(self.createPhotoInputItem())
+        items.append(createTextInputItem())
+        items.append(createPhotoInputItem())
         return items
     }
     
@@ -66,8 +68,8 @@ final class ChatViewController: BaseChatViewController {
     
     private func createPhotoInputItem() -> PhotosChatInputItem {
         let item = PhotosChatInputItem(presentingController: self)
-        item.photoInputHandler = { photo, _ in
-            print(photo)
+        item.photoInputHandler = { [weak self] photo, _ in
+            self?.viewModel.dataSource.addPhotoMessage(photo)
         }
         return item
     }
@@ -79,31 +81,35 @@ final class ChatViewController: BaseChatViewController {
         )
         textMessagePresenter.baseMessageStyle = BaseMessageCollectionViewCellDefaultStyle()
         
-//        let photoMessagePresenter = PhotoMessagePresenterBuilder(
-//            viewModelBuilder: DemoPhotoMessageViewModelBuilder(),
-//            interactionHandler: DemoPhotoMessageHandler(baseHandler: self.baseMessageHandler)
-//        )
-//        photoMessagePresenter.baseCellStyle = BaseMessageCollectionViewCellDefaultStyle()
+        let photoMessagePresenter = PhotoMessagePresenterBuilder(
+            viewModelBuilder: TestPhotoMessageViewModelBuilder(),
+            interactionHandler: GenericMessageHandler(baseHandler: self.baseMessageHandler)
+        )
+        photoMessagePresenter.baseCellStyle = BaseMessageCollectionViewCellDefaultStyle()
         
         return [
-            "text-message-type": [textMessagePresenter]
-//            "photo-message-type": [photoMessagePresenter],
+            TestTextMessageModel.chatItemType: [textMessagePresenter],
+            TestPhotoMessageModel.chatItemType: [photoMessagePresenter]
         ]
     }
+}
+
+// MARK: Random Message Button
+extension ChatViewController {
     
-//    private func addRandomIncomingMessages() {
-//        let button = UIBarButtonItem(
-//            title: L10n.chatScreenAddRandomIncomingMessageButtonText,
-//            style: .plain,
-//            target: self,
-//            action: #selector(addRandomMessage)
-//        )
-//        self.navigationItem.rightBarButtonItem = button
-//    }
+    private func addRandomIncomingMessagesButton() {
+        let button = UIBarButtonItem(
+            title: L10n.chatScreenAddRandomIncomingMessageButtonText,
+            style: .plain,
+            target: self,
+            action: #selector(addRandomMessage)
+        )
+        self.navigationItem.rightBarButtonItem = button
+    }
     
-//    @objc private func addRandomMessage() {
-//        self.dataSource.addRandomIncomingMessage()
-//    }
+    @objc private func addRandomMessage() {
+        viewModel.dataSource.addRandomIncomingMessage()
+    }
 }
 
 extension ChatViewController: MessagesSelectorDelegate {

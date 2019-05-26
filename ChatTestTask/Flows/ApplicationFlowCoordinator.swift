@@ -5,7 +5,6 @@
 //
 
 import UIKit
-import Core
 import Swinject
 
 enum ApplicationEvent: Event {

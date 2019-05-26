@@ -29,6 +29,9 @@ internal enum Asset {
   internal static let tabIconMapUnselected = ImageAsset(name: "tab_icon_map_unselected")
   internal static let tabIconProfileSelected = ImageAsset(name: "tab_icon_profile_selected")
   internal static let tabIconProfileUnselected = ImageAsset(name: "tab_icon_profile_unselected")
+  internal static let test1 = ImageAsset(name: "test1")
+  internal static let test2 = ImageAsset(name: "test2")
+  internal static let test3 = ImageAsset(name: "test3")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

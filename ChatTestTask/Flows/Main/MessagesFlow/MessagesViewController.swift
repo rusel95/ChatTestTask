@@ -32,7 +32,7 @@ final class MessagesViewController: UIViewController {
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)
         
-        tableView.register(MessageTableViewCell.self,
+        tableView.register(MessageTableViewCell.nib,
                            forCellReuseIdentifier: MessageTableViewCell.reuseIdentifier)
         
         viewModel.messagesDataSource
