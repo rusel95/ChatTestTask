@@ -8,9 +8,15 @@
 
 import Foundation
 import RxSwift
+import RxOptional
 import ChattoAdditions
 
 final class ChatViewModel: HasDisposeBag {
+    
+    var chatDisplayName: Observable<String> {
+        return model.userChat.filterNil()
+            .map { $0.fullName }
+    }
     
     var chatInputPresenter: BasicChatInputBarPresenter!
     var messageSender: TestChatMessageSender!
@@ -20,8 +26,6 @@ final class ChatViewModel: HasDisposeBag {
     
     let chatScreenSendButtonText = L10n.chatScreenSendButtonText
     let chatScreenInputTextPlaceholder = L10n.chatScreenInputTextPlaceholder
-    
-    var navigationBarTitle = Observable.just(L10n.messagesNavitaionTitle)
     
     private let model: ChatModel
     

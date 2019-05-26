@@ -21,7 +21,7 @@ colors:
     templateName: literals-swift4
     output: Colors+SwiftGen.swift
 json:
-  inputs: Resources/
+  inputs: Resources/JSONs/UserChats.txt
   outputs:
     templateName: runtime-swift4
-    output: JSON.swift
+    output: JSON+SwiftGen.swift

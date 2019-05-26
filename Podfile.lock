@@ -67,6 +67,9 @@ PODS:
   - RxGesture (3.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - RxOptional (4.0.0):
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
   - RxRealm (1.0.0):
     - RealmSwift (~> 3.14)
     - RxSwift (~> 5.0)
@@ -89,6 +92,7 @@ DEPENDENCIES:
   - "NSObject+Rx (= 5.0.0)"
   - RxCocoa (= 5.0.0)
   - RxGesture (= 3.0.0)
+  - RxOptional (= 4.0.0)
   - RxRealm (= 1.0.0)
   - RxSwift (= 5.0.0)
   - SnapKit (~> 5.0.0)
@@ -115,6 +119,7 @@ SPEC REPOS:
     - RealmSwift
     - RxCocoa
     - RxGesture
+    - RxOptional
     - RxRealm
     - RxRelay
     - RxSwift
@@ -141,6 +146,7 @@ SPEC CHECKSUMS:
   RealmSwift: 8a41886f8ab6efef9eb8df97de2f2bb911561a79
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxGesture: 0cd8e37ff9a266e1c31f46bcaed6de1c536bc81e
+  RxOptional: 9904e2219d59260c3c171273d475b2126de187e8
   RxRealm: 1e81dcfca1fb50c3e9b3e1f8102bc875c5156a2e
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
@@ -150,6 +156,6 @@ SPEC CHECKSUMS:
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectAutoregistration: 93a908f7543c401b0c315305ac0ae501efdbce89
 
-PODFILE CHECKSUM: b66ca8cbeeef8e13c98387482aaf51a55306e41d
+PODFILE CHECKSUM: bc0b29322418d9ec089d1fc369f77e16871fcbbf
 
 COCOAPODS: 1.6.1

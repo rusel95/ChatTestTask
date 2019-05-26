@@ -36,14 +36,17 @@ final class MessagesModel: EventNode, HasDisposeBag {
     // MARK: - private
     private func fetchMessages() {
         // NOTE: just a test data
-//        let userChat = [UserChat.construct(from: JSONFIl)
-//        messages.accept(
-//            (id: 0,
-//                                 profileURL: URL(string: "https://picsum.photos/40/40?grayscale")!,
-//                                 fullName: "Edwige Arnaud",
-//                                 receivedDate: Date(),
-//                                 lastMessageText: "There are millions of users, and there wil…",
-//                                 role: "Graphic Designer - 2D Artist",
-//                                 livePlace: "Havana") ] )
+        let userChatJSON = [
+            "id": 0,
+            "profile_url": "https://picsum.photos/40/40?grayscale",
+            "full_name": "Edwige Arnaud",
+            "received_date": "Yesterday",
+            "last_message_text": "There are millions of users, and there will do that",
+            "role": "Graphic Designer - 2D Artist",
+            "current_location_name": "Havana"] as [String : Any]
+
+        if let userChat = UserChat(json: userChatJSON) {
+            messages.accept([userChat])
+        }
     }
 }

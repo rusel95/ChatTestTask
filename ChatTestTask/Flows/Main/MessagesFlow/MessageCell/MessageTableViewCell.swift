@@ -19,9 +19,11 @@ class MessageTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var livePlaceLabel: UILabel!
     
     func configure(with message: UserChat) {
-        photoImageView?.setImage(with: message.profileURL, placeholder: Asset.photoPlaceholder.image)
+        if let url = URL(string: message.profileURLString) {
+            photoImageView?.setImage(with: url, placeholder: Asset.photoPlaceholder.image)
+        }
         fullNameLabel?.text = message.fullName
-        receivedTimeLabel?.text = message.receivedDate?.description
+        receivedTimeLabel?.text = message.receivedDateString
         messageTextLabel?.text = message.lastMessageText
         roleLabel?.text = message.role
         livePlaceLabel?.text = message.currentLocationPlace

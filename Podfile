@@ -13,6 +13,7 @@ abstract_target 'Shared' do
     pod 'RxSwift', '5.0.0'
     pod 'RxGesture', '3.0.0'
     pod 'NSObject+Rx', '5.0.0'
+    pod 'RxOptional', '4.0.0'
 
     target 'Core' do
 

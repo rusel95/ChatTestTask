@@ -1,9 +1,4 @@
-//
-//  JSON+SwiftGen.swift
-//  ChatTestTask
-//
-//  Created by Ruslan Popesku on 5/26/19.
-//  Copyright © 2019 Buyper. All rights reserved.
-//
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
 
-import Foundation
+// No files found
