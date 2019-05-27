@@ -9,8 +9,28 @@
 import RxSwift
 import RxOptional
 import ChattoAdditions
+import AXPhotoViewer
 
 final class ChatViewModel: HasDisposeBag {
+    
+    lazy var baseMessageHandler: BaseMessageHandler = {
+        return BaseMessageHandler(messageSender: messageSender,
+                                  messagesSelector: messagesSelector)
+    }()
+    
+    var photoDetaildDataSource: RxSwift.Observable<AXPhotosDataSource> {
+        return baseMessageHandler.userTappedOnPhoto.filterNil()
+            .map {
+                return AXPhotosDataSource(photos:
+                    [AXPhoto(attributedTitle: nil,
+                             attributedDescription: nil,
+                             attributedCredit: nil,
+                             imageData: nil,
+                             image: $0,
+                             url: nil)]
+                )
+            }
+    }
     
     var chatDisplayName: RxSwift.Observable<String> {
         return model.userChat.filterNil()
@@ -36,6 +56,5 @@ final class ChatViewModel: HasDisposeBag {
     
     private func initializeBindings() {
         self.messageSender = dataSource.messageSender
-        
     }
 }

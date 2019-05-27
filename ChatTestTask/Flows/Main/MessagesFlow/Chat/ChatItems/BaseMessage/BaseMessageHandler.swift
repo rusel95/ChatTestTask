@@ -9,8 +9,11 @@
 import Foundation
 import Chatto
 import ChattoAdditions
+import RxCocoa
 
 final class BaseMessageHandler {
+    
+    let userTappedOnPhoto = BehaviorRelay<UIImage?>(value: nil)
     
     private let messageSender: TestChatMessageSender
     private let messagesSelector: MessagesSelectorProtocol
@@ -29,6 +32,11 @@ final class BaseMessageHandler {
     }
     
     func userDidTapOnBubble(viewModel: TestMessageViewModelProtocol) {
+        if let viewModel = viewModel as? TestPhotoMessageViewModel,
+           let model = viewModel.messageModel as? TestPhotoMessageModel {
+            print(model.image)
+            userTappedOnPhoto.accept(model.image)
+        }
         print("userDidTapOnBubble")
     }
     

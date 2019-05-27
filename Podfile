@@ -37,6 +37,9 @@ abstract_target 'Shared' do
         # Char SDK
         pod 'Chatto', '= 3.4.0'
         pod 'ChattoAdditions', '= 3.4.0'
+        
+        # Photo Viewer
+        pod 'AXPhotoViewer'
     end
 end
 

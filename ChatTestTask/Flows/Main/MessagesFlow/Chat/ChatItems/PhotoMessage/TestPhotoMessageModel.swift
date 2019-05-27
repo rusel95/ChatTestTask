@@ -10,6 +10,7 @@ import Foundation
 import ChattoAdditions
 
 public class TestPhotoMessageModel: PhotoMessageModel<MessageModel>, TestMessageModelProtocol {
+    
     public override init(messageModel: MessageModel, imageSize: CGSize, image: UIImage) {
         super.init(messageModel: messageModel, imageSize: imageSize, image: image)
     }

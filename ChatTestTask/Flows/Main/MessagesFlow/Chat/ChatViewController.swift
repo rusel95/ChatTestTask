@@ -12,15 +12,11 @@ import RxCocoa
 import SnapKit
 import Chatto
 import ChattoAdditions
+import AXPhotoViewer
 
 final class ChatViewController: BaseChatViewController {
     
     // MARK: - Properties
-    lazy private var baseMessageHandler: BaseMessageHandler = {
-        return BaseMessageHandler(messageSender: self.viewModel.messageSender,
-                                  messagesSelector: self.viewModel.messagesSelector)
-    }()
-    
     var viewModel: ChatViewModel!
     
     // MARK: - View lifecycle
@@ -38,6 +34,13 @@ final class ChatViewController: BaseChatViewController {
     private func initializeBindings() {
         viewModel.chatDisplayName
             .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
+        
+        viewModel.photoDetaildDataSource
+            .doOnNext { [weak self] dataSource in
+                let photosViewController = AXPhotosViewController(dataSource: dataSource)
+                self?.present(photosViewController, animated: true)
+            }
             .disposed(by: disposeBag)
     }
     
@@ -79,16 +82,15 @@ final class ChatViewController: BaseChatViewController {
     override func createPresenterBuilders() -> [ChatItemType: [ChatItemPresenterBuilderProtocol]] {
         let textMessagePresenter = TextMessagePresenterBuilder(
             viewModelBuilder: TestTextMessageViewModelBuilder(),
-            interactionHandler: GenericMessageHandler(baseHandler: self.baseMessageHandler)
+            interactionHandler: GenericMessageHandler(baseHandler: viewModel.baseMessageHandler)
         )
         textMessagePresenter.baseMessageStyle = BaseMessageCollectionViewCellDefaultStyle()
         
         let photoMessagePresenter = PhotoMessagePresenterBuilder(
             viewModelBuilder: TestPhotoMessageViewModelBuilder(),
-            interactionHandler: GenericMessageHandler(baseHandler: self.baseMessageHandler)
+            interactionHandler: GenericMessageHandler(baseHandler: viewModel.baseMessageHandler)
         )
         photoMessagePresenter.baseCellStyle = BaseMessageCollectionViewCellDefaultStyle()
-        
         return [
             TestTextMessageModel.chatItemType: [textMessagePresenter],
             TestPhotoMessageModel.chatItemType: [photoMessagePresenter]
@@ -96,7 +98,7 @@ final class ChatViewController: BaseChatViewController {
     }
 }
 
-// MARK: Random Message Button
+// MARK: - random message button - only for tesitng puproses
 extension ChatViewController {
     
     private func addRandomIncomingMessagesButton() {
@@ -114,7 +116,9 @@ extension ChatViewController {
     }
 }
 
+// MARK: - messages selection delegate
 extension ChatViewController: MessagesSelectorDelegate {
+   
     func messagesSelector(_ messagesSelector: MessagesSelectorProtocol, didSelectMessage: MessageModelProtocol) {
         self.enqueueModelUpdate(updateType: .normal)
     }
