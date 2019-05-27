@@ -7,11 +7,8 @@
 //
 
 import Foundation
-import Core
 import RxSwift
 import RxCocoa
-
-typealias UserChat = Core.UserChat
 
 final class MessagesModel: EventNode, HasDisposeBag {
     
@@ -43,7 +40,7 @@ final class MessagesModel: EventNode, HasDisposeBag {
             "received_date": "Yesterday",
             "last_message_text": "There are millions of users, and there will do that",
             "role": "Graphic Designer - 2D Artist",
-            "current_location_name": "Havana"] as [String : Any]
+            "current_location_name": "Havana"] as [String: Any]
 
         if let userChat = UserChat(json: userChatJSON) {
             messages.accept([userChat])

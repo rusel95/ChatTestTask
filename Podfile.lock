@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.8.2)
   - AXPhotoViewer (1.7.1):
     - AXPhotoViewer/Core (= 1.7.1)
   - AXPhotoViewer/Core (1.7.1):
@@ -41,6 +42,7 @@ PODS:
     - Swinject (~> 2.6)
 
 DEPENDENCIES:
+  - Alamofire
   - AXPhotoViewer
   - Chatto (= 3.4.0)
   - ChattoAdditions (= 3.4.0)
@@ -59,6 +61,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - AXPhotoViewer
     - AXStateButton
     - Chatto
@@ -81,6 +84,7 @@ SPEC REPOS:
     - SwinjectAutoregistration
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AXPhotoViewer: f4b021c6e43b0b9dbc7b30cf8b9a4f577d0c1f51
   AXStateButton: 6c515a433e37551505046429b5be04c12daa8c07
   Chatto: c00cb1af4c57b797041ce77a115d4f535ec54991
@@ -102,6 +106,6 @@ SPEC CHECKSUMS:
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectAutoregistration: 93a908f7543c401b0c315305ac0ae501efdbce89
 
-PODFILE CHECKSUM: e2c00710073c64e9a7cde48f295fb34099042828
+PODFILE CHECKSUM: c6f78a69b5e1d48ec827d07c51b88cda84aacadd
 
 COCOAPODS: 1.6.1

@@ -18,11 +18,8 @@ abstract_target 'Shared' do
     # DB client component
     pod 'RxRealm', '1.0.0'
     
-    target 'Core' do
-
-    #pod 'Alamofire'
-
-    end
+    # Networking
+    pod 'Alamofire'
     
     target 'ChatTestTask' do
         # Controls

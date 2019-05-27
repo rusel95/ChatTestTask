@@ -8,7 +8,6 @@
 
 import Swinject
 import SwinjectAutoregistration
-import Core
 import RxCocoa
 
 final class MessagesFlowAssembly: Assembly {

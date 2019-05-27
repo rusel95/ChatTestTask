@@ -1,16 +1,5 @@
 //
-//  Day.swift
-//  Core
-//
-//  Created by Ruslan Popesku on 12/5/18.
-//  Copyright © 2018 Yalantis. All rights reserved.
-//
-
-import Foundation
-import RealmSwift
-
-//
-//  Day.swift
+//  UserChat.swift
 //  Core
 //
 //  Created by Ruslan Popesku on 12/5/18.
