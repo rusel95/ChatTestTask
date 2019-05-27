@@ -22,12 +22,14 @@ final class ChatViewModel: HasDisposeBag {
         return baseMessageHandler.userTappedOnPhoto.filterNil()
             .map {
                 return AXPhotosDataSource(photos:
-                    [AXPhoto(attributedTitle: nil,
+                    [
+                        AXPhoto(attributedTitle: nil,
                              attributedDescription: nil,
                              attributedCredit: nil,
                              imageData: nil,
                              image: $0,
-                             url: nil)]
+                             url: nil)
+                    ]
                 )
             }
     }

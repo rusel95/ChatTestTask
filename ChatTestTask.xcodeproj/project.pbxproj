@@ -40,6 +40,7 @@
 		70BF67EF2045A6AE00803C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67AF2045A6AD00803C08 /* Assets.xcassets */; };
 		70BF67F12045A6AE00803C08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B12045A6AD00803C08 /* Localizable.strings */; };
 		70BF67F22045A6AE00803C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */; };
+		74106A9E229BDF90008FDD92 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74106A9D229BDF90008FDD92 /* UIImage+Color.swift */; };
 		7426387121BA5EC00063E6E8 /* NotificationsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7426387021BA5EC00063E6E8 /* NotificationsService.swift */; };
 		743053CF22734D2000649FAE /* MainContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743053CE22734D2000649FAE /* MainContainerViewModel.swift */; };
 		743053D122734D5900649FAE /* MainContainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743053D022734D5900649FAE /* MainContainerModel.swift */; };
@@ -190,6 +191,7 @@
 		70BF67B12045A6AD00803C08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		70BF67B32045A6AD00803C08 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		740F0F88227852A4003452A1 /* ChatTestTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChatTestTask.entitlements; sourceTree = "<group>"; };
+		74106A9D229BDF90008FDD92 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
 		741A9C3B21B7C18E00C0A2B1 /* UserChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChat.swift; sourceTree = "<group>"; };
 		7426387021BA5EC00063E6E8 /* NotificationsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsService.swift; sourceTree = "<group>"; };
 		743053CE22734D2000649FAE /* MainContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewModel.swift; sourceTree = "<group>"; };
@@ -432,6 +434,7 @@
 				70BF67732045A6AD00803C08 /* UITableView+Rx.swift */,
 				70BF67752045A6AD00803C08 /* UIViewController+RxLyfecycle.swift */,
 				747170B521D6663C00A8CD52 /* UIView+IBInspectable.swift */,
+				74106A9D229BDF90008FDD92 /* UIImage+Color.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1284,6 +1287,7 @@
 				74BAEB0B227828BF00663CA2 /* Colors+Swiftgen.swift in Sources */,
 				747E5977229AE389003C99DA /* TimeSeparatorPresenter.swift in Sources */,
 				74E1AA3F21B005F90057C271 /* ObservableType+Call.swift in Sources */,
+				74106A9E229BDF90008FDD92 /* UIImage+Color.swift in Sources */,
 				74BAEAFB2277222200663CA2 /* ProfileFlowAssambly.swift in Sources */,
 				70BF67B92045A6AD00803C08 /* ApplicationAlert.swift in Sources */,
 				74D5CB89229966EC00A365F5 /* MessagesViewController.swift in Sources */,

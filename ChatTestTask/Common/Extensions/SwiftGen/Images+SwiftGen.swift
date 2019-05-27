@@ -27,6 +27,8 @@ internal enum Asset {
   internal static let tabIconExploreUnselected = ImageAsset(name: "tab_icon_explore_unselected")
   internal static let tabIconMapSelected = ImageAsset(name: "tab_icon_map_selected")
   internal static let tabIconMapUnselected = ImageAsset(name: "tab_icon_map_unselected")
+  internal static let tabIconMessages = ImageAsset(name: "tab_icon_messages")
+  internal static let tabIconOrders = ImageAsset(name: "tab_icon_orders")
   internal static let tabIconProfileSelected = ImageAsset(name: "tab_icon_profile_selected")
   internal static let tabIconProfileUnselected = ImageAsset(name: "tab_icon_profile_unselected")
   internal static let test1 = ImageAsset(name: "test1")

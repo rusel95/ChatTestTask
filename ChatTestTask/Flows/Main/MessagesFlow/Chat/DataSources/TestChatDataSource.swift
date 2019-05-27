@@ -82,10 +82,13 @@ class TestChatDataSource: ChatDataSourceProtocol {
     }
     
     func addRandomIncomingMessage() {
-        let message = TestChatMessageFactory.makeRandomMessage("\(self.nextMessageId)", isIncoming: true)
-        self.nextMessageId += 1
-        self.slidingWindow.insertItem(message, position: .bottom)
-        self.delegate?.chatDataSourceDidUpdate(self)
+        //Only for testing purposes
+        DispatchQueue.main.async {
+            let message = TestChatMessageFactory.makeRandomMessage("\(self.nextMessageId)", isIncoming: true)
+            self.nextMessageId += 1
+            self.slidingWindow.insertItem(message, position: .bottom)
+            self.delegate?.chatDataSourceDidUpdate(self)
+        }
     }
     
     func adjustNumberOfMessages(preferredMaxCount: Int?,

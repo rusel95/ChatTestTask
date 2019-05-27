@@ -9,6 +9,7 @@
 import Foundation
 import Chatto
 import ChattoAdditions
+import Kingfisher
 
 class TestChatMessageFactory {
     
@@ -21,7 +22,7 @@ class TestChatMessageFactory {
     
     class func makeRandomMessage(_ uid: String, isIncoming: Bool) -> MessageModelProtocol {
         if arc4random_uniform(100) % 2 == 0 {
-            return self.makeRandomMessage(uid, isIncoming: isIncoming)
+            return self.makeRandomTextMessage(uid, isIncoming: isIncoming)
         } else {
             return self.makeRandomPhotoMessage(uid, isIncoming: isIncoming)
         }
@@ -35,8 +36,13 @@ class TestChatMessageFactory {
         return textMessageModel
     }
     
-    class func makePhotoMessage(_ uid: String, image: UIImage, size: CGSize, isIncoming: Bool) -> TestPhotoMessageModel {
-        let messageModel = self.makeMessageModel(uid, isIncoming: isIncoming, type: PhotoMessageModel<MessageModel>.chatItemType)
+    class func makePhotoMessage(_ uid: String,
+                                image: UIImage,
+                                size: CGSize,
+                                isIncoming: Bool) -> TestPhotoMessageModel {
+        let messageModel = self.makeMessageModel(uid,
+                                                 isIncoming: isIncoming,
+                                                 type: PhotoMessageModel<MessageModel>.chatItemType)
         let photoMessageModel = TestPhotoMessageModel(messageModel: messageModel, imageSize: size, image: image)
         return photoMessageModel
     }
@@ -57,7 +63,8 @@ class TestChatMessageFactory {
         let incomingText: String = isIncoming ? "incoming" : "outgoing"
         let maxText = self.demoText
         let length: Int = 10 + Int(arc4random_uniform(300))
-        let text = "\(String(maxText[..<maxText.index(maxText.startIndex, offsetBy: length)]))\n\n\(incomingText)\n#\(uid)"
+        let text = String(maxText[..<maxText.index(maxText.startIndex, offsetBy: length)]) +
+                 "\n\n\(incomingText)\n#\(uid)"
         return self.makeTextMessage(uid, text: text, isIncoming: isIncoming)
     }
     
@@ -67,20 +74,26 @@ class TestChatMessageFactory {
         case 0:
             imageSize = CGSize(width: 400, height: 300)
         case 1:
-            imageSize = CGSize(width: 300, height: 400)
+            imageSize = CGSize(width: 200, height: 400)
         default:
-            imageSize = CGSize(width: 300, height: 300)
+            imageSize = CGSize(width: 300, height: 200)
         }
 
         var image: UIImage
+        let url: URL
         switch arc4random_uniform(100) % 3 {
         case 0:
-            image = Asset.test1.image
+            url = URL(string: "https://picsum.photos/400/300")!
+            //image = Asset.test1.image
         case 1:
-            image = Asset.test2.image
+            url = URL(string: "https://picsum.photos/200/400")!
+            //image = Asset.test2.image
         default:
-            image = Asset.test3.image
+            url = URL(string: "https://picsum.photos/300/200")!
+            //image = Asset.test3.image
         }
+        let data = try? Data(contentsOf: url)
+        image = UIImage(data: data!)!
         return self.makePhotoMessage(uid, image: image, size: imageSize, isIncoming: isIncoming)
     }
     
@@ -119,37 +132,22 @@ extension TestChatMessageFactory {
         case image(String)
     }
     
-    private static let overviewMessages: [DemoMessage] = [
-        .text("Welcome to Chatto! A lightweight Swift framework to build chat apps"),
-        .text("It calculates sizes in the background for smooth pagination and rotation, and it can deal with thousands of messages with a sliding data source"),
-        .text("Along with Chatto there's ChattoAdditions, with bubbles and the input component"),
-        .text("This is a TextMessageCollectionViewCell. It uses UITextView with data detectors so you can interact with urls: https://github.com/badoo/Chatto, phone numbers: 07400000000, dates: 3 jan 2016 and others"),
-        .image("pic-test-1"),
-        .image("pic-test-2"),
-        .image("pic-test-3"),
-        .text("Those were some PhotoMessageCollectionViewCell. With some fake data transfer"),
-        .text("Both Text and Photo cells inherit from BaseMessageCollectionViewCell which adds support for a failed icon and a timestamp you can reveal by swiping from the right"),
-        .text("Each message is paired with a Presenter. Each presenter is responsible to present a message by managing a corresponding UICollectionViewCell. New types of messages can be easily added by creating new types of presenters!"),
-        .text("Messages have different margins and only some bubbles show a tail. This is done with a decorator that conforms to ChatItemsDecoratorProtocol"),
-        .text("Failed/sending status are completly separated cells. This helps to keep cells them simpler. They are generated with the decorator as well, but other approaches are possible, like being returned by the DataSource or using more complex cells"),
-        .text("More info on https://github.com/badoo/Chatto. We are waiting for your pull requests!")
-    ]
-    
     private static func messages(fromDemoMessages demoMessages: [DemoMessage]) -> [MessageModelProtocol] {
         return demoMessages.map { (demoMessage) in
             let isIncoming: Bool = arc4random_uniform(100) % 2 == 0
             switch demoMessage {
             case .text(let text):
-                return TestChatMessageFactory.makeTextMessage(NSUUID().uuidString, text: text, isIncoming: isIncoming)
+                return TestChatMessageFactory.makeTextMessage(NSUUID().uuidString,
+                                                              text: text,
+                                                              isIncoming: isIncoming)
             case .image(let name):
                 let image = UIImage(named: name)!
-                return TestChatMessageFactory.makePhotoMessage(NSUUID().uuidString, image: image, size: image.size, isIncoming: isIncoming)
+                return TestChatMessageFactory.makePhotoMessage(NSUUID().uuidString,
+                                                               image: image,
+                                                               size: image.size,
+                                                               isIncoming: isIncoming)
             }
         }
-    }
-    
-    static func makeOverviewMessages() -> [MessageModelProtocol] {
-        return self.messages(fromDemoMessages: self.overviewMessages)
     }
     
 //    static func makeCompoundMessages() -> [MessageModelProtocol] {
