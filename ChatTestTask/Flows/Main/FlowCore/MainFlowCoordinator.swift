@@ -103,11 +103,11 @@ final class MainFlowCoordinator: EventNode, FlowCoordinator {
         let viewController = flowCoordinator.createFlow()
         let containerViewController = UINavigationController(rootViewController: viewController)
         
-        viewController.navigationController?.isNavigationBarHidden = true
-        containerViewController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        containerViewController.navigationBar.shadowImage = UIImage()
-        containerViewController.navigationBar.isTranslucent = true
-        containerViewController.view.backgroundColor = .clear
+//        viewController.navigationController?.isNavigationBarHidden = true
+//        containerViewController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        containerViewController.navigationBar.shadowImage = UIImage()
+//        containerViewController.navigationBar.isTranslucent = true
+//        containerViewController.view.backgroundColor = .clear
         
         flowCoordinator.containerViewController = containerViewController
         

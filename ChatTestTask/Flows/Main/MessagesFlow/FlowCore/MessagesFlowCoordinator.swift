@@ -46,7 +46,7 @@ final class MessagesFlowCoordinator: EventNode, FlowCoordinator {
     
     func createFlow() -> UIViewController {
         let controller: MessagesViewController = container.autoresolve(argument: self)
-        controller.title = L10n.mapTabTitle
+        controller.title = L10n.messagesTabTitle
         rootViewController = controller
         
         return controller

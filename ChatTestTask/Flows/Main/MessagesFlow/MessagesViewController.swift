@@ -28,6 +28,7 @@ final class MessagesViewController: UIViewController {
     
     // MARK: - Private Methods
     private func initializeBindings() {
+        
         viewModel.navigationBarTitle
             .bind(to: navigationItem.rx.title)
             .disposed(by: disposeBag)

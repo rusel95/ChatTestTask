@@ -6,14 +6,13 @@
 //  Copyright © 2019 Buyper. All rights reserved.
 //
 
-import Foundation
 import RxSwift
 import RxOptional
 import ChattoAdditions
 
 final class ChatViewModel: HasDisposeBag {
     
-    var chatDisplayName: Observable<String> {
+    var chatDisplayName: RxSwift.Observable<String> {
         return model.userChat.filterNil()
             .map { $0.fullName }
     }
@@ -37,6 +36,6 @@ final class ChatViewModel: HasDisposeBag {
     
     private func initializeBindings() {
         self.messageSender = dataSource.messageSender
+        
     }
-    
 }

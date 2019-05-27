@@ -36,7 +36,9 @@ final class ChatViewController: BaseChatViewController {
     
     // MARK: - Private Methods
     private func initializeBindings() {
-        viewModel.chatDisplayName.bind(to: navigationItem.rx.title).disposed(by: disposeBag)
+        viewModel.chatDisplayName
+            .bind(to: navigationItem.rx.title)
+            .disposed(by: disposeBag)
     }
     
     override func createChatInputView() -> UIView {

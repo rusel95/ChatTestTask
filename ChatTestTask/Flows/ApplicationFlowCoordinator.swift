@@ -27,6 +27,8 @@ final class ApplicationFlowCoordinator: EventNode {
         self.window = window
         
         super.init()
+        
+        setUIAppearance()
     }
     
     func execute() {
@@ -53,8 +55,20 @@ final class ApplicationFlowCoordinator: EventNode {
     // MARK: Helpers
     
     private func setWindowRootViewController(with viewController: UIViewController) {
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+        window.rootViewController = viewController
         window.makeKeyAndVisible()
+    }
+    
+    private func setUIAppearance() {
+        let navigationBarAppearance = UINavigationBar.appearance()
+        
+        navigationBarAppearance.tintColor = .gray
+        navigationBarAppearance.barTintColor = .gray
+        navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
+        navigationBarAppearance.shadowImage = UIImage()
+        navigationBarAppearance.backgroundColor = .clear
+        navigationBarAppearance.isTranslucent = true
+        //navigationBarAppearance.titleTextAttributes = TextStyle.navBarTitleLight.textAttributes
     }
     
 }

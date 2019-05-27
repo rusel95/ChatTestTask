@@ -12,21 +12,15 @@ abstract_target 'Shared' do
     pod 'RxCocoa', '5.0.0'
     pod 'RxSwift', '5.0.0'
     pod 'RxGesture', '3.0.0'
-    pod 'NSObject+Rx', '5.0.0'
     pod 'RxOptional', '4.0.0'
-
-    target 'Core' do
+    pod 'NSObject+Rx', '5.0.0'
 
     # DB client component
     pod 'RxRealm', '1.0.0'
-    pod 'Alamofire'
     
-    # Firebase
-    pod 'Firebase/Core'
-    
-    # Char SDK
-    pod 'Chatto', '= 3.4.0'
-    pod 'ChattoAdditions', '= 3.4.0' # if you want to use the cells or the input component
+    target 'Core' do
+
+    #pod 'Alamofire'
 
     end
     
@@ -36,9 +30,13 @@ abstract_target 'Shared' do
         
         pod 'Kingfisher', '5.5.0'
         pod 'SnapKit', '~> 5.0.0'
+        
         # Tools
         pod 'SwiftGen', '~> 6.1.0'
-      
+        
+        # Char SDK
+        pod 'Chatto', '= 3.4.0'
+        pod 'ChattoAdditions', '= 3.4.0'
     end
 end
 
